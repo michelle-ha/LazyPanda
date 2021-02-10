@@ -13,7 +13,7 @@ const App = () => (
     <Modal />
     <header>
       <h1 className="logo">
-        {/* <img src="../../assets/images/PngItem_2512217.png" /> */}
+        <img src="../../app/assets/images/PngItem_2512217.png" />
         <NavLink to="/" activeClassName="active">lazypanda</NavLink>
       </h1>
       <GreetingContainer/>
