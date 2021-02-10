@@ -78,5 +78,13 @@ header {
     border: none;
     font-size: 100%;
     font: inherit;
+
   }
 
+  .dropdown {
+    h2 {
+      button:hover {
+        color: rgb(201, 34, 34)
+      }
+    }
+  }
