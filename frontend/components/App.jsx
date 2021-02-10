@@ -10,15 +10,12 @@ import logo from "../../app/assets/images/PngItem_2512217.png"
 
 class App extends React.Component {
   render() {
-    // const logo = require("../../app/assets/images/PngItem_2512217.png")
     return(
       <div>
     <Modal />
     <header>
       <h1 className="logo">
-        {/* <img src={require('../../app/assets/images/PngItem_2512217.png')}/> */}
         <img src={logo} />
-        {/* <img src={'../../app/assets/images/PngItem_2512217.png'}/> */}
         <NavLink to="/" activeClassName="active">lazypanda</NavLink>
       </h1>
       <GreetingContainer/>
