@@ -1,0 +1,130 @@
+
+.login-form > label  {
+    color: black;
+    margin-bottom: .313em;
+    // margin-top: .834em;
+    font-size: 1em;
+    display: block;
+    font-family: roboto;
+    box-sizing: content-box;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.login-form-container { 
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-box { 
+    outline: 1px solid black;
+    padding: 50px;
+    background: white;
+    position: relative;
+    // display: block;
+    width: 325px;
+    height: 300px;
+}
+
+.login-form { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px
+}
+
+// .login-input { 
+//     margin-left: 20px;
+// }
+
+.session-submit {
+    text-transform: capitalize;
+}
+
+.modal-header {
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 0.5px solid lightgrey;
+    padding-bottom: 10px;
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: auto;
+}
+
+.modal-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-x {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 1;
+
+}
+
+label > input {
+    width: 23.177em;
+    max-width: 100%;
+    font-size: 1.2em;
+    border: 1px solid #e0e0e0;
+    padding: .365em;
+    border-radius: 5px;
+    margin-bottom: .521em;
+    display: block;
+    box-sizing: content-box;
+    vertical-align: middle;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    cursor: text;
+
+}
+
+input[type="submit" i] {
+    width: 25%;
+    height: 35px;
+    background-color: rgb(212, 27, 27);
+    color: white;
+    cursor: pointer;
+    font-size: 20px
+}
+
+.modal-footer {
+    display: flex;
+    // flex-direction: horizontal;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.modal-footer > li {
+    float: right;
+}
+
+.demoButton {
+    margin-top: 15px
+
+}
+
+ .registration-link > a{
+     color: red;
+     cursor: pointer;
+ }
+
+ .registration-link:first-of-type {
+    margin-bottom: 5px;
+
+ }
