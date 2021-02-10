@@ -27,3 +27,5 @@ Things you may want to cover:
 Yesterday: created user demo + modal for login/registration
 Today: more CSS. trying to make things pretty. started creating a drop-down menu for my user to logout, but it's lookign really ugly. 
 Blockers: getting an error git-commiting my progress b/c it says i have corrupted files. Ryan is supposed to help me with that later. Also have trouble uploading pictures onto my site. keeps showing brokenn link. Image preview on VS is showing an error, too. Trying to google solutions -->
+
+images: import images from image folder, npm install file-loader and url-loader, update webpackconfig

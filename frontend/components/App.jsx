@@ -8,15 +8,13 @@ import Modal from "./modal/modal";
 import { NavLink } from 'react-router-dom';
 import logo from "../../app/assets/images/PngItem_2512217.png"
 
-class App extends React.Component {
-  render() {
-    return(
-      <div>
+const App = () => (
+  <div>
     <Modal />
     <header>
       <h1 className="logo">
-        <img src={logo} />
-        <NavLink to="/" activeClassName="active">lazypanda</NavLink>
+        
+        <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
       </h1>
       <GreetingContainer/>
     </header>
@@ -25,25 +23,7 @@ class App extends React.Component {
       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
     </Switch>
   </div>
-    )
-  }
-}
-
-// const App = () => (
-//   <div>
-//     <Modal />
-//     <header>
-//       <h1 className="logo">
-//         <img src={require('../../app/assets/images/PngItem_2512217.png')}/>
-//         <NavLink to="/" activeClassName="active">lazypanda</NavLink>
-//       </h1>
-//       <GreetingContainer/>
-//     </header>
-//     <Switch>
-//       {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-//       <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
-//     </Switch>
-//   </div>
-// );
+);
 
 export default App;
+
