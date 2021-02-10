@@ -8,8 +8,17 @@ h1.logo > a.active {
     font-weight: bold;
 }
 
+.active {
+  width: fit-content;
+  height: 50px;
+}
+
+.logo {
+  height: 50px
+}
+
 .panda-logo {
-  height: 14%;
+  height: 100%;
 }
 
 a:link {
