@@ -9707,3 +9707,75 @@ Migrating to CreatePosts (20210211185530)
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (4.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3UZPYetFAo45p3T72o8ddw=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "guest@gmail.com"], ["name", "User"], ["session_token", "3UZPYetFAo45p3T72o8ddw=="], ["password_digest", "$2a$12$ARKcqL2BYBlwsKYRWq0ejev/mfKX7lV6e3dP3u9IoszY3gR/cjeXa"], ["created_at", "2021-02-11 20:03:58.274872"], ["updated_at", "2021-02-11 20:03:58.274872"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kitty@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mIfFy089qkYhggwVznTb3w=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "kitty@gmail.com"], ["name", "Cindy"], ["session_token", "mIfFy089qkYhggwVznTb3w=="], ["password_digest", "$2a$12$v1Yt1mYpUskDCZbGxQvUaO6ZtGEwBcSCxH2zRmiFzVxrwVYAcVx9e"], ["created_at", "2021-02-11 20:03:58.550029"], ["updated_at", "2021-02-11 20:03:58.550029"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aliquam ultricies neque non lectus"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis metus, porta ut tincidunt et, interdum eget nisi. Maecenas non lacinia dolor, ornare blandit est. Quisque augue sem, dictum eu purus et, ornare facilisis dui. Quisque ultricies gravida leo eu convallis. Nullam luctus non odio at rhoncus. Nulla laoreet sit amet justo sed convallis. Morbi lectus lectus, pellentesque et semper vitae, tincidunt eu justo. Mauris enim lacus, cursus id elit et, vestibulum volutpat quam. Curabitur gravida tortor dolor, quis scelerisque felis fermentum eu."], ["author_id", 10], ["created_at", "2021-02-11 20:03:58.580013"], ["updated_at", "2021-02-11 20:03:58.580013"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (4.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPost Destroy (2.0ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "aqhPLuYI754YcAGPEsSDOg=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "guest@gmail.com"], ["name", "User"], ["session_token", "aqhPLuYI754YcAGPEsSDOg=="], ["password_digest", "$2a$12$/F3BlnBPcDHEYocqzV8r.emXfl7rJnWzPYRd5oRGYH6IUvXz9HGIu"], ["created_at", "2021-02-11 20:04:09.181015"], ["updated_at", "2021-02-11 20:04:09.181015"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kitty@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Sn8WCDrgwg74bYwu2VLV0A=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "kitty@gmail.com"], ["name", "Cindy"], ["session_token", "Sn8WCDrgwg74bYwu2VLV0A=="], ["password_digest", "$2a$12$2/sbByfqkzl/OFQrtd57POe0vBK/oeDb2qIckZdu.qWoKrdeIRqn."], ["created_at", "2021-02-11 20:04:09.461059"], ["updated_at", "2021-02-11 20:04:09.461059"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aliquam ultricies neque non lectus"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis metus, porta ut tincidunt et, interdum eget nisi. Maecenas non lacinia dolor, ornare blandit est. Quisque augue sem, dictum eu purus et, ornare facilisis dui. Quisque ultricies gravida leo eu convallis. Nullam luctus non odio at rhoncus. Nulla laoreet sit amet justo sed convallis. Morbi lectus lectus, pellentesque et semper vitae, tincidunt eu justo. Mauris enim lacus, cursus id elit et, vestibulum volutpat quam. Curabitur gravida tortor dolor, quis scelerisque felis fermentum eu."], ["author_id", 12], ["created_at", "2021-02-11 20:04:09.486860"], ["updated_at", "2021-02-11 20:04:09.486860"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
