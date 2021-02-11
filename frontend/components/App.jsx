@@ -1,7 +1,6 @@
 import React from 'react';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 import SignIn from "./greeting/signin"
-import { Redirect } from 'react-router';
 
 
 class App extends React.Component {
@@ -9,14 +8,13 @@ class App extends React.Component {
 
     return (
         <Switch>
-         <Route exact path="/" component={SignIn} />
+         <Route exact path="/" component={SignIn } />
          <Route render={() => <Redirect to="/"/>}/>
         </Switch>
     )
   }
 
 }
-
 
 export default App;
 
