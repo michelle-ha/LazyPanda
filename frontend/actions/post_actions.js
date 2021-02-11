@@ -1,6 +1,6 @@
 
 import * as PostAPIUtil from '../util/post_api_util';
-import { receiveErrors, clearErrors } from './error_actions';
+// import { receiveErrors, clearErrors } from './error_actions';
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
@@ -37,8 +37,8 @@ export const fetchPost = id => dispatch => (
   PostAPIUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
 );
 
-export const createPost = todo => dispatch => (
-  PostAPIUtil.createPost(todo)
+export const createPost = post => dispatch => (
+  PostAPIUtil.createPost(post)
   .then(post => { dispatch(receivePost(post)); dispatch(clearErrors())},
   err => dispatch(receiveErrors(err.responseJSON)))
 );

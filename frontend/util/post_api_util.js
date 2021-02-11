@@ -1,18 +1,18 @@
-export const fetchTodos = () => (
+export const fetchPosts = () => (
     $.ajax({
       method: 'GET',
       url: '/api/posts'
     })
   );
   
-  export const fetchTodo = id => (
+  export const fetchPost = id => (
     $.ajax({
       method: 'GET',
       url: `/api/posts/${id}`,
     })
   );
   
-  export const createTodo = post => (
+  export const createPost = post => (
    $.ajax({
       method: 'POST',
       url: '/api/posts',
@@ -20,7 +20,7 @@ export const fetchTodos = () => (
     })
   );
   
-  export const updateTodo = post => (
+  export const updatePost = post => (
     $.ajax({
       method: 'PATCH',
       url: `/api/posts/${post.id}`,
@@ -28,7 +28,7 @@ export const fetchTodos = () => (
     })
   );
   
-  export const destroyTodo = post => (
+  export const destroyPost = post => (
     $.ajax({
       method: 'DELETE',
       url: `api/posts/${post.id}`

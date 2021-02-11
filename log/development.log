@@ -9779,3 +9779,138 @@ Migrating to CreatePosts (20210211185530)
   ↳ db/seeds.rb:24
   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:24
+Started GET "/" for ::1 at 2021-02-11 13:38:36 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2436ms (Views: 2435.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 13:40:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 542ms (Views: 541.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 13:42:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 545ms (Views: 544.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 13:44:15 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (23.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.6ms)
+
+
+
+ActionView::MissingTemplate - Missing partial api/posts/_post with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/home/michelle/desktop/LazyPanda/lazy_panda/app/views":
+  app/views/api/posts/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076968967680'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076968967680'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076968967680'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___3577163569202923547_70076968967680'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/" for ::1 at 2021-02-11 13:45:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 13:46:05 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/index.json.jbuilder (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::MissingTemplate - Missing partial api/posts/_post with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/home/michelle/desktop/LazyPanda/lazy_panda/app/views":
+  app/views/api/posts/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076963868480'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076963868480'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076963868480'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___3577163569202923547_70076963868480'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/api/posts" for ::1 at 2021-02-11 13:51:26 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/_post.json.jbuilder (581.1ms)
+  Rendered api/posts/index.json.jbuilder (584.7ms)
+Completed 500 Internal Server Error in 587ms (ActiveRecord: 0.8ms)
+
+
+
+NameError - undefined local variable or method `todo' for #<#<Class:0x00007f7821ac76f0>:0x00007f7821ccd490>:
+  app/views/api/posts/_post.json.jbuilder:1:in `_app_views_api_posts__post_json_jbuilder__4350748599452284585_70076970205600'
+  app/views/api/posts/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076970168320'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076970168320'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076970168320'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___3577163569202923547_70076970168320'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/" for ::1 at 2021-02-11 13:52:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 527ms (Views: 526.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 13:52:15 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/_post.json.jbuilder (407.7ms)
+  Rendered api/posts/index.json.jbuilder (410.8ms)
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `todo' for #<#<Class:0x00007f7821ac76f0>:0x00007f78227b1c30>:
+  app/views/api/posts/_post.json.jbuilder:1:in `_app_views_api_posts__post_json_jbuilder__4350748599452284585_70076975627460'
+  app/views/api/posts/index.json.jbuilder:4:in `block (3 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076975645840'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076975645840'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___3577163569202923547_70076975645840'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___3577163569202923547_70076975645840'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/" for ::1 at 2021-02-11 13:55:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 13:55:36 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/index.json.jbuilder (3.7ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 14:04:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 843ms (Views: 842.2ms | ActiveRecord: 0.0ms)
+
+
