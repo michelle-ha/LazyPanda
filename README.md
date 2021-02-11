@@ -40,5 +40,11 @@ No serif for "X". get x symbol.  -->
 <!-- bring error messages down. put in red + up top.  -->
 <!-- similarize distance w/ signin.  -->
 <!-- bigger signup/login buttons (1/3rd of width).  -->
-Padding of loging remains. 
+<!-- Padding of loging remains.  => overlay:auto, height: fit-content -->
 <!-- style loguut button => changed from dropdown to logout button -->
+
+more space after "don't have account"
+
+<!-- make bad routes redirect only -->
+
+re-align login/register

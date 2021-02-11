@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
-import NotFound from "./error_messages/not_found"
 import SignIn from "./greeting/signin"
+import { Redirect } from 'react-router';
+
 
 class App extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class App extends React.Component {
     return (
         <Switch>
          <Route exact path="/" component={SignIn} />
-         <Route component={NotFound} />
+         <Route render={() => <Redirect to="/"/>}/>
         </Switch>
     )
   }

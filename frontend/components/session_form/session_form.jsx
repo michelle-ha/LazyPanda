@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
     } else {
         formMessage = 
         <>
-            Don't have an account? {this.props.otherForm}
+            Don't have an account?    {this.props.otherForm}
         </>    
     }
 
@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === "login") {
         demoButton = 
         <>
-          <a onClick={this.demoLogin}>Demo log in</a>
+          <a onClick={this.demoLogin}>Demo Log In</a>
         </>
         }
     
