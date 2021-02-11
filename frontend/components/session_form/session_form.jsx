@@ -45,6 +45,13 @@ class SessionForm extends React.Component {
 
   render() {
 
+    let welcome = (<> </>)
+    if (this.props.formType === "signup") {
+      welcome = <>Become a member</>
+    } else if (this.props.formType === "login") {
+      welcome = <>Let's fight boredom together!</>
+    }
+
     let test = (<> </>)
     
     if (this.props.formType === "signup") {
@@ -57,7 +64,6 @@ class SessionForm extends React.Component {
                 className="signin-input"
                 />
             </label>
-            <br/>
         </>
     }
     let formMessage = (<> </>)
@@ -96,9 +102,9 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
         
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h1 className="modal-header">Let's fight boredom together!</h1>
+          <div className="errors">{this.renderErrors()}</div>
+          <h1 className="modal-header">{welcome}</h1>
           <div onClick={this.props.closeModal} className="close-x">&#10006;</div>
-          {this.renderErrors()}
           <div className="login-form">
             {test}
             <label>Email:

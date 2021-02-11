@@ -37,8 +37,8 @@ border radius buttons + modal.
 No serif for "X". get x symbol.  -->
 <!-- justify form higer (not center. add padding or margins).  -->
 <!-- right-justify things outside logn.  -->
-bring error messages down. put in red + up top. 
-similarize distance w/ signin. 
-bigger signup/login buttons (1/3rd of width). 
+<!-- bring error messages down. put in red + up top.  -->
+<!-- similarize distance w/ signin.  -->
+<!-- bigger signup/login buttons (1/3rd of width).  -->
 Padding of loging remains. 
-style loguut button 
+<!-- style loguut button => changed from dropdown to logout button -->

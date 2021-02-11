@@ -5,7 +5,7 @@
     // margin-top: .834em;
     font-size: 1em;
     display: block;
-    font-family: roboto;
+    font-family: arial;
     box-sizing: content-box;
     font-weight: 500;
     line-height: 1;
@@ -14,6 +14,7 @@
 .login-form-container { 
     display: flex;
     justify-content: center;
+  
 }
 
 .login-form-box { 
@@ -21,9 +22,10 @@
     background: white;
     position: relative;
     width: 325px;
-    height: 325px;
+    height: fit-content;
     border: 2px solid black;
     border-radius: 6px;
+    overflow: auto;
 }
 
 .login-form { 
@@ -110,6 +112,7 @@ input[type="submit" i] {
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: arial;
 }
 
 
@@ -128,7 +131,7 @@ input[type="submit" i] {
  }
 
  .registration-link:first-of-type {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
  }
 
@@ -137,4 +140,13 @@ input[type="submit" i] {
      text-align: right;
      font-size: small;
      }
+ }
+
+ .errors {
+    color: red;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family: arial;
+    font-size: small;
+
  }
