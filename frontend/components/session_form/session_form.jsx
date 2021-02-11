@@ -79,16 +79,25 @@ class SessionForm extends React.Component {
     if (this.props.formType === "login") {
         demoButton = 
         <>
-          Want to give it a try? <a onClick={this.demoLogin}>Demo Login</a>
+          <a onClick={this.demoLogin}>Demo log in</a>
         </>
         }
+    
+    let text = (<></>)
+
+    if (this.props.formType === "login") {
+      text = "Log in" 
+    } else if (this.props.formType === "signup") {
+      text = "Sign up"
+    }
+
 
     return (
       <div className="login-form-container">
         
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1 className="modal-header">Let's fight boredom together!</h1>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <div onClick={this.props.closeModal} className="close-x">&#10006;</div>
           {this.renderErrors()}
           <div className="login-form">
             {test}
@@ -107,7 +116,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <div className= "modal-footer">
-              <input className="session-submit" type="submit" value={this.props.formType} />
+              <input className="session-submit" type="submit" value={text} />
                   <ul >
                     <li className="registration-link">{formMessage}</li>
                     <li className="registration-link">{demoButton}</li>

@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => {
         dispatch(receiveErrors([]))
       }
         }>
-        Signup
+        Sign up
       </a>
     ),
     closeModal: () => {

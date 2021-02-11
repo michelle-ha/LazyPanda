@@ -17,13 +17,13 @@
 }
 
 .login-form-box { 
-    outline: 1px solid black;
     padding: 50px;
     background: white;
     position: relative;
-    // display: block;
     width: 325px;
     height: 325px;
+    border: 2px solid black;
+    border-radius: 6px;
 }
 
 .login-form { 
@@ -42,10 +42,11 @@
 }
 
 .modal-header {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
     border-bottom: 0.5px solid lightgrey;
     padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal-background {
@@ -60,7 +61,7 @@
 
 .modal-child {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -93,12 +94,14 @@ label > input {
 }
 
 input[type="submit" i] {
-    width: 25%;
+    width: 40%;
     height: 35px;
-    background-color: rgb(212, 27, 27);
+    background-color: #d41b1b;
     color: white;
     cursor: pointer;
-    font-size: 20px
+    font-size: 20px;
+    border: 1px solid darkred;
+    border-radius: 6px;
 }
 
 .modal-footer {
@@ -127,4 +130,11 @@ input[type="submit" i] {
  .registration-link:first-of-type {
     margin-bottom: 5px;
 
+ }
+
+ .login-form {
+     ul {
+     text-align: right;
+     font-size: small;
+     }
  }
