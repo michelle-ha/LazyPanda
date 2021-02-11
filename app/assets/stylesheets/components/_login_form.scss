@@ -107,6 +107,10 @@ input[type="submit" i] {
     margin-top: 1px;
 }
 
+input[type="submit" i]:hover {
+    background-color: rgb(253, 63, 63)
+}
+
 .modal-footer {
     display: flex;
     // flex-direction: horizontal;
@@ -129,6 +133,7 @@ input[type="submit" i] {
  .registration-link > a{
      color: red;
      cursor: pointer;
+     margin-left: 2px;
  }
  .registration-link:last-child {
      text-decoration: underline;
@@ -137,6 +142,11 @@ input[type="submit" i] {
  .registration-link:first-of-type {
     margin-bottom: 9px;
 
+ }
+
+ .registration-link >a:hover {
+     text-decoration: underline;
+     font-weight: bold;
  }
 
  .login-form {

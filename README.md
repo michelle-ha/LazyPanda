@@ -43,8 +43,8 @@ No serif for "X". get x symbol.  -->
 <!-- Padding of loging remains.  => overlay:auto, height: fit-content -->
 <!-- style loguut button => changed from dropdown to logout button -->
 
-more space after "don't have account"
+<!-- more space after "don't have account" -->
 
 <!-- make bad routes redirect only -->
 
-re-align login/register
+<!-- yesterday i did purely CSS and got the approval to start my 2nd mvp. but today I got a list of some more CSS things i gotta do. Stuck right now on how to close my modal by clicking the escape button. One design decision i made was to scrap my dropbox bar b/c it was ugly and just do a logout button -->

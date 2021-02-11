@@ -10,7 +10,9 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    // this.onKeyUp = this.onKeyUp.bind(this);
   }
+
 
   update(field) {
     return e => this.setState({
@@ -36,12 +38,17 @@ class SessionForm extends React.Component {
     );
   }
 
+
+
   demoLogin(e) {
     e.preventDefault();
     e.stopPropagation();
     const guest = {email: "guest@gmail.com", password: "password" }
     this.props.processForm(guest).then(this.props.closeModal)
   }
+
+
+
 
   render() {
 
@@ -76,7 +83,7 @@ class SessionForm extends React.Component {
     } else {
         formMessage = 
         <>
-            Don't have an account?    {this.props.otherForm}
+            Don't have an account? {this.props.otherForm}
         </>    
     }
 
@@ -105,6 +112,9 @@ class SessionForm extends React.Component {
           <div className="errors">{this.renderErrors()}</div>
           <h1 className="modal-header">{welcome}</h1>
           <div onClick={this.props.closeModal} className="close-x">&#10006;</div>
+          {/* <div onKeyPress={this.onKeyUp}></div> */}
+
+          
           <div className="login-form">
             {test}
             <label>Email:
