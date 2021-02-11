@@ -7,23 +7,22 @@ import { AuthRoute } from '../util/route_util';
 import Modal from "./modal/modal";
 import { NavLink } from 'react-router-dom';
 import logo from "../../app/assets/images/PngItem_2512217.png"
+import NotFound from "./error_messages/not_found"
+import SignIn from "./greeting/signin"
 
-const App = () => (
-  <div>
-    <Modal />
-    <header>
-      <h1 className="logo">
-        
-        <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-      </h1>
-      <GreetingContainer/>
-    </header>
-    <Switch>
-      {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
-    </Switch>
-  </div>
-);
+class App extends React.Component {
+  render() {
+
+    return (
+        <Switch>
+         <Route exact path="/" component={SignIn} />
+         <Route component={NotFound} />
+        </Switch>
+    )
+  }
+
+}
+
 
 export default App;
 
