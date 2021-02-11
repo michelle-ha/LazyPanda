@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import GreetingContainer from "./greeting_container";
 
-
-
 const signin = () => (
     <div>
       <Modal />
@@ -16,8 +14,6 @@ const signin = () => (
         <GreetingContainer/>
       </header>
     </div>
-
   )
-
 
   export default signin
