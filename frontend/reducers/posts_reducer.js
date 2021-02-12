@@ -2,7 +2,6 @@ import {
     RECEIVE_POSTS,
     RECEIVE_POST,
     REMOVE_POST,
-    POST_ERROR,
   } from '../actions/post_actions';
   
   const postsReducer = (state = {}, action) => {

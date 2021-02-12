@@ -37,8 +37,6 @@ class PostForm extends React.Component {
     );
   }
 
-
-
   render() {
 
     return (
@@ -50,17 +48,14 @@ class PostForm extends React.Component {
             <input type="string"
                 value={this.state.title}
                 onChange={this.update('title')}
-                className="post-input"
+                className="post-title-input"
               />
           </label>
           <label>Body:
             <textarea
-            //   cols='20'
               value={ this.state.body }
-            //   rows='5'
-            //   placeholder="2% or whatever is on sale!"
               onChange={ this.update('body') }
-              className="input"
+              className="post-body-input"
               ></textarea>
           </label>
 
