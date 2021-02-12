@@ -8,9 +8,9 @@ export const REMOVE_POST = "REMOVE_POST";
 export const POST_ERROR = "POST_ERROR";
 
 
-export const receivePosts = payload => ({
+export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
-  payload
+  posts
 });
 
 export const receivePost = post => ({

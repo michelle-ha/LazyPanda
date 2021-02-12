@@ -21,8 +21,8 @@ class PostIndexItem extends React.Component {
         // onClick={this.handleClick}
       >
         <div className="index-item-info">
-          <span className="index-item-title">{title}</span>
-          <span className="index-item-body">{body}</span>
+          <div className="index-item-title">{title}</div>
+          <div className="index-item-body">{body}</div>
         </div>
       </div>
     );

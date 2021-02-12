@@ -14,8 +14,9 @@ const signin = () => (
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
         </h1>
         <GreetingContainer/>
-        <PostIndexContainer/>
       </header>
+      <PostIndexContainer/>
+
     </div>
   )
 

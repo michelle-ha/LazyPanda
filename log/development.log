@@ -10040,3 +10040,190 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 511ms (Views: 510.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-02-11 16:26:03 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 1519ms (Views: 1516.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:26:05 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/index.json.jbuilder (21.3ms)
+Completed 200 OK in 35ms (Views: 15.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:26:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 531ms (Views: 528.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:26:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:26:53 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/index.json.jbuilder (3.9ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:27:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:27:35 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/index.json.jbuilder (3.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:29:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 497ms (Views: 496.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:29:46 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/index.json.jbuilder (15.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:44:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 122ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:44:55 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/index.json.jbuilder (4.6ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:45:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 101ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:45:28 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:54:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1159ms (Views: 1157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:54:04 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/index.json.jbuilder (3.9ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-11 16:59:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 566ms (Views: 564.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-11 16:59:01 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/index.json.jbuilder (3.7ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (2.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPost Destroy (2.2ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4Jzg2qqGJn5puA4jg5tAvA=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "guest@gmail.com"], ["name", "User"], ["session_token", "4Jzg2qqGJn5puA4jg5tAvA=="], ["password_digest", "$2a$12$pcfWxVXxmzw9efSwguS85e6jEkGo2dFfIpbjtmLmWkGmSqQlRPP.i"], ["created_at", "2021-02-12 01:02:10.202764"], ["updated_at", "2021-02-12 01:02:10.202764"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kitty@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "apXSebAh+EXPZQY6jZ3T8Q=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "kitty@gmail.com"], ["name", "Cindy"], ["session_token", "apXSebAh+EXPZQY6jZ3T8Q=="], ["password_digest", "$2a$12$Y1d46ZOkmH0JADw/MWoSxelCrhSO1TQx7TtdaZ6cg4jWnzIpdP5S."], ["created_at", "2021-02-12 01:02:10.491452"], ["updated_at", "2021-02-12 01:02:10.491452"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aliquam ultricies neque non lectus"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis metus, porta ut tincidunt et, interdum eget nisi. Maecenas non lacinia dolor, ornare blandit est. Quisque augue sem, dictum eu purus et, ornare facilisis dui. Quisque ultricies gravida leo eu convallis. Nullam luctus non odio at rhoncus. Nulla laoreet sit amet justo sed convallis. Morbi lectus lectus, pellentesque et semper vitae, tincidunt eu justo. Mauris enim lacus, cursus id elit et, vestibulum volutpat quam. Curabitur gravida tortor dolor, quis scelerisque felis fermentum eu."], ["author_id", 14], ["created_at", "2021-02-12 01:02:10.521156"], ["updated_at", "2021-02-12 01:02:10.521156"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Vestibulum eu viverra mauris. In non risus sollicitudin, sagittis ex"], ["body", "Sed sed nunc eget leo vehicula cursus. Cras maximus justo sit amet ex sagittis, et sollicitudin dolor rhoncus. Quisque quis pellentesque sapien. Nullam sem nibh, consectetur nec dolor eu, pretium porttitor lectus. In at vulputate tellus. Phasellus nec diam risus. Sed in odio ipsum. Morbi nec quam mi. Donec posuere lobortis ornare. Cras iaculis condimentum odio, gravida fermentum libero gravida sit amet. Suspendisse feugiat sodales dolor, ullamcorper viverra nulla ullamcorper nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur convallis, leo pulvinar accumsan tincidunt, ex leo tristique eros, vitae tempus urna lectus et quam.\n\n  Proin iaculis facilisis orci. Maecenas imperdiet, magna vitae pretium lobortis, eros massa consectetur erat, id imperdiet leo augue vulputate augue. In sodales mi eget sagittis viverra. Vestibulum volutpat mollis euismod. Praesent dictum, metus eu commodo maximus, libero ligula dignissim mi, vitae tempor ante ipsum in ligula. Pellentesque tortor neque, commodo eget porttitor eu, euismod et nisi. Quisque pharetra nisl vel lorem hendrerit, a maximus nisl tincidunt."], ["author_id", 15], ["created_at", "2021-02-12 01:02:10.526863"], ["updated_at", "2021-02-12 01:02:10.526863"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30

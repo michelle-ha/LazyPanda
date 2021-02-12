@@ -4,7 +4,6 @@ import {
     REMOVE_POST,
     POST_ERROR,
   } from '../actions/post_actions';
-  import merge from 'lodash/merge';
   
   const postsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -12,12 +11,12 @@ import {
   
     switch(action.type){
       case RECEIVE_POSTS:
-        return action.payload.posts;
+        return action.posts;
       case RECEIVE_POST:
         const newPost = { [action.post.id]: action.post };
-        return merge({}, state, newPost);
+        return Object.assign({}, state, newPost);
       case REMOVE_POST:
-        nextState = merge({}, state);
+        nextState = Object.assign({}, state);
         delete nextState[action.post.id];
         return nextState;
       default:
