@@ -1,6 +1,6 @@
 
 import * as PostAPIUtil from '../util/post_api_util';
-// import { receiveErrors, clearErrors } from './error_actions';
+import { receiveErrors, clearErrors } from './error_actions';
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
@@ -45,7 +45,7 @@ export const createPost = post => dispatch => (
 
 export const updatePost = post => dispatch => (
   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
-);
+); //want errors here, too?
 
 export const deletePost = post => dispatch => (
   PostAPIUtil.destroyPost(post).then(post => dispatch(removePost(post)))
