@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+
 
 class PostForm extends React.Component {
   constructor(props) {
@@ -16,7 +18,9 @@ class PostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const post = Object.assign({}, this.state);
-    this.props.createPost(post)
+    this.props.createPost(post);
+    this.props.history.push('/');
+
   }
 
   update(field) {
@@ -40,6 +44,7 @@ class PostForm extends React.Component {
   render() {
 
     return (
+        <React.Fragment>
       <form className="post-form" onSubmit={ this.handleSubmit }>
         <div className="errors">{this.renderErrors()}</div>
 
@@ -58,12 +63,11 @@ class PostForm extends React.Component {
               className="post-body-input"
               ></textarea>
           </label>
-
-          <button className="create-button">Create Post!</button>
+        <button className="create-button" >Create Post!</button>
       </form>
-
+      </React.Fragment>
     );
   }
 }
 
-export default PostForm;
+export default withRouter(PostForm);

@@ -37,17 +37,19 @@ export const fetchPost = id => dispatch => (
   PostAPIUtil.fetchPost(id).then(post => dispatch(receivePost(post)))
 );
 
-export const createPost = post => dispatch => (
-  PostAPIUtil.createPost(post).then(post => dispatch(receivePost(post)))
-);
-
 // export const createPost = post => dispatch => (
-//   PostAPIUtil.createPost(post).then(post => (
-//     dispatch(receivePost(post))
-//   ), err => (
-//     dispatch(receiveErrors(err.responseJSON))
-//   ))
+//   PostAPIUtil.createPost(post)
+//   .then(post => { dispatch(receivePost(post)); dispatch(clearErrors())},
+//   err => dispatch(receiveErrors(err.responseJSON)))
 // );
+
+export const createPost = post => dispatch => (
+  PostAPIUtil.createPost(post).then(post => (
+    dispatch(receivePost(post))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
 
 export const updatePost = post => dispatch => (
   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
