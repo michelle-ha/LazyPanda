@@ -22,6 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+git push heroku master
 <!-- 
 2/10/21:
 Yesterday: created user demo + modal for login/registration
