@@ -49,4 +49,8 @@ No serif for "X". get x symbol.  -->
 
 <!-- make bad routes redirect only -->
 
+<!-- 2/11/21 -->
 <!-- yesterday i did purely CSS and got the approval to start my 2nd mvp. but today I got a list of some more CSS things i gotta do. Stuck right now on how to close my modal by clicking the escape button. One design decision i made was to scrap my dropbox bar b/c it was ugly and just do a logout button -->
+
+<!-- 2/12/21
+yesterday i worked on making posts for my website. By the end of the day I was able to seed posts onto my site, so i was happy. Today I'm planning to work on making the edit/create forms for it, but Right now I'm working on setting up my active storage for pictures. The directions are semi-vague, so its going slowly.  -->
