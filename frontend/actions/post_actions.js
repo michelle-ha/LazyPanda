@@ -43,14 +43,6 @@ export const createPost = post => dispatch => (
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-// export const createPost = post => dispatch => (
-//   PostAPIUtil.createPost(post).then(post => (
-//     dispatch(receivePost(post))
-
-//   ), err => {
-//     return dispatch(receiveErrors(err.responseJSON))
-//   })
-// );
 
 export const updatePost = post => dispatch => (
   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))

@@ -17,7 +17,8 @@ def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
     if @post.save
-      render json: @post
+      # render json: @post
+      render :show
     else
       render json: @post.errors.full_messages, status: 422
     end

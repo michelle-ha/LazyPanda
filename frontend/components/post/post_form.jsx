@@ -9,28 +9,17 @@ class PostForm extends React.Component {
       title: "",
       body: "",
       photoFile: null,
-      photoUrl: null
-    //   photos: [],
+      photoUrl: null,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-//   componentDidMount() {
-//       const {isDataSubmitted, history} = this.props;
-//       if (isDataSubmitted) {
-//           history.push('/')
-//       }
-//   }
-
-
-
   handleSubmit(e) {
     e.preventDefault();
-    const post = Object.assign({}, this.state);
-    this.props.createPost(post);
-    // this.props.history.push('/')
-    }
+    this.props.createPost(this.state)
+    .then( () => this.props.history.push("/"));
+  }
 
 
   update(field) {
@@ -40,23 +29,23 @@ class PostForm extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+
+  return this.props.errors.map(error => {
+    return (
+    <li className="error" key={error}>
+      {error}
+    </li>
     );
+  });
   }
 
   render() {
 
     return (
         <div>
+      <div className="errors">{this.renderErrors()}</div>
+
       <form className="post-form" onSubmit={ this.handleSubmit }>
-        <div className="errors">{this.renderErrors()}</div>
         
         <h1>New Post</h1>
           <label>Title:
@@ -73,8 +62,7 @@ class PostForm extends React.Component {
               className="post-body-input"
               ></textarea>
           </label>
-        <button className="create-button" >Create Post!</button>
-        
+          <button className="post-button">Create Post</button>
       </form>
       </div>
     );
