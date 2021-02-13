@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
         <Switch>
          <Route exact path="/" component={SignIn } />
-         <Route exact path="/add-new-post" component={PostFormContainer} />
+         <ProtectedRoute exact path="/add-new-post" component={PostFormContainer} />
          <Route render={() => <Redirect to="/"/>}/>
         </Switch>
     )
