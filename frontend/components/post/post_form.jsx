@@ -16,14 +16,22 @@ class PostForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+//   componentDidMount() {
+//       const {isDataSubmitted, history} = this.props;
+//       if (isDataSubmitted) {
+//           history.push('/')
+//       }
+//   }
+
+
 
   handleSubmit(e) {
     e.preventDefault();
     const post = Object.assign({}, this.state);
     this.props.createPost(post);
-    // this.props.history.push('/');
+    // this.props.history.push('/')
+    }
 
-  }
 
   update(field) {
     return e => this.setState({
@@ -46,10 +54,10 @@ class PostForm extends React.Component {
   render() {
 
     return (
-        <React.Fragment>
+        <div>
       <form className="post-form" onSubmit={ this.handleSubmit }>
         <div className="errors">{this.renderErrors()}</div>
-
+        
         <h1>New Post</h1>
           <label>Title:
             <input type="string"
@@ -66,8 +74,9 @@ class PostForm extends React.Component {
               ></textarea>
           </label>
         <button className="create-button" >Create Post!</button>
+        
       </form>
-      </React.Fragment>
+      </div>
     );
   }
 }

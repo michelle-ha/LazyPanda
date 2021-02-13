@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import GreetingContainer from "./greeting_container";
 import PostIndexContainer from "../post/post_index_container"
-import CreatePostContainer from "../post/create_post_container"
 
 
 const signin = () => (
@@ -14,7 +13,6 @@ const signin = () => (
         <h1 className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
         </h1>
-        {/* <CreatePostContainer/> */}
         <GreetingContainer/>
       </header>
       <PostIndexContainer/>
