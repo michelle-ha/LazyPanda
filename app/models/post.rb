@@ -3,5 +3,5 @@ class Post < ApplicationRecord
 
     belongs_to :author,
         class_name: :User
-    has_many_attached :photos
+    has_one_attached :photo
 end

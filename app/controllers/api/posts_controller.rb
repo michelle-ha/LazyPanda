@@ -13,21 +13,13 @@ def show
   render :show
 end
 
-# def create
-#   @post = current_user.posts.new(post_params)
-#   if @post.save
-#     render json: @post
-#   else
-#     render json: @post.errors.full_messages, status: 422
-#   end
-# end
-
 def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
     @post.save!
     render :show
   end
+
 
 def destroy
   @post = current_user.posts.find(params[:id])
@@ -47,6 +39,6 @@ end
 private
 
 def post_params
-  params.require(:post).permit(:title, :body) #:photos: []
+  params.require(:post).permit(:title, :body, :photo) 
 end
 end

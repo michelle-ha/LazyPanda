@@ -8,6 +8,8 @@ class PostForm extends React.Component {
     this.state = {
       title: "",
       body: "",
+      photoFile: null,
+      photoUrl: null
     //   photos: [],
     };
 
@@ -19,7 +21,7 @@ class PostForm extends React.Component {
     e.preventDefault();
     const post = Object.assign({}, this.state);
     this.props.createPost(post);
-    this.props.history.push('/');
+    // this.props.history.push('/');
 
   }
 
