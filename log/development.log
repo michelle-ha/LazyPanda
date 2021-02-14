@@ -15733,3 +15733,2946 @@ Processing by Api::PostsController#index as JSON
 Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.7ms)
 
 
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-02-12 21:15:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 514ms (Views: 511.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:15:53 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (35.0ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:23:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 480ms (Views: 477.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:23:48 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (55.0ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:25:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:42:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 451ms (Views: 448.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:42:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:42:49 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (1.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (47.7ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:45:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 700ms (Views: 698.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:45:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 423ms (Views: 422.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:48:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 458ms (Views: 456.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:52:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 480ms (Views: 478.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:52:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:52:30 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (2.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (60.7ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:52:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:52:53 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (5.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (129.3ms)
+Completed 200 OK in 144ms (Views: 142.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:54:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 451ms (Views: 449.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 21:54:41 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (81.7ms)
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:54:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:55:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:55:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 483ms (Views: 481.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:55:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:57:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 614ms (Views: 613.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 21:59:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:03:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 435ms (Views: 433.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:04:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 498ms (Views: 496.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:05:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 462ms (Views: 460.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:05:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-02-12 22:15:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 445ms (Views: 443.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 22:15:40 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (11.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (10.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (100.6ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 22:15:48 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (60.2ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:16:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 481ms (Views: 479.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-12 22:16:09 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (10.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (11.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (73.3ms)
+Completed 200 OK in 87ms (Views: 86.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:16:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:20:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 442ms (Views: 440.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:20:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:23:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 525ms (Views: 523.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:23:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:23:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 532ms (Views: 530.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:23:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:24:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:26:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 464ms (Views: 462.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:26:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:26:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:26:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 399ms (Views: 397.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-12 22:26:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mOUMFuSeSna0Rh4Pz37mfA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:44:58 -0800
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 1310ms (Views: 1308.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 11:45:00 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (5.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (3.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (96.1ms)
+Completed 200 OK in 117ms (Views: 85.4ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:46:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:48:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:51:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:51:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:52:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:53:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 11:53:19 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (73.6ms)
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:54:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 454ms (Views: 453.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 11:54:33 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (100.4ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 11:55:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:36:26 -0800
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 2297ms (Views: 2294.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:36:29 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (87.5ms)
+Completed 200 OK in 116ms (Views: 82.2ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:36:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:40:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:40:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:40:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:41:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:41:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:41:15 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (2.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (67.7ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:41:28 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (2.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (57.0ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:42:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:42:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:44:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:44:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:44:26 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (91.9ms)
+Completed 200 OK in 105ms (Views: 103.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:44:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:45:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:48:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:48:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:50:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:51:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:51:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:51:24 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (81.3ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:51:29 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (4.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (1.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (66.1ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:54:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 674ms (Views: 672.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 18:54:12 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (8.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (114.6ms)
+Completed 200 OK in 119ms (Views: 117.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:56:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 710ms (Views: 708.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:56:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1258ms (Views: 1256.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:59:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 149ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:00:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:00:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:01:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1252ms (Views: 1251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:01:20 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (66.1ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:03:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 663ms (Views: 661.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:03:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 570ms (Views: 568.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:04:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:04:12 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (1.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (62.3ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:05:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 744ms (Views: 743.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:05:24 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (90.3ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:05:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 650ms (Views: 648.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:06:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:06:01 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (6.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (4.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (205.9ms)
+Completed 200 OK in 214ms (Views: 207.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:06:05 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (88.4ms)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:06:10 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (76.9ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:06:13 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (77.4ms)
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-02-13 19:09:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 588ms (Views: 587.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:09:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:09:39 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (107.1ms)
+Completed 200 OK in 111ms (Views: 109.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:10:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 738ms (Views: 736.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:10:06 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/index.json.jbuilder (83.3ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:10:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:10:28 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (5.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (58.7ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:10:32 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (77.2ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:10:48 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (1.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (102.5ms)
+Completed 200 OK in 110ms (Views: 108.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:15:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 660ms (Views: 659.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:15:27 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (82.1ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:15:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 726ms (Views: 725.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:15:46 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (10.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (114.5ms)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:16:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:16:28 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (61.4ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:18:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 599ms (Views: 597.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:18:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:18:38 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (3.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (71.7ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:19:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 623ms (Views: 621.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:19:12 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (6.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (98.2ms)
+Completed 200 OK in 103ms (Views: 96.0ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:24:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:25:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 131ms (Views: 130.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:25:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:25:22 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (2.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (5.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (63.4ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:25:24 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (2.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (50.0ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:25:27 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/index.json.jbuilder (73.6ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:25:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:25:35 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (2.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (82.8ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:26:45 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (1.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (1.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (1.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (125.7ms)
+Completed 200 OK in 140ms (Views: 137.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:26:50 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (88.3ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:29:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 648ms (Views: 647.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:29:03 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (16.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (90.8ms)
+Completed 200 OK in 101ms (Views: 94.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:29:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 749ms (Views: 748.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:29:42 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (9.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (5.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (86.8ms)
+Completed 200 OK in 91ms (Views: 89.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:29:45 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (44.0ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-13 19:29:52 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"guest@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guest@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "guest@gmail.com"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["updated_at", "2021-02-14 03:29:53.138847"], ["id", 14]]
+  ↳ app/models/user.rb:29
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:29
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 380ms (Views: 4.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:30:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 698ms (Views: 696.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:31:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 665ms (Views: 663.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:31:10 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (4.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.5ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (51.2ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:31:15 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (0.7ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/index.json.jbuilder (49.5ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:31:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-13 19:31:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rxaI66vkKHLGeVwsf+3QqQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:31:25 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (1.0ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (4.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.8ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (69.4ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:31:29 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (1.4ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.9ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/index.json.jbuilder (72.0ms)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-13 19:31:35 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  Rendered api/posts/_post.json.jbuilder (1.6ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.3ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.2ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/_post.json.jbuilder (0.1ms)
+  Rendered api/posts/index.json.jbuilder (49.8ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.9ms)
+
+

@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 
 class PostForm extends React.Component {
@@ -64,6 +66,7 @@ class PostForm extends React.Component {
           </label>
           <button className="post-button">Create Post</button>
       </form>
+      <Link to="/">Delete Post</Link>
       </div>
     );
   }
