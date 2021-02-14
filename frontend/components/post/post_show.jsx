@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  Redirect} from 'react-router-dom';
 
 class PostShow extends React.Component {
   constructor(props) {
   super(props); }
 
 render() {
+  const {post} = this.props
+  if (!post) return (<Redirect to="/" />)
   return(
     <div className="single-post-show">
       <Link to="/">Back to Posts</Link>
