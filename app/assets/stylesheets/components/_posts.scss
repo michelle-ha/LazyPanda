@@ -1,0 +1,22 @@
+.post-index-item {
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid lightgrey;
+    margin-bottom: 17px;
+}
+
+.index-item-title {
+    font-size: 35px;
+    font-family: arial;
+}
+
+.index-item-title:hover {
+    color: rgb(192, 37, 37);
+    cursor: pointer;
+
+}
+
+.index-item-body {
+    color: gray;
+    font-family: arial;
+}
