@@ -9,24 +9,24 @@ class EditPostForm extends React.Component {
     }
    
     render() {
-      const { post } = this.props;
+      const { post, updatePost } = this.props;
    
       if (!post) return null;
       return (
         <PostEditForm
-          post={post} />
+          post={post} 
+          updatePost={updatePost}/>
       );
-  
     }
   }
    
   const mapStateToProps = (state, ownProps) => ({ 
-    post: state.posts[ownProps.match.params.postId],
+    post: state.entities.posts[ownProps.match.params.postId],
   });
    
   const mapDispatchToProps = dispatch => ({ 
     fetchPost: postId => dispatch(fetchPost(postId)),
-    updatePost: post => dispatch(updatePost(post)) 
+  updatePost: post => dispatch(updatePost(post)) 
   });
    
   export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link,  Redirect} from 'react-router-dom';
 import {deletePost } from '../../actions/post_actions';
+import logo from "../../../app/assets/images/PngItem_2512217.png"
+import { NavLink } from 'react-router-dom';
+import GreetingContainer from "../greeting/greeting_container";
+
+
+
 
 
 class PostShow extends React.Component {
@@ -18,6 +24,12 @@ render() {
   if (!post) return (<Redirect to="/" />)
   return(
     <div className="single-post-show">
+      <h1 className="logo">
+          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink> 
+          <GreetingContainer/>
+
+          </h1>
+
       <Link to="/">Back to Posts</Link>
       <div className="post-details">
       <li>Title: {this.props.post.title}</li>

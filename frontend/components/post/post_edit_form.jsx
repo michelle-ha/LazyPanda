@@ -1,6 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import logo from "../../../app/assets/images/PngItem_2512217.png"
+import GreetingContainer from "../greeting/greeting_container";
 
 
 
@@ -12,9 +15,12 @@ class PostEditForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.updatePost(this.state)
+    .then( () => this.props.history.push("/"));
+
   }
 
 
@@ -24,25 +30,28 @@ class PostEditForm extends React.Component {
     });
   }
 
-  renderErrors() {
+  // renderErrors() {
 
-  return this.props.errors.map(error => {
-    return (
-    <li className="error" key={error}>
-      {error}
-    </li>
-    );
-  });
-  }
+  // return this.props.errors.map(error => {
+  //   return (
+  //   <li className="error" key={error}>
+  //     {error}
+  //   </li>
+  //   );
+  // });
+  // }
 
   render() {
 
     return (
         <div>
-      <div className="errors">{this.renderErrors()}</div>
+      {/* <div className="errors">{this.renderErrors()}</div> */}
 
       <form className="post-form" onSubmit={ this.handleSubmit }>
-        
+      <h1 className="logo">
+          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
+          <GreetingContainer/>
+        </h1>
         <h1>Edit Post</h1>
           <label>Title:
             <input type="string"
@@ -59,6 +68,8 @@ class PostEditForm extends React.Component {
               ></textarea>
           </label>
           <button className="post-button">Edit Post</button>
+
+
       </form>
       <Link to="/">Go back</Link>
       </div>

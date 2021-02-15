@@ -32,6 +32,12 @@ def destroy
 
   @post.destroy
   render json: @posts
+  # if @post.destroy 
+  #   render json: @posts
+  # else
+  #   render json: @post.errors.full_messages, status: 422
+  # end
+
 end
 
 def update
