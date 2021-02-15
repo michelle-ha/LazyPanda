@@ -8,11 +8,7 @@ class PostShow extends React.Component {
   super(props); }
 
   componentDidMount() {
-    this.props.fetchPost(); //from mapDispatchToProps in container 
-  }
-
-  onDelete() {
-    this.props.deletePost(this.props.post.id)
+    this.props.fetchPost(); 
   }
 
 
@@ -29,7 +25,8 @@ render() {
         {/* <li>By: {this.props.users[this.props.post.author_id]}</li> */}
       </div>
       <Link to={`/${post.id}/edit`}>Edit</Link>
-      <button onClick={() => deletePost(post.id)}>Delete</button>
+      <Link to="/" onClick={() => deletePost(post.id)}>Delete</Link>
+
     </div>
   );
 };
