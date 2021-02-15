@@ -48,6 +48,6 @@ export const updatePost = post => dispatch => (
   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
 ); //want errors here, too?
 
-export const deletePost = post => dispatch => (
-  PostAPIUtil.destroyPost(post).then(post => dispatch(removePost(post)))
+export const deletePost = postId => dispatch => (
+  PostAPIUtil.destroyPost(postId).then(() => dispatch(removePost(post)))
 );

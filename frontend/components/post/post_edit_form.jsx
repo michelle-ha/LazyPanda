@@ -14,7 +14,7 @@ class PostEditForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.state)
+    this.props.updatePost(this.state)
   }
 
 

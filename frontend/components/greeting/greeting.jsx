@@ -14,7 +14,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   const personalGreeting = () => (
     <>
       <Link to="/add-new-post">
-        <button type="button">Add post</button>
+        <button className="add-post-button" type="button">Add post</button>
       </Link>
       <button className="header-button" onClick={logout}>Log Out</button>
     </>

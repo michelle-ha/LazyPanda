@@ -4,3 +4,4 @@ export const selectPost = ({ posts }, postId) => {
     return posts[postId]
   };
   
+

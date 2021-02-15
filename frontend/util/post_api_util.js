@@ -28,9 +28,10 @@ export const fetchPosts = () => (
     })
   );
   
-  export const destroyPost = post => (
+  export const destroyPost = postid => (
     $.ajax({
       method: 'DELETE',
-      url: `api/posts/${post.id}`
+      url: `api/posts/${postid}`
+      
     })
   );

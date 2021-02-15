@@ -27,17 +27,3 @@ class PostIndex extends React.Component {
 }
 
 export default PostIndex;
-
-// const PostIndex = ({ posts }) => (
-//     <div>
-//       {posts.map(post => (
-//         <PostIndexItem
-//           post={post}
-//           key={post.id}
-//         />
-//       ))}
-//     </div>
-//   );
-  
-//   export default PostIndex;
-  

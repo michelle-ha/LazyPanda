@@ -14,7 +14,7 @@ class App extends React.Component {
          <Route exact path="/" component={SignIn } />
          <ProtectedRoute exact path="/add-new-post" component={PostFormContainer} />
          <Route exact path="/:postId" component={PostShowContainer} />
-         {/* <Route exact path="/:postId/edit" component={PostEditContainer} /> */}
+         <Route exact path="/:postId/edit" component={PostEditContainer} />
          <Route render={() => (<Redirect to="/" />)}/>
         </Switch>
     )

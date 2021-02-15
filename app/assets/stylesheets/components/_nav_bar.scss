@@ -36,7 +36,7 @@ header {
     margin: auto;
 }
 
-.login-signup {
+.login-signup, .header-button {
     display: block;
     border: 2px solid #bfbfbf;
     // padding: .65em;
@@ -53,30 +53,49 @@ header {
     cursor: pointer;
 }
 
-.login-signup:hover {
+.login-signup:hover, .header-button:hover {
     background-color: gray;
     color: white;
 }
 
-.header-button {
+// .header-button {
+//   display: block;
+//   border: 2px solid #c73a3a;
+//   height: 40px;
+//   text-align: center;
+//   border-radius: 5px;
+//   text-transform: none;
+//   font-weight: 500;
+//   color: #b84949;
+//   line-height: 17px;
+//   width: 130px;
+//   background-color: white;
+//   cursor: pointer;
+// }
+
+// .header-button:hover{
+//   background-color: red;
+//   color: white;
+// }
+
+.add-post-button{
   display: block;
-  border: 2px solid #c73a3a;
-  height: 40px;
-  text-align: center;
-  border-radius: 5px;
-  text-transform: none;
-  font-weight: 500;
-  color: #b84949;
-  line-height: 17px;
-  width: 130px;
-  background-color: white;
-  cursor: pointer;
+    border: 2px solid #c73a3a;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    line-height: 17px;
+    width: 130px;
+    background-color: rgb(218, 53, 53);
+    cursor: pointer;
+    margin-left: 600px;
 }
 
-.header-button:hover{
-  background-color: red;
-  color: white;
-
+.add-post-button:hover {
+  background-color:#f12121;
 }
 
 // .dropdown {
