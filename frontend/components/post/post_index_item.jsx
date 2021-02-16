@@ -16,7 +16,8 @@ class PostIndexItem extends React.Component {
   }
 
   render() {
-    const { title, body } = this.props.post;
+    const { title, body, photo } = this.props.post;
+    console.log(photo)
     return (
       <div
         className="post-index-item"
@@ -25,6 +26,9 @@ class PostIndexItem extends React.Component {
         <div className="index-item-info">
           <div className="index-item-title">{title}</div>
           <div className="index-item-body">{body}</div>
+          <div className="index-item-photo"><img src={photo}/></div>
+
+
         </div>
       </div>
     );

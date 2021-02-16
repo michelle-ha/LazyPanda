@@ -18,11 +18,31 @@ class PostForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
+
+  }
+
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPost(this.state)
+    const formData = new FormData();
+    formData.append('post[title]', this.state.title);
+    formData.append('post[body]', this.state.body);
+
+    if (this.state.photoFile) {
+      formData.append('post[photo]', this.state.photoFile);
+    }
+    this.props.createPost(formData)
     .then( () => this.props.history.push("/"));
   }
 
@@ -45,6 +65,7 @@ class PostForm extends React.Component {
   }
 
   render() {
+    const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
 
     return (
         <div>
@@ -56,6 +77,13 @@ class PostForm extends React.Component {
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
           <GreetingContainer/>
         </h1>
+        <div className="button-holder">
+              <h3>Image preview </h3>
+              {preview}
+              <h3 className="button-holder">Add a Picture</h3>
+              <input type="file" className="new-post-button"
+                onChange={this.handleFile.bind(this)}/>
+            </div>
         <h1>New Post</h1>
           <label>Title:
             <input type="string"
