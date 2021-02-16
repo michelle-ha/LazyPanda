@@ -25,8 +25,8 @@ class PostIndexItem extends React.Component {
       >
         <div className="index-item-info">
           <div className="index-item-title">{title}</div>
-          <div className="index-item-body">{body}</div>
           <div className="index-item-photo"><img src={photo}/></div>
+          <div className="index-item-body">{body}</div>
 
 
         </div>

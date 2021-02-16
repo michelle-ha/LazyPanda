@@ -31354,3 +31354,23 @@ Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/dAT7LLKuH25z9udgG
 Completed 302 Found in 24ms (ActiveRecord: 17.8ms)
 
 
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+[36m  S3 Storage (240.6ms) [0m[32mUploaded file to key: 8MnzfLX8ddhnse5D5i4VgmZC (checksum: ikpSe3iuO3O+XNlBhnjgpw==)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (3.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "8MnzfLX8ddhnse5D5i4VgmZC"], ["filename", "kiKMgaoij.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 25034], ["checksum", "ikpSe3iuO3O+XNlBhnjgpw=="], ["created_at", "2021-02-16 02:10:37.106566"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Post"], ["record_id", 3], ["blob_id", 9], ["created_at", "2021-02-16 02:10:37.139845"]]
+  [1m[36mPost Update (0.6ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1 WHERE "posts"."id" = $2[0m  [["updated_at", "2021-02-16 02:10:37.142764"], ["id", 3]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d8072a2c-9afc-4398-bee1-a67344dc42dd) to Async(default) with arguments: #<GlobalID:0x00007f1c7c963030 @uri=#<URI::GID gid://lazy-panda/ActiveStorage::Blob/9>>
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd] Performing ActiveStorage::AnalyzeJob (Job ID: d8072a2c-9afc-4398-bee1-a67344dc42dd) from Async(default) with arguments: #<GlobalID:0x000055f412738398 @uri=#<URI::GID gid://lazy-panda/ActiveStorage::Blob/9>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd] [36m  S3 Storage (223.6ms) [0m[34mDownloaded file from key: 8MnzfLX8ddhnse5D5i4VgmZC[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 9]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd]   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d8072a2c-9afc-4398-bee1-a67344dc42dd] Performed ActiveStorage::AnalyzeJob (Job ID: d8072a2c-9afc-4398-bee1-a67344dc42dd) from Async(default) in 237.3ms
