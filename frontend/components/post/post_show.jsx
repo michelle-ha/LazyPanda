@@ -32,6 +32,7 @@ render() {
 
       <Link to="/">Back to Posts</Link>
       <div className="post-details">
+        <li><img src={this.props.post.photo}/></li>
       <li>Title: {this.props.post.title}</li>
         <li>Description: {this.props.post.body}</li>
         {/* <li>By: {this.props.users[this.props.post.author_id]}</li> */}
