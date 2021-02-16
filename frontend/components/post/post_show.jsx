@@ -27,10 +27,12 @@ render() {
 
       <Link to="/">Back to Posts</Link>
       <div className="post-details">
+        <ul>
       <li><img src={this.props.post.photo}/></li>
       <li>Title: {this.props.post.title}</li>
         <li>Description: {this.props.post.body}</li>
         {/* <li>By: {this.props.post.author_id.name}</li> */}
+        </ul>
       </div>
       <Link to={`/${post.id}/edit`}>Edit</Link>
       <Link to="/" onClick={() => deletePost(post.id)}>Delete</Link>
