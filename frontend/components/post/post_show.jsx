@@ -26,10 +26,16 @@ render() {
       <>
           <Link to={`/${post.id}/edit`}>Edit</Link> 
           <Link to="/" onClick={() => deletePost(post.id)}>Delete</Link>
-
       </>
     )
   }
+  let insertPhoto
+  if (post.photo) {
+    insertPhoto = (
+      <li><img src={this.props.post.photo}/></li>
+      )
+  }
+
   return(
     <div className="single-post-show">
       <NavBar/>
@@ -39,7 +45,8 @@ render() {
         <li className="post-author">{this.props.post.author.name}, {this.props.post.author.email}</li>
       <li className="post-title">{this.props.post.title}</li>
         <li>{this.props.post.body}</li>
-        <li><img src={this.props.post.photo}/></li>
+        {/* <li><img src={this.props.post.photo}/></li> */}
+        {insertPhoto}
 
         </ul>
       </div>

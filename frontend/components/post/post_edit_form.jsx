@@ -3,7 +3,9 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
-import GreetingContainer from "../greeting/greeting_container";
+import NavBar from "../greeting/navbar"
+
+// import GreetingContainer from "../greeting/greeting_container";
 
 
 
@@ -77,9 +79,8 @@ class PostEditForm extends React.Component {
       {/* <div className="errors">{this.renderErrors()}</div> */}
 
       <form className="post-form" onSubmit={ this.handleSubmit }>
-      <h1 className="logo">
-          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-        </h1>
+      <NavBar/>
+
         <h1>Edit Post</h1>
         {preview}
         <input type="file"

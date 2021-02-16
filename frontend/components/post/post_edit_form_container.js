@@ -22,6 +22,7 @@ class EditPostForm extends React.Component {
    
   const mapStateToProps = (state, ownProps) => ({ 
     post: state.entities.posts[ownProps.match.params.postId],
+    errors: state.errors.post
   });
    
   const mapDispatchToProps = dispatch => ({ 
