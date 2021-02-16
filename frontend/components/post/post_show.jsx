@@ -28,10 +28,11 @@ render() {
       <Link to="/">Back to Posts</Link>
       <div className="post-details">
         <ul>
-      <li><img src={this.props.post.photo}/></li>
-      <li>Title: {this.props.post.title}</li>
-        <li>Description: {this.props.post.body}</li>
-        {/* <li>By: {this.props.post.author.name}</li> */}
+        <li>{this.props.post.author.name}, {this.props.post.author.email}</li>
+      <li>{this.props.post.title}</li>
+        <li>{this.props.post.body}</li>
+        <li><img src={this.props.post.photo}/></li>
+
         </ul>
       </div>
       <Link to={`/${post.id}/edit`}>Edit</Link>

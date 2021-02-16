@@ -34956,3 +34956,1085 @@ Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWE
 Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2021-02-16 10:54:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 10:54:12 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (17.9ms)
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (13.5ms)
+  Rendered api/posts/index.json.jbuilder (38.3ms)
+Completed 200 OK in 43ms (Views: 29.4ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg" for ::1 at 2021-02-16 10:54:12 -0800
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4", "filename"=>"cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e/cute-marshmallows.png" for ::1 at 2021-02-16 10:54:12 -0800
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: Bird7UiGcwtXVgfvekuwFraf (https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T185412Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9e1876d5ad9c5f91beae56a42bc4c4c0644a7141d3bafc459ca636e69cc4c31a)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T185412Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9e1876d5ad9c5f91beae56a42bc4c4c0644a7141d3bafc459ca636e69cc4c31a
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e", "filename"=>"cute-marshmallows"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.3ms) [0m[34mGenerated URL for file at key: 6hK5dEZTnXymwrXWEA6iW7Q3 (https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T185412Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=752328758ea9e7f72431b22c84d87e1cb76afc3946a206e67da4af765548634f)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T185412Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=752328758ea9e7f72431b22c84d87e1cb76afc3946a206e67da4af765548634f
+Completed 302 Found in 17ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 10:54:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 10:54:24 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 10:54:24 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (18.6ms)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (9.5ms)
+  Rendered api/posts/index.json.jbuilder (37.4ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 10:57:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 10:57:04 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 10:57:04 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.0ms)
+  Rendered api/posts/index.json.jbuilder (34.4ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 10:57:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 10:57:16 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (14.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.8ms)
+  Rendered api/posts/index.json.jbuilder (33.8ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 10:59:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 693ms (Views: 692.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:00:00 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (17.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.3ms)
+  Rendered api/posts/index.json.jbuilder (46.0ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg" for ::1 at 2021-02-16 11:00:00 -0800
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4", "filename"=>"cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e/cute-marshmallows.png" for ::1 at 2021-02-16 11:00:00 -0800
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.7ms) [0m[34mGenerated URL for file at key: Bird7UiGcwtXVgfvekuwFraf (https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T190000Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1f30d5ff1561d10d9375e4bf63c29d5e1da611689b5e9b1ec0b1b3566d8af22a)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T190000Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1f30d5ff1561d10d9375e4bf63c29d5e1da611689b5e9b1ec0b1b3566d8af22a
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e", "filename"=>"cute-marshmallows"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.6ms) [0m[34mGenerated URL for file at key: 6hK5dEZTnXymwrXWEA6iW7Q3 (https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T190001Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=116625fd0368a284e5cfa0a0b0ce6d42bfe9a21d5d8cae1c2bc8bc974bdfb63f)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T190001Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=116625fd0368a284e5cfa0a0b0ce6d42bfe9a21d5d8cae1c2bc8bc974bdfb63f
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:00:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 459ms (Views: 458.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:00:11 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (8.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 11ms (ActiveRecord: 8.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:00:11 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (7.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.7ms)
+  Rendered api/posts/index.json.jbuilder (42.8ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:00:14 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:00:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:00:26 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:00:26 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (6.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (14.1ms)
+  Rendered api/posts/index.json.jbuilder (23.6ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:00:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:00:44 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (13.7ms)
+  Rendered api/posts/index.json.jbuilder (23.5ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:00:47 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:01:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 458ms (Views: 457.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:01:34 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:01:34 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.4ms)
+  Rendered api/posts/index.json.jbuilder (36.6ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:01:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:01:39 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (6.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (13.6ms)
+  [1m[36mActiveStorage::Attachment Load (11.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (17.3ms)
+  Rendered api/posts/index.json.jbuilder (34.8ms)
+Completed 200 OK in 38ms (Views: 17.7ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:10:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:10:12 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (14.0ms)
+  Rendered api/posts/index.json.jbuilder (34.4ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg" for ::1 at 2021-02-16 11:10:12 -0800
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4", "filename"=>"cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.0ms) [0m[34mGenerated URL for file at key: Bird7UiGcwtXVgfvekuwFraf (https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191012Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6704eb058d4c2f576c73410fb91675a749bc09d33cc34332c362abb471f1f076)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191012Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=6704eb058d4c2f576c73410fb91675a749bc09d33cc34332c362abb471f1f076
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e/cute-marshmallows.png" for ::1 at 2021-02-16 11:10:12 -0800
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e", "filename"=>"cute-marshmallows"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: 6hK5dEZTnXymwrXWEA6iW7Q3 (https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191012Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4ba0c5c46058e3b17cc42a555a934d21439c83e7b3edb5784c70a36bcd52c993)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191012Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4ba0c5c46058e3b17cc42a555a934d21439c83e7b3edb5784c70a36bcd52c993
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:10:14 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:10:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:10:35 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:10:35 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (16.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (16.5ms)
+  Rendered api/posts/index.json.jbuilder (37.5ms)
+Completed 200 OK in 50ms (Views: 38.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:10:37 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:13:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:13:08 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:13:08 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (6.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.9ms)
+  Rendered api/posts/index.json.jbuilder (35.3ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:13:09 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:13:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:13:36 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:13:36 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (12.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.5ms)
+  Rendered api/posts/index.json.jbuilder (22.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:13:37 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-02-16 11:14:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:14:39 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:14:39 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (7.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (6.0ms)
+  Rendered api/posts/index.json.jbuilder (34.1ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:14:40 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:14:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:14:50 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:14:50 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (17.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (8.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (11.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (16.4ms)
+  Rendered api/posts/index.json.jbuilder (45.4ms)
+Completed 200 OK in 48ms (Views: 18.3ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:14:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:15:00 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (21.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (29.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.2ms)
+  Rendered api/posts/index.json.jbuilder (38.9ms)
+Completed 200 OK in 42ms (Views: 18.4ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:15:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:15:33 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:15:34 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (13.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (5.3ms)
+  Rendered api/posts/index.json.jbuilder (23.0ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg" for ::1 at 2021-02-16 11:15:34 -0800
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4", "filename"=>"cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.1ms) [0m[34mGenerated URL for file at key: Bird7UiGcwtXVgfvekuwFraf (https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191534Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7fab10ba3a3d0b57c1f7021e5d2bd7a0123bed87164a9b40e4d99748d51a91cf)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191534Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7fab10ba3a3d0b57c1f7021e5d2bd7a0123bed87164a9b40e4d99748d51a91cf
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e/cute-marshmallows.png" for ::1 at 2021-02-16 11:15:34 -0800
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e", "filename"=>"cute-marshmallows"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.1ms) [0m[34mGenerated URL for file at key: 6hK5dEZTnXymwrXWEA6iW7Q3 (https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191534Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=567b02c64a34e5513c8e9143c7afc51788e163a0e60501b8a7d760dfec55ac24)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T191534Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=567b02c64a34e5513c8e9143c7afc51788e163a0e60501b8a7d760dfec55ac24
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:15:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:15:50 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:15:50 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (15.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (6.2ms)
+  Rendered api/posts/index.json.jbuilder (25.2ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:19:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:19:01 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:19:01 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (3.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (8.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (21.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (6.9ms)
+  Rendered api/posts/index.json.jbuilder (32.0ms)
+Completed 200 OK in 35ms (Views: 20.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-16 11:20:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:20:05 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:20:05 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (17.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (83.7ms)
+  Rendered api/posts/index.json.jbuilder (86.3ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 17.9ms)
+
+
+
+NoMethodError - undefined method `author' for nil:NilClass:
+  app/views/api/posts/_post.json.jbuilder:3:in `_app_views_api_posts__post_json_jbuilder___409785400331693567_70187539388580'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___1468915016480463766_70187539408100'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___1468915016480463766_70187539408100'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___1468915016480463766_70187539408100'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/" for ::1 at 2021-02-16 11:20:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:20:09 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (3.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  Rendered api/posts/_post.json.jbuilder (16.4ms)
+  Rendered api/posts/index.json.jbuilder (19.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.6ms)
+
+
+
+NoMethodError - undefined method `author' for nil:NilClass:
+  app/views/api/posts/_post.json.jbuilder:3:in `_app_views_api_posts__post_json_jbuilder___409785400331693567_70187536144440'
+  app/views/api/posts/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_posts_index_json_jbuilder___1468915016480463766_70187536169000'
+  app/views/api/posts/index.json.jbuilder:2:in `block in _app_views_api_posts_index_json_jbuilder___1468915016480463766_70187536169000'
+  app/views/api/posts/index.json.jbuilder:1:in `_app_views_api_posts_index_json_jbuilder___1468915016480463766_70187536169000'
+  app/controllers/api/posts_controller.rb:8:in `index'
+
+Started GET "/" for ::1 at 2021-02-16 11:20:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:20:52 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (70.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (7.6ms)
+  Rendered api/posts/index.json.jbuilder (82.4ms)
+Completed 200 OK in 86ms (Views: 73.5ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg" for ::1 at 2021-02-16 11:20:52 -0800
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--044038ad50e8c7469e9529d587c51000f72b6bf4", "filename"=>"cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.5ms) [0m[34mGenerated URL for file at key: Bird7UiGcwtXVgfvekuwFraf (https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T192052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=352fb7ec7a4ef846b1a4d5899277c26f38ecbef36cb18921491d5adefb6e6b8a)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/Bird7UiGcwtXVgfvekuwFraf?response-content-disposition=inline%3B%20filename%3D%22cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg%22%3B%20filename%2A%3DUTF-8%27%27cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T192052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=352fb7ec7a4ef846b1a4d5899277c26f38ecbef36cb18921491d5adefb6e6b8a
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e/cute-marshmallows.png" for ::1 at 2021-02-16 11:20:52 -0800
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--752c1a15aabbcc830fbe84ef0fb8bf4140c74e7e", "filename"=>"cute-marshmallows"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ /home/michelle/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (7.6ms) [0m[34mGenerated URL for file at key: 6hK5dEZTnXymwrXWEA6iW7Q3 (https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T192052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=379ce8afcdea1695a982f04b8524375f4752f404775ce8ac078edf6241fac634)[0m
+Redirected to https://lazypanda-dev.s3.us-west-1.amazonaws.com/6hK5dEZTnXymwrXWEA6iW7Q3?response-content-disposition=inline%3B%20filename%3D%22cute-marshmallows.png%22%3B%20filename%2A%3DUTF-8%27%27cute-marshmallows.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZB4DJUI3UK5RWM64%2F20210216%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210216T192052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=379ce8afcdea1695a982f04b8524375f4752f404775ce8ac078edf6241fac634
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:20:54 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:21:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 401ms (Views: 400.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:21:31 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:21:31 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (16.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (16.6ms)
+  Rendered api/posts/index.json.jbuilder (46.1ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:21:33 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/" for ::1 at 2021-02-16 11:24:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 513ms (Views: 512.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:24:02 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
+Started GET "/api/posts" for ::1 at 2021-02-16 11:24:02 -0800
+Processing by Api::PostsController#index as JSON
+  Rendering api/posts/index.json.jbuilder
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/api/posts/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 46], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (17.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 47], ["record_type", "Post"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:2
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/api/posts/_post.json.jbuilder:3
+  Rendered api/posts/_post.json.jbuilder (35.1ms)
+  Rendered api/posts/index.json.jbuilder (56.8ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/posts/undefined" for ::1 at 2021-02-16 11:24:18 -0800
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:12
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Post with 'id'=undefined:
+  app/controllers/api/posts_controller.rb:12:in `show'
+
