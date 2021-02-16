@@ -13,20 +13,26 @@ User.delete_all
 Post.delete_all
 
 u1 = User.create!(
-  name: 'User',
+  name: 'Demo User',
   password: 'password',
   email: 'guest@gmail.com'
 )
 
 u2 = User.create!(
-  name: 'Cindy',
+  name: 'Cindy Lee',
   password: 'password',
   email: 'kitty@gmail.com'
 )
 
+u3 = User.create!(
+  name: 'Panda Man',
+  password: 'password',
+  email: 'panda@gmail.com'
+)
+
 p1 = Post.create!(
   author_id: u1.id,
-  title: "Cutests animal drawings",
+  title: "Cutest animal drawings",
   body: "Post your favorite animal drawings here! Hedgehog to start us off. :)."
 )
 
@@ -43,3 +49,23 @@ p2 = Post.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute-marshmallows.png')
 
 p2.photo.attach(io: file, filename: 'cute-marshmallows.png')
+
+p3 = Post.create!(
+  author_id: u3.id,
+  title: "Worst pickup lines",
+  body: "We've all heard or said them. Share your most memorable ones here!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup-thumb.jpg')
+
+p3.photo.attach(io: file, filename: 'pickup-thumb.jpg')
+
+p4 = Post.create!(
+  author_id: u3.id,
+  title: "Funniest memes ever",
+  body: "Share your favorites here!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Cat+Meme+Netflix+Funny+1000x666.png')
+
+p4.photo.attach(io: file, filename: 'Cat+Meme+Netflix+Funny+1000x666.png')

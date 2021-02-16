@@ -19,13 +19,19 @@ class PostIndexItem extends React.Component {
   render() {
     const { title, body, photo } = this.props.post;
     // console.log(photo)
+    let insertPhoto;
+    if (photo) {
+      insertPhoto = (
+        <div className="index-item-photo"><img src={photo}/></div>
+      )
+    }
     return (
       <div
         className="post-index-item"
         onClick={this.handleClick}
       >
         <div className="index-item-info">
-        <div className="index-item-photo"><img src={photo}/></div>
+          {insertPhoto}
           <div className="index-item-title">{title}</div>
           <div className="index-item-body">{body}</div>
 

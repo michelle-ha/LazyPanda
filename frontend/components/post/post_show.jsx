@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link,  Redirect} from 'react-router-dom';
-import {deletePost } from '../../actions/post_actions';
+// import {deletePost } from '../../actions/post_actions';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import { NavLink } from 'react-router-dom';
-import GreetingContainer from "../greeting/greeting_container";
-import EditPostFormContainer from "./post_edit_form_container"
+// import GreetingContainer from "../greeting/greeting_container";
+// import EditPostFormContainer from "./post_edit_form_container"
+import NavBar from "../greeting/navbar"
 
 class PostShow extends React.Component {
   constructor(props) {
@@ -31,12 +32,8 @@ render() {
   }
   return(
     <div className="single-post-show">
-      <h1 className="logo">
-          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink> 
+      <NavBar/>
 
-          </h1>
-
-      {/* <Link to="/">Back to Posts</Link> */}
       <div className="post-details">
         <ul>
         <li className="post-author">{this.props.post.author.name}, {this.props.post.author.email}</li>
@@ -46,7 +43,6 @@ render() {
 
         </ul>
       </div>
-      {/* <Link to={`/${post.id}/edit`}>Edit</Link> */}
       {canEditPost}
 
     </div>
