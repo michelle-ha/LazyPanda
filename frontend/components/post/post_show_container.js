@@ -7,9 +7,11 @@ import PostShow from './post_show';
 const mapStateToProps = (state, { match }) => {
   const postId = parseInt(match.params.postId);
   const post = selectPost(state.entities, postId);
+  const currentUser = state.entities.users[state.session.id];
   return {
     postId,
     post,
+    currentUser
   };
 };
 
