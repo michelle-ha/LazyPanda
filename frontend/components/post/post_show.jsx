@@ -22,14 +22,13 @@ render() {
     <div className="single-post-show">
       <h1 className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink> 
-          <GreetingContainer/>
 
           </h1>
 
       <Link to="/">Back to Posts</Link>
       <div className="post-details">
-      <li>Title: {this.props.post.title}</li>
       <li><img src={this.props.post.photo}/></li>
+      <li>Title: {this.props.post.title}</li>
         <li>Description: {this.props.post.body}</li>
         {/* <li>By: {this.props.post.author_id.name}</li> */}
       </div>

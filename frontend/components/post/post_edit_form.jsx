@@ -79,7 +79,6 @@ class PostEditForm extends React.Component {
       <form className="post-form" onSubmit={ this.handleSubmit }>
       <h1 className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-          <GreetingContainer/>
         </h1>
         <h1>Edit Post</h1>
         {preview}

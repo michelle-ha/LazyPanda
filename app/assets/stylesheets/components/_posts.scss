@@ -1,5 +1,5 @@
 .post-index-item {
-    max-width: 1000px;
+    max-width: 700px;
     margin: auto;
     border: 1px solid lightgrey;
     margin-bottom: 17px;
@@ -19,4 +19,20 @@
 .index-item-body {
     color: gray;
     font-family: arial;
+}
+
+img {
+    height: 600px;
+    max-height: 100%;
+    width: 700px;
+    max-width: 700px;
+    margin: auto;
+    align-items: center;
+    border: 1px solid lightgray
+}
+
+.post-details {
+    max-width: 700px;
+    border: 1px solid lightgray;
+    margin: auto;
 }
