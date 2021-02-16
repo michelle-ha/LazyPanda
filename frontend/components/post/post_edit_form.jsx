@@ -10,15 +10,42 @@ import GreetingContainer from "../greeting/greeting_container";
 class PostEditForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.post
+    this.state = {
+      title: this.props.post.title,
+      body: this.props.post.body,
+      id: this.props.post.id,
+      photoFile: null,
+      photoUrl: null,
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
+
   }
 
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updatePost(this.state)
+    const formData = new FormData();
+    formData.append('post[title]', this.state.title);
+    formData.append('post[body]', this.state.body);
+    formData.append('post[id]', this.state.id);
+
+    if (this.state.photoFile) {
+      formData.append('post[photo]', this.state.photoFile);
+    }
+
+    this.props.updatePost(formData)
     .then( () => this.props.history.push("/"));
 
   }
@@ -43,6 +70,8 @@ class PostEditForm extends React.Component {
 
   render() {
 
+    const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
+
     return (
         <div>
       {/* <div className="errors">{this.renderErrors()}</div> */}
@@ -53,6 +82,9 @@ class PostEditForm extends React.Component {
           <GreetingContainer/>
         </h1>
         <h1>Edit Post</h1>
+        {preview}
+        <input type="file"
+               onChange={this.handleFile}/>
           <label>Title:
             <input type="string"
                 value={this.state.title}
