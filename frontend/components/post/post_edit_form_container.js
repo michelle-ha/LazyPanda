@@ -9,13 +9,14 @@ class EditPostForm extends React.Component {
     }
    
     render() {
-      const { post, updatePost } = this.props;
+      const { post, updatePost, errors } = this.props;
    
       if (!post) return null;
       return (
         <PostEditForm
           post={post} 
-          updatePost={updatePost}/>
+          updatePost={updatePost}
+          errors = {errors}/>
       );
     }
   }
@@ -27,7 +28,7 @@ class EditPostForm extends React.Component {
    
   const mapDispatchToProps = dispatch => ({ 
     fetchPost: postId => dispatch(fetchPost(postId)),
-  updatePost: post => dispatch(updatePost(post)) 
+    updatePost: post => dispatch(updatePost(post)) 
   });
    
   export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);

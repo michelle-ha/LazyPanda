@@ -1,4 +1,3 @@
-
 import * as PostAPIUtil from '../util/post_api_util';
 import { receiveErrors, clearErrors } from './error_actions';
 
@@ -6,7 +5,6 @@ export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 export const POST_ERROR = "POST_ERROR";
-
 
 export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
@@ -28,7 +26,6 @@ export const postError = error => ({
   error
 });
 
-
 export const fetchPosts = () => dispatch => (
   PostAPIUtil.fetchPosts().then(posts => dispatch(receivePosts(posts)))
 );
@@ -43,16 +40,15 @@ export const createPost = post => dispatch => (
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
+// export const updatePost = post => dispatch => (
+//   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
+// ); //want errors here, too?
 
 export const updatePost = post => dispatch => (
-  PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
-); //want errors here, too?
-
-// export const updatePost = post => dispatch => (
-//   PostAPIUtil.createPost(post)
-//   .then(post => { dispatch(updatePost(post)); dispatch(clearErrors())},
-//   err => dispatch(receiveErrors(err.responseJSON)))
-// );
+  PostAPIUtil.createPost(post)
+  .then(post => { dispatch(updatePost(post)); dispatch(clearErrors())},
+  err => dispatch(receiveErrors(err.responseJSON)))
+);
 
 
 export const deletePost = postId => dispatch => (

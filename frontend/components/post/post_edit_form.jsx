@@ -57,52 +57,52 @@ class PostEditForm extends React.Component {
     });
   }
 
-  // renderErrors() {
-
-  // return this.props.errors.map(error => {
-  //   return (
-  //   <li className="error" key={error}>
-  //     {error}
-  //   </li>
-  //   );
-  // });
-  // }
+  renderErrors() {
+    // debugger
+    return this.props.errors.map(error => {
+      return (
+      <li className="error" key={error}>
+        {error}
+      </li>
+      );
+    });
+  }
 
   render() {
 
-    const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
+  const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
 
-    return (
+  return (
 
-      <div >
-      {/* <div className="errors">{this.renderErrors()}</div> */}
-      <form className="post-form" onSubmit={ this.handleSubmit }>
-      <EditNavBar/>
-        <div className="post-creator">
-          <div className="post-creator-container">
-          <input type="string"
-              value={this.state.title}
-              onChange={this.update('title')}
-              className="post-title-input"
-            />
-          <textarea
-            value={ this.state.body }
-            onChange={ this.update('body') }
-            className="post-body-input"
-            ></textarea>
-          <div className="button-holder">
-            {preview}
-            <h3 className="button-holder">Upload photo</h3>
-            <input type="file" className="new-post-button"
-              value={ this.state.photo }
-              onChange={this.handleFile.bind(this)}/>
-          </div>
-        <button className="post-button">Edit Post</button>
+    <div >
+    <div className="errors">{this.renderErrors()}</div>
+    <form className="post-form" onSubmit={ this.handleSubmit }>
+    <EditNavBar/>
+      <div className="post-creator">
+        <div className="post-creator-container">
+        <input type="string"
+            value={this.state.title}
+            onChange={this.update('title')}
+            className="post-title-input"
+          />
+        <textarea
+          value={ this.state.body }
+          onChange={ this.update('body') }
+          className="post-body-input"
+          ></textarea>
+        <div className="button-holder">
+          {preview}
+          <h3 className="button-holder">Upload photo</h3>
+          <input type="file" className="new-post-button"
+            value={ this.state.photo }
+            onChange={this.handleFile.bind(this)}/>
         </div>
-        </div>
-        <Link to="/" className="go-back">Go Back</Link>
-      </form>
+      <button className="post-button">Edit Post</button>
+      </div>
     </div>
+    <Link to="/" className="go-back">Go Back</Link>
+    </form>
+  </div>
   );
 }
 }
