@@ -44,15 +44,15 @@ export const createPost = post => dispatch => (
 );
 
 
-// export const updatePost = post => dispatch => (
-//   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
-// ); //want errors here, too?
-
 export const updatePost = post => dispatch => (
-  PostAPIUtil.createPost(post)
-  .then(post => { dispatch(updatePost(post)); dispatch(clearErrors())},
-  err => dispatch(receiveErrors(err.responseJSON)))
-);
+  PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
+); //want errors here, too?
+
+// export const updatePost = post => dispatch => (
+//   PostAPIUtil.createPost(post)
+//   .then(post => { dispatch(updatePost(post)); dispatch(clearErrors())},
+//   err => dispatch(receiveErrors(err.responseJSON)))
+// );
 
 
 export const deletePost = postId => dispatch => (

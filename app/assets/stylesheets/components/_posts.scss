@@ -39,6 +39,7 @@ img {
     max-width: 700px;
     border: 1px solid lightgray;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 .index-item-photo:hover {
@@ -76,4 +77,54 @@ li.post-body {
     color: rgba(0,0,0,.8);
     font-weight: 400;
     font-size: 20px;
+}
+
+a.delete-link {
+    display: block;
+    border: 2px solid #c73a3a;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+    width: 80px;
+    background-color: #da3535;
+    cursor: pointer;
+}
+a.delete-link:hover {
+    font-weight: bold;
+    background-color: #f12121
+
+}
+
+a.edit-link {
+    display: block;
+    border: 2px solid #c73a3a;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+    width: 80px;
+    background-color: #da3535;
+    cursor: pointer;
+}
+
+a.edit-link:hover {
+    font-weight: bold;
+    background-color: #f12121
+}
+
+button {
+    border: none;
+    background-color: white;
+    width: fit-content;
+}
+
+.post-edit-links {
+    padding-bottom: 5px;
 }
