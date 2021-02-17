@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
-import logo from "../../../app/assets/images/PngItem_2512217.png"
+import { Link, Redirect } from 'react-router-dom';
 import EditNavBar from "../greeting/edit_navbar"
 
 // import GreetingContainer from "../greeting/greeting_container";
@@ -14,6 +12,7 @@ class PostEditForm extends React.Component {
       title: this.props.post.title,
       body: this.props.post.body,
       id: this.props.post.id,
+      // photo: this.props.post.photo,
       photoFile: null,
       photoUrl: null,
     };
@@ -40,6 +39,8 @@ class PostEditForm extends React.Component {
     formData.append('post[title]', this.state.title);
     formData.append('post[body]', this.state.body);
     formData.append('post[id]', this.state.id);
+    // formData.append('post[photo]', this.state.photo);
+
 
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
@@ -47,7 +48,6 @@ class PostEditForm extends React.Component {
 
     this.props.updatePost(formData)
     .then( () => this.props.history.push("/"));
-
   }
 
 
@@ -91,10 +91,12 @@ class PostEditForm extends React.Component {
           className="post-body-input"
           ></textarea>
         <div className="button-holder">
+          <h3 className="button-holder">Original Photo</h3>
+          <img src = { this.props.post.photo } />
+          <h3 className="button-holder">Photo Preview</h3>
           {preview}
-          <h3 className="button-holder">Upload photo</h3>
           <input type="file" className="new-post-button"
-            value={ this.state.photo }
+            
             onChange={this.handleFile.bind(this)}/>
         </div>
       <button className="post-button">Edit Post</button>

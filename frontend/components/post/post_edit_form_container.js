@@ -8,7 +8,7 @@ class EditPostForm extends React.Component {
       this.props.fetchPost(this.props.match.params.postId); 
     }
    
-    render() {
+  render() {
       const { post, updatePost, errors } = this.props;
    
       if (!post) return null;
