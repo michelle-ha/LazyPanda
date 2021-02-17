@@ -126,7 +126,9 @@ button {
 }
 
 .post-edit-links {
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
 }
 
 .post-creator {
@@ -136,7 +138,7 @@ button {
 }
 
 .post-creator-container {
-    width: 600px;
+    width: 500px;
     margin: auto;
 }
 
@@ -147,10 +149,71 @@ input.post-title-input {
     font-size: x-large;
     font-family: arial;
     margin-top: 30px;
+    padding-left: 15px;
 }
 
 textarea.post-body-input {
     margin-top: 15px;
-    width: 601px;
+    width: 502px;
     height: 85px;
+    padding-left: 15px;
+    font-size: large;
+    color: rgb(90, 88, 88);
+    padding-top: 15px;
+}
+
+.button-holder {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    width: 100%;
+    margin-top: 15px;
+}
+
+h3.button-holder {
+    width: 460px;
+    border: 1px solid lightgrey;
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+  }
+
+  button.post-button {
+    display: block;
+    border: 2px solid #c73a3a;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    line-height: 17px;
+    width: 130px;
+    background-color: rgb(218, 53, 53);
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  input.new-post-button {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+form.post-form {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.picture-shown {
+    border: 1px solid lightgrey;
+    // margin-bottom: 20px;
 }

@@ -66,7 +66,7 @@ class PostForm extends React.Component {
   }
 
   render() {
-    const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
+    const preview = this.state.photoUrl ? <img src={this.state.photoUrl} height="200px" width="200px" /> : null;
 
     return (
       <div >
@@ -98,8 +98,8 @@ class PostForm extends React.Component {
           <button className="post-button">Create Post</button>
           </div>
           </div>
+          <Link to="/">Go Back</Link>
         </form>
-      <Link to="/">Delete Post</Link>
       </div>
     );
   }

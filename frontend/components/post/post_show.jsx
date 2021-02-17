@@ -47,7 +47,7 @@ render() {
 
         <li className="post-body">{this.props.post.body}</li>
         {/* <li><img src={this.props.post.photo}/></li> */}
-        {insertPhoto}
+        <div className="picture-shown">{insertPhoto}</div>
         {canEditPost}
 
 
