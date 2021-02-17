@@ -1,9 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EditNavBar from "../greeting/edit_navbar"
-
-// import GreetingContainer from "../greeting/greeting_container";
 
 class PostEditForm extends React.Component {
   constructor(props) {
@@ -12,7 +10,6 @@ class PostEditForm extends React.Component {
       title: this.props.post.title,
       body: this.props.post.body,
       id: this.props.post.id,
-      // photo: this.props.post.photo,
       photoFile: null,
       photoUrl: null,
     };
@@ -39,8 +36,6 @@ class PostEditForm extends React.Component {
     formData.append('post[title]', this.state.title);
     formData.append('post[body]', this.state.body);
     formData.append('post[id]', this.state.id);
-    // formData.append('post[photo]', this.state.photo);
-
 
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
@@ -58,7 +53,6 @@ class PostEditForm extends React.Component {
   }
 
   renderErrors() {
-    // debugger
     return this.props.errors.map(error => {
       return (
       <li className="error" key={error}>

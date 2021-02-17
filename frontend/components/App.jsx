@@ -11,15 +11,14 @@ class App extends React.Component {
 
     return (
         <Switch>
-         <Route exact path="/" component={SignIn } />
-         <ProtectedRoute exact path="/add-new-post" component={PostFormContainer} />
-         <Route exact path="/:postId" component={PostShowContainer} />
-         <ProtectedRoute exact path="/:postId/edit" component={PostEditContainer} />
-         <Route render={() => (<Redirect to="/" />)}/>
+          <Route exact path="/" component={SignIn } />
+          <ProtectedRoute exact path="/add-new-post" component={PostFormContainer} />
+          <Route exact path="/:postId" component={PostShowContainer} />
+          <ProtectedRoute exact path="/:postId/edit" component={PostEditContainer} />
+          <Route render={() => (<Redirect to="/" />)}/>
         </Switch>
     )
   }
-
 }
 
 export default App;
