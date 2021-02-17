@@ -9,7 +9,9 @@ import PostIndexContainer from "../post/post_index_container"
 const signin = () => (
     <div>
       <Modal />
-      <header className="panda-header"></header>
+      <header className="panda-header">
+        <div className="panda-laptop"></div>
+      </header>
       <header>
         <div className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
@@ -18,6 +20,7 @@ const signin = () => (
         <GreetingContainer/>
         </div>
       </header>
+      <div className="line-break"></div>
       <PostIndexContainer/>
 
     </div>

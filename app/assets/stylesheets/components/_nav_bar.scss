@@ -33,11 +33,10 @@ header {
     justify-content: space-between;
     margin-left: 250px;
     margin-right: 250px;
-    margin-top: 10px;
     background-color: white;
     max-width: 1000px;
     margin: auto;
-    margin-bottom: 15px;
+    padding-top: 10px;
 }
 
 .login-signup, .header-button {
@@ -163,4 +162,21 @@ header {
   height: 199px;
   background-size: cover;
   max-width: none;
+}
+
+.panda-laptop {
+  background: url("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/header-panda-new.svg") no-repeat;
+  background-size: contain;
+  display: block;
+  width: 220px;
+  height: 119px;
+  position: absolute;
+  top: 80px;
+  left: 320px
+}
+
+.line-break {
+  height: 30px;
+  background-color: black;
+  margin-bottom: 25px;  ;
 }

@@ -42,9 +42,10 @@ render() {
 
       <div className="post-details">
         <ul>
-        <li className="post-author">{this.props.post.author.name}, {this.props.post.author.email}</li>
-      <li className="post-title">{this.props.post.title}</li>
-        <li>{this.props.post.body}</li>
+        <li className="post-title">{this.props.post.title}</li>
+
+        <li className="post-author">By: {this.props.post.author.name}, {this.props.post.author.email}</li>
+        <li className="post-body">{this.props.post.body}</li>
         {/* <li><img src={this.props.post.photo}/></li> */}
         {insertPhoto}
 

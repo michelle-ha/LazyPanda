@@ -7,13 +7,19 @@ import GreetingContainer from "./greeting_container";
 const navBar = () => (
     <div>
       <Modal />
-      <header className="panda-header"></header>
-      <header>
-        <h1 className="logo">
-          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-        </h1>
-        <GreetingContainer/>
+      <header className="panda-header">
+        <div className="panda-laptop"></div>
       </header>
+
+      <header>
+        <div className="logo">
+          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
+        </div>
+        <div className="form-buttons">
+        <GreetingContainer/>
+        </div>
+      </header>
+      <div className="line-break"></div>
     </div>
   )
 
