@@ -100,7 +100,7 @@ class PostEditForm extends React.Component {
       <button className="post-button">Edit Post</button>
       </div>
     </div>
-    <Link to="/" className="go-back">Go Back</Link>
+    <div className="go-back-link"><Link to="/" className="go-back">Go Back</Link></div>
     </form>
   </div>
   );

@@ -135,6 +135,7 @@ button {
     background-color: #fafafa;
     border: 1px solid lightgray;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .post-creator-container {
@@ -232,4 +233,13 @@ li.error {
     font-weight: bold;
     font-family: arial;
     font-size: large;
+}
+
+a.go-back {
+    font-size: large;
+}
+
+.go-back-link {
+    padding-bottom: 15px;
+    font-size: medium;
 }
