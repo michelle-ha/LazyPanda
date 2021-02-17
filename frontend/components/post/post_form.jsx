@@ -1,10 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
-import logo from "../../../app/assets/images/PngItem_2512217.png"
-import GreetingContainer from "../greeting/greeting_container";
-import NavBar from "../greeting/navbar"
 import EditNavBar from "../greeting/edit_navbar"
 
 
@@ -72,10 +68,10 @@ class PostForm extends React.Component {
 
     return (
       <div >
-        <div className="errors">{this.renderErrors()}</div>
-        <form className="post-form" onSubmit={ this.handleSubmit }>
         <EditNavBar/>
+        <form className="post-form" onSubmit={ this.handleSubmit }>
           <div className="post-creator">
+          <div className="errors">{this.renderErrors()}</div>
             <div className="post-creator-container">
             <input type="string"
                 value={this.state.title}

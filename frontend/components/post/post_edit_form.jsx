@@ -75,10 +75,10 @@ class PostEditForm extends React.Component {
   return (
 
     <div >
-    <div className="errors">{this.renderErrors()}</div>
+    <EditNavBar/>
     <form className="post-form" onSubmit={ this.handleSubmit }>
-      <EditNavBar/>
       <div className="post-creator">
+        <div className="errors">{this.renderErrors()}</div>
         <div className="post-creator-container">
         <input type="string"
             value={this.state.title}
