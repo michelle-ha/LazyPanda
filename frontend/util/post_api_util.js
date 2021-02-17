@@ -22,15 +22,15 @@ export const fetchPosts = () => (
     })
   };
   
-  export const updatePost = post => (
-    $.ajax({
+  export const updatePost = post => {
+    return $.ajax({
       method: 'PATCH',
       url: `/api/posts/${post.get['post[id]']}`,
       data: post,
       contentType: false,
       processData: false
     })
-  );
+  };
   
   export const destroyPost = postid => (
     $.ajax({

@@ -40,16 +40,11 @@ export const createPost = post => dispatch => (
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-// export const updatePost = post => dispatch => (
-//   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
-// ); //want errors here, too?
-
 export const updatePost = post => dispatch => (
-  PostAPIUtil.createPost(post)
-  .then(post => { dispatch(updatePost(post)); dispatch(clearErrors())},
+  PostAPIUtil.updatePost(post)
+  .then(post => { dispatch(receivePost(post)); dispatch(clearErrors())},
   err => dispatch(receiveErrors(err.responseJSON)))
 );
-
 
 export const deletePost = postId => dispatch => (
   PostAPIUtil.destroyPost(postId).then(() => dispatch(removePost(post)))
