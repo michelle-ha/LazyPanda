@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
-import NavBar from "../greeting/navbar"
+import EditNavBar from "../greeting/edit_navbar"
 
 // import GreetingContainer from "../greeting/greeting_container";
 
@@ -77,9 +77,7 @@ class PostEditForm extends React.Component {
       <div >
       {/* <div className="errors">{this.renderErrors()}</div> */}
       <form className="post-form" onSubmit={ this.handleSubmit }>
-      <h1 className="logo">
-        <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-      </h1>
+      <EditNavBar/>
         <div className="post-creator">
           <div className="post-creator-container">
           <input type="string"
@@ -102,7 +100,7 @@ class PostEditForm extends React.Component {
         <button className="post-button">Edit Post</button>
         </div>
         </div>
-        <Link to="/">Go Back</Link>
+        <Link to="/" className="go-back">Go Back</Link>
       </form>
     </div>
   );

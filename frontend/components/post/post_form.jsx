@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import GreetingContainer from "../greeting/greeting_container";
 import NavBar from "../greeting/navbar"
+import EditNavBar from "../greeting/edit_navbar"
+
 
 
 
@@ -72,9 +74,7 @@ class PostForm extends React.Component {
       <div >
         <div className="errors">{this.renderErrors()}</div>
         <form className="post-form" onSubmit={ this.handleSubmit }>
-        <h1 className="logo">
-          <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-        </h1>
+        <EditNavBar/>
           <div className="post-creator">
             <div className="post-creator-container">
             <input type="string"
@@ -98,7 +98,7 @@ class PostForm extends React.Component {
           <button className="post-button">Create Post</button>
           </div>
           </div>
-          <Link to="/">Go Back</Link>
+          <Link to="/" className="go-back">Go Back</Link>
         </form>
       </div>
     );

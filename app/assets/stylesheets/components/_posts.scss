@@ -217,3 +217,11 @@ form.post-form {
     border: 1px solid lightgrey;
     // margin-bottom: 20px;
 }
+
+.go-back {
+    margin-bottom: 10px;
+}
+.go-back:hover {
+    color: red;
+    cursor: pointer;
+}
