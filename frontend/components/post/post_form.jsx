@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import GreetingContainer from "../greeting/greeting_container";
+import NavBar from "../greeting/navbar"
 
 
 
@@ -68,41 +69,36 @@ class PostForm extends React.Component {
     const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
 
     return (
-        <div>
-
-      <div className="errors">{this.renderErrors()}</div>
-
-      <form className="post-form" onSubmit={ this.handleSubmit }>
-      <h1 className="logo">
+      <div >
+        <div className="errors">{this.renderErrors()}</div>
+        <form className="post-form" onSubmit={ this.handleSubmit }>
+        <h1 className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-          <GreetingContainer/>
         </h1>
-        <div className="button-holder">
-              <h3>Image preview </h3>
-              {preview}
-              <h3 className="button-holder">Add a Picture</h3>
-              <input type="file" className="new-post-button"
-                onChange={this.handleFile.bind(this)}/>
-            </div>
-        <h1>New Post</h1>
-          <label>Title:
+          <div className="post-creator">
+            <div className="post-creator-container">
             <input type="string"
                 value={this.state.title}
                 placeholder="Post title..."
                 onChange={this.update('title')}
                 className="post-title-input"
               />
-          </label>
-          <label>Body:
             <textarea
               value={ this.state.body }
               placeholder="Tell us your story here..."
               onChange={ this.update('body') }
               className="post-body-input"
               ></textarea>
-          </label>
+            <div className="button-holder">
+              {preview}
+              <h3 className="button-holder">Upload photo</h3>
+              <input type="file" className="new-post-button"
+                onChange={this.handleFile.bind(this)}/>
+            </div>
           <button className="post-button">Create Post</button>
-      </form>
+          </div>
+          </div>
+        </form>
       <Link to="/">Delete Post</Link>
       </div>
     );
