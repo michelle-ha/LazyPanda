@@ -7,8 +7,6 @@ import NavBar from "../greeting/navbar"
 
 // import GreetingContainer from "../greeting/greeting_container";
 
-
-
 class PostEditForm extends React.Component {
   constructor(props) {
     super(props);
@@ -75,38 +73,40 @@ class PostEditForm extends React.Component {
     const preview = this.state.photoUrl ? <img height="200px" width="200px" src={this.state.photoUrl} /> : null;
 
     return (
-        <div>
+
+      <div >
       {/* <div className="errors">{this.renderErrors()}</div> */}
-
       <form className="post-form" onSubmit={ this.handleSubmit }>
-      <NavBar/>
-
-        <h1>Edit Post</h1>
-        {preview}
-        <input type="file"
-               onChange={this.handleFile}/>
-          <label>Title:
-            <input type="string"
-                value={this.state.title}
-                onChange={this.update('title')}
-                className="post-title-input"
-              />
-          </label>
-          <label>Body:
-            <textarea
-              value={ this.state.body }
-              onChange={ this.update('body') }
-              className="post-body-input"
-              ></textarea>
-          </label>
-          <button className="post-button">Edit Post</button>
-
-
+      <h1 className="logo">
+        <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
+      </h1>
+        <div className="post-creator">
+          <div className="post-creator-container">
+          <input type="string"
+              value={this.state.title}
+              onChange={this.update('title')}
+              className="post-title-input"
+            />
+          <textarea
+            value={ this.state.body }
+            onChange={ this.update('body') }
+            className="post-body-input"
+            ></textarea>
+          <div className="button-holder">
+            {preview}
+            <h3 className="button-holder">Upload photo</h3>
+            <input type="file" className="new-post-button"
+              value={ this.state.photo }
+              onChange={this.handleFile.bind(this)}/>
+          </div>
+        <button className="post-button">Edit Post</button>
+        </div>
+        </div>
+        <Link to="/">Go Back</Link>
       </form>
-      <Link to="/">Go back</Link>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 }
 
 export default withRouter(PostEditForm);
