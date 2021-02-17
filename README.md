@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ...
 
+heroku run rake db:migrate
 heroku run rake db:seed
 git push heroku master
 <!-- 

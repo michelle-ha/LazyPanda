@@ -136,3 +136,20 @@ header {
 //     }
 //   }
 
+// .panda-header {
+//   background-image: url("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/panda+header.png");
+//   width: 100%;
+//   height: 100%;
+//   background-size: auto;
+//   height: auto
+
+// }
+
+.panda-header {
+  height: auto;
+  width: 1000000px
+}
+
+img.panda-header {
+  max-width: none;
+}

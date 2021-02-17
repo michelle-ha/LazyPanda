@@ -9,6 +9,13 @@ import PostIndexContainer from "../post/post_index_container"
 const signin = () => (
     <div>
       <Modal />
+      <header className="panda-header">
+      <img className="panda-header" src="https://lazypanda-seeds.s3-us-west-1.amazonaws.com/panda+header.png"/>
+      <img className="panda-reading" src="https://lazypanda-seeds.s3-us-west-1.amazonaws.com/header-panda-new.svg"/>
+      </header>
+      
+
+
       <header>
         <h1 className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
