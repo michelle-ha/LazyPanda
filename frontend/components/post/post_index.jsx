@@ -6,15 +6,7 @@ class PostIndex extends React.Component {
     this.props.requestPosts();
   }
 
-
-
   render() {
-    // if (!users) return null
-
-    // if (Object.keys(this.props.users).length < 2) {
-    //   return null
-    // }
-// debugger
     const users = this.props.users;
 
     const postIndexItems = this.props.posts.map(post => (
