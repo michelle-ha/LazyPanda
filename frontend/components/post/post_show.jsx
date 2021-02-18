@@ -37,7 +37,7 @@ class PostShow extends React.Component {
         <div className="post-details">
           <ul>
             <li className="post-title">{this.props.post.title}</li>
-            {/* <li className="post-author">By: {this.props.post.user.name}, {this.props.post.author.email}</li> */}
+            {/* <li className="post-author">By: {this.props.user.name}, {this.props.user.email}</li> */}
             <li className="post-body">{this.props.post.body}</li>
             <div className="picture-shown">{insertPhoto}</div>
             {canEditPost}
