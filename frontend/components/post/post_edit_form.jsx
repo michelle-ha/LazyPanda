@@ -13,13 +13,16 @@ class PostEditForm extends React.Component {
       photoFile: null,
       photoUrl: null,
       author_id: this.props.post.author_id,
-
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
 
   }
+
+  // componentDidMount() {
+  //   this.props.fetchPost(this.props.match.params.postId); 
+  // }
 
 
   handleFile(e) {

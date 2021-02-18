@@ -26,7 +26,7 @@ class PostIndexItem extends React.Component {
       )
     }
     // debugger
-    if (this.props.user === undefined) debugger
+    // if (this.props.user === undefined) debugger
     return (
       <div
         className="post-index-item"

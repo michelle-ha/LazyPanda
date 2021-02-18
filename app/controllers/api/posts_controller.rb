@@ -18,7 +18,7 @@ def create
   @post.author_id = current_user.id
   if @post.save
     # render json: @post
-    render :show
+    render json: @post
   else
     render json: @post.errors.full_messages, status: 422
   end
@@ -27,13 +27,13 @@ end
 def destroy
   @post = Post.find(params[:id])
   @post.destroy
-  render json: :show
+  render json: @post
 end
 
 def update
   @post = Post.find(params[:post][:id])
   if @post.update(post_params)
-    render json: :show
+    render json: @post
   else
     render json: @post.errors.full_messages, status: 422
   end
