@@ -14,6 +14,7 @@ class PostForm extends React.Component {
       body: "",
       photoFile: null,
       photoUrl: null,
+      creator_id: this.props.currentUserId,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,6 +38,8 @@ class PostForm extends React.Component {
     const formData = new FormData();
     formData.append('post[title]', this.state.title);
     formData.append('post[body]', this.state.body);
+    formData.append('post[author_id]', this.state.author_id)
+
 
     if (this.state.photoFile) {
       formData.append('post[photo]', this.state.photoFile);
@@ -62,6 +65,10 @@ class PostForm extends React.Component {
     );
   });
   }
+
+  componentWillUnmount() {
+    this.props.clearErrors()
+}
 
   render() {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} height="200px" width="200px" /> : null;

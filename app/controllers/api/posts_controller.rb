@@ -27,13 +27,13 @@ end
 def destroy
   @post = Post.find(params[:id])
   @post.destroy
-  render json: @posts
+  render json: :show
 end
 
 def update
   @post = Post.find(params[:post][:id])
   if @post.update(post_params)
-    render json: @post
+    render json: :show
   else
     render json: @post.errors.full_messages, status: 422
   end

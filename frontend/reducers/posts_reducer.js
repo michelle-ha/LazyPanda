@@ -6,17 +6,17 @@ import {
   
   const postsReducer = (state = {}, action) => {
     Object.freeze(state);
-    let nextState;
+    let nextState = Object.assign({}, state);
   
     switch(action.type){
       case RECEIVE_POSTS:
-        return action.posts;
+        return action.payload.posts;
       case RECEIVE_POST:
-        const newPost = { [action.post.id]: action.post };
-        return Object.assign({}, state, newPost);
+        nextState[action.post.id] = action.post;
+        return Object.assign({}, state, nextState);
       case REMOVE_POST:
         nextState = Object.assign({}, state);
-        delete nextState[action.post.id];
+        delete nextState[action.postId];
         return nextState;
       default:
         return state;

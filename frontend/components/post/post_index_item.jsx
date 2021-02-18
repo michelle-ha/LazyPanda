@@ -34,8 +34,7 @@ class PostIndexItem extends React.Component {
           {insertPhoto}
           <div className="index-item-title">{title}</div>
           <div className="index-item-body">{body}</div>
-
-
+          <div className="index-item-author">By: {this.props.user.name}</div>
         </div>
       </div>
     );

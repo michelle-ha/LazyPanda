@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link,  Redirect} from 'react-router-dom';
-// import {deletePost } from '../../actions/post_actions';
-import logo from "../../../app/assets/images/PngItem_2512217.png"
-import { NavLink } from 'react-router-dom';
-// import GreetingContainer from "../greeting/greeting_container";
 import NavBar from "../greeting/navbar"
 
 class PostShow extends React.Component {
@@ -11,7 +7,7 @@ class PostShow extends React.Component {
   super(props); }
 
   componentDidMount() {
-    this.props.fetchPost(); 
+    this.props.fetchPost(this.props.match.params.postId); 
   }
 
   render() {
@@ -41,7 +37,7 @@ class PostShow extends React.Component {
         <div className="post-details">
           <ul>
             <li className="post-title">{this.props.post.title}</li>
-            <li className="post-author">By: {this.props.post.author.name}, {this.props.post.author.email}</li>
+            {/* <li className="post-author">By: {this.props.post.user.name}, {this.props.post.author.email}</li> */}
             <li className="post-body">{this.props.post.body}</li>
             <div className="picture-shown">{insertPhoto}</div>
             {canEditPost}
