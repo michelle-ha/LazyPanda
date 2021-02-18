@@ -9,6 +9,10 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: :Post
 
+    has_many :subposts,
+        foreign_key: :author_id,
+        class_name: :Subpost
+
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)

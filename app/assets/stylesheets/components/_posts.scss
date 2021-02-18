@@ -203,6 +203,12 @@ img {
     margin-bottom: 15px;
   }
 
+  button.post-button:hover {
+    font-weight: bold;
+    background-color: #f12121
+
+}
+
   input.new-post-button {
     padding-top: 10px;
     padding-left: 10px;

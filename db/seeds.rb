@@ -11,6 +11,7 @@ require 'open-uri'
 
 User.delete_all
 Post.delete_all
+Subpost.delete_all
 
 u1 = User.create!(
   name: 'Demo User',
@@ -69,3 +70,27 @@ p4 = Post.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Cat+Meme+Netflix+Funny+1000x666.png')
 
 p4.photo.attach(io: file, filename: 'Cat+Meme+Netflix+Funny+1000x666.png')
+
+s1 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p1.id, 
+  title: "Take a look!"
+)
+
+s2 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p2.id, 
+  title: "Nom nom nom!"
+)
+
+s3 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p3.id, 
+  title: "Can't help but laugh"
+)
+
+s4 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p4.id, 
+  title: "Brings back the old days :)"
+)
