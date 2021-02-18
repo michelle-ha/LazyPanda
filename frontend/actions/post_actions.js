@@ -11,9 +11,9 @@ export const receivePosts = payload => ({
   payload
 });
 
-export const receivePost = post => ({
+export const receivePost = payload => ({
   type: RECEIVE_POST,
-  post
+  payload
 });
 
 export const removePost = postId => ({

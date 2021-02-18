@@ -4,23 +4,23 @@ import PostEditForm from './post_edit_form';
 import { fetchPost, updatePost } from '../../actions/post_actions';
 import {clearErrors} from "../../actions/error_actions"
 
-// class EditPostForm extends React.Component {
-//     componentDidMount() {
-//       this.props.fetchPost(this.props.match.params.postId); 
-//     }
+class EditPostForm extends React.Component {
+    // componentDidMount() {
+    //   this.props.fetchPost(this.props.match.params.postId); 
+    // }
    
-//   render() {
-//       const { post, updatePost, errors } = this.props;
+  render() {
+      const { post, updatePost, errors } = this.props;
    
-//       if (!post) return null;
-//       return (
-//         <PostEditForm
-//           post={post} 
-//           updatePost={updatePost}
-//           errors = {errors}/>
-//       );
-//     }
-//   }
+      if (!post) return null;
+      return (
+        <PostEditForm
+          post={post} 
+          updatePost={updatePost}
+          errors = {errors}/>
+      );
+    }
+  }
    
   const mapStateToProps = (state, ownProps) => ({ 
     // post: state.entities.posts[ownProps.match.params.postId],
@@ -35,4 +35,4 @@ import {clearErrors} from "../../actions/error_actions"
 
   });
    
-  export default connect(mapStateToProps, mapDispatchToProps)(PostEditForm);
+  export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);

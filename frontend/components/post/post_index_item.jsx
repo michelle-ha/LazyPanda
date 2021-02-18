@@ -25,11 +25,12 @@ class PostIndexItem extends React.Component {
         <div className="index-item-photo"><img src={photo}/></div>
       )
     }
+    // debugger
+    if (this.props.user === undefined) debugger
     return (
       <div
         className="post-index-item"
-        onClick={this.handleClick}
-      >
+        onClick={this.handleClick}>
         <div className="index-item-info">
           {insertPhoto}
           <div className="index-item-title">{title}</div>

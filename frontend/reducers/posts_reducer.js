@@ -12,8 +12,8 @@ import {
       case RECEIVE_POSTS:
         return action.payload.posts;
       case RECEIVE_POST:
-        nextState[action.post.id] = action.post;
-        return Object.assign({}, state, nextState);
+        nextState[action.payload.post.id] = action.payload.post;
+        return nextState
       case REMOVE_POST:
         nextState = Object.assign({}, state);
         delete nextState[action.postId];

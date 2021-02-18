@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from "../modal/modal";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import logo from "../../../app/assets/images/PngItem_2512217.png"
 import GreetingContainer from "./greeting_container";
 

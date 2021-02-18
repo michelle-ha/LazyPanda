@@ -21,6 +21,7 @@ class PostEditForm extends React.Component {
 
   }
 
+
   handleFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
