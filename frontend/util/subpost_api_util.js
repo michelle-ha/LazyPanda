@@ -1,6 +1,6 @@
 export const createSubpost = subpost => {
     return $.ajax({
-        url: '/api/subposts',
+        url: `api/posts/${subpost.post_id}/subposts`,
         method: "POST",
         // data: { subpost }
         data: {subpost},
@@ -9,9 +9,9 @@ export const createSubpost = subpost => {
     })
 }
 
-export const deleteSubpost = subpostId => {
+export const deleteSubpost = subpost => {
     return $.ajax({
-        url: `/api/subposts/${subpostId}`,
+        url: `/api/posts/${subpost.post_id}/subposts/${subpost}`,
         method: "DELETE"
     })
 }

@@ -6,6 +6,8 @@ class SubpostForm extends React.Component {
 
         this.state = {
             title: '',
+            author_id: this.props.currentUserId,
+            post_id: this.props.postId
             //add pics later
             // photoFile: null,
             // photoUrl: null,
@@ -24,14 +26,14 @@ class SubpostForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.createSubpost(this.state)
-            .then(() => this.props.fetchPost(this.props.postId))
-            .then(() => {
-                this.setState({
-                    title: '',
-                    post_id: this.props.postId
-                })
-            })
+        this.props.processPost(this.state)
+            // .then(() => this.props.fetchPost(this.props.postId))
+            // .then(() => {
+            //     this.setState({
+            //         title: '',
+            //         post_id: this.props.postId
+            //     })
+            // })
     }
 
     renderErrors() {

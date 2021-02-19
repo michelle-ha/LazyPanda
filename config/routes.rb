@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
-    resources :posts
-    resources :subposts, only: [:create, :destroy]
+    resources :posts do 
+      resources :subposts, only: [:create, :destroy]
+    end
   end
   
   root "static_pages#root"

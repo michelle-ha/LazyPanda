@@ -11,14 +11,14 @@ const mapStateToProps = (state, ownProps) => {
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],
         subposts: state.entities.subposts,
-        postId: ownProps.postId,
+        // postId: ownProps.match.params.postId,
         errors: state.errors.post
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        createSubpost: subpost => dispatch(createSubpost(subpost)),
+        processPost: subpost => dispatch(createSubpost(subpost)),
         fetchPost: postId => dispatch(fetchPost(postId)),
         clearErrors: () => dispatch(clearErrors()),
         openModal: () => dispatch(openModal('login'))
