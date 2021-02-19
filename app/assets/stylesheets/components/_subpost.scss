@@ -1,0 +1,44 @@
+.subpost-form {
+    max-width: 700px;
+    border: 1px solid lightgray;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.subpost-title-input {
+    background: 0 0;
+    font-family: Merriweather,serif;
+    font-weight: 700;
+    font-size: 2.3em;
+    line-height: 1.2;
+    padding: 12px .781em .125em .781em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: auto;
+    text-align: left;
+    font-weight: bold;
+    width: 91%
+}
+
+.sub-button-holder {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.sub-post-signin {
+    width: 40%;
+    height: 35px;
+    background-color: #d41b1b;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid darkred;
+    border-radius: 6px;
+    margin-top: 1px;
+}
+
+.sub-post-signin:hover {
+    background-color: #f12121
+}

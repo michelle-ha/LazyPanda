@@ -74,7 +74,7 @@ class SubpostForm extends React.Component {
     render() {
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} height="200px" width="200px" /> : null;
         return (
-            <div>
+            <div className="subpost-form">
                 <form onSubmit={this.handleSubmit}>
                     <input type="string"
                     value={this.state.title}
@@ -83,10 +83,10 @@ class SubpostForm extends React.Component {
                     className="subpost-title-input"
                 />
 
-            <div className="button-holder">
+            <div className="subpost-form">
               {preview}
-              <h3 className="button-holder">Upload photo</h3>
-              <input type="file" className="new-post-button"
+              <h3 className="sub-button-holder">Upload photo</h3>
+              <input type="file" className="sub-post-button"
                 onChange={this.handleFile.bind(this)}/>
             </div> 
                 {this.props.currentUser ?
@@ -94,7 +94,7 @@ class SubpostForm extends React.Component {
                             <input type="submit" value="Write a response" />
                         </div>)
                     : (<div>
-                        <button onClick={() => this.props.openModal()}>Sign in to write a Response </button>
+                        <button className= "sub-post-signin" onClick={() => this.props.openModal()}>Sign in to write a Response </button>
                     </div>)}
                 </form>
             </div>
