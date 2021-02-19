@@ -1,28 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/PngItem_2512217.png "Lazy Panda Logo")
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-<!-- heroku run rake db:migrate
-heroku run rake db:seed
-git push heroku master -->
