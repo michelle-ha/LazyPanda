@@ -18,7 +18,6 @@ const removeSubpost = subpostId => {
     }
 }
 
-
 export const createSubpost = subpost => dispatch => (
     SubpostAPIUtil.createSubpost(subpost)
       .then(subpost => { dispatch(receiveSubpost(subpost)); dispatch(clearErrors())},

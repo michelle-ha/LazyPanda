@@ -2,8 +2,10 @@ export const createSubpost = subpost => {
     return $.ajax({
         url: '/api/subposts',
         method: "POST",
-        data: { subpost }
-        //change later when we want to add pics
+        // data: { subpost }
+        data: {subpost},
+        // contentType: false,
+        // processData: false
     })
 }
 

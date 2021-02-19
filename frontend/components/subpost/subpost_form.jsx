@@ -7,7 +7,9 @@ class SubpostForm extends React.Component {
         this.state = {
             title: '',
             //add pics later
-            post_id: this.props.postId
+            // photoFile: null,
+            // photoUrl: null,
+            // creator_id: this.props.currentUserId,
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -57,9 +59,6 @@ class SubpostForm extends React.Component {
                     onChange={this.update('title')}
                     className="subpost-title-input"
                 />
-
-                {/* <input type="submit" value="Write a response" /> */}
-
                 {this.props.currentUser ?
                         (<div>
                             <input type="submit" value="Write a response" />
@@ -67,7 +66,6 @@ class SubpostForm extends React.Component {
                     : (<div>
                         <button onClick={() => this.props.openModal()}>Sign in to write a Response </button>
                     </div>)}
-                    {/* <input type="submit" value="Write a response" /> */}
                 </form>
             </div>
         )

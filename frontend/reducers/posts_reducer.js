@@ -12,12 +12,7 @@ import {
       case RECEIVE_POSTS:
         return action.payload.posts;
       case RECEIVE_POST:
-        // if (action.payload.post.id) {
-          nextState[action.payload.post.id] = action.payload.post;
-        //   } else {
-        //     nextState[action.payload.id] = action.payload;
-        //   }
-        // nextState[action.payload.id] = action.payload;
+          nextState[action.post.post.id] = action.post.post;
         return nextState
       case REMOVE_POST:
         delete nextState[action.postId];

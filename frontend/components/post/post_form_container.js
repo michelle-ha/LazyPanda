@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import PostForm from './post_form';
 import { createPost, fetchPost } from '../../actions/post_actions';
 import {clearErrors} from "../../actions/error_actions"
-import {openModal} from '../../actions/modal_actions'
 
 
 const mapStateToProps = state => {
