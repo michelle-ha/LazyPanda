@@ -3,9 +3,9 @@ export const createSubpost = subpost => {
         url: `api/posts/${subpost.post_id}/subposts`,
         method: "POST",
         // data: { subpost }
-        data: {subpost},
-        // contentType: false,
-        // processData: false
+        data: subpost,
+        contentType: false,
+        processData: false
     })
 }
 
