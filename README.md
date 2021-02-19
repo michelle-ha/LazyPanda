@@ -26,5 +26,7 @@ Registered users are able to create their own posts in order to start up a new t
 
 ![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/createPost.png "Create Post Screenshot")
 
+In order for the "Add Post" button to only permit registered users to access the form page, a conditional was made in which the button action changed in regards to if the user was logged in or not. If the user was not, the login modal will appear on the screen. If the user was, they would be re-directed to another page. 
+
 
 
