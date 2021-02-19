@@ -24,5 +24,3 @@ class Api::SubpostsController < ApplicationController
       params.require(:subpost).permit(:title, :post_id)
     end
   end
-
-end
