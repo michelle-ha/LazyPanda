@@ -32,8 +32,6 @@ class PostShow extends React.Component {
         )
     }
 
-    
-
     return(
       <div className="single-post-show">
         <NavBar/>

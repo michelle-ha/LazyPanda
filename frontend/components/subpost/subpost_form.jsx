@@ -59,17 +59,6 @@ class SubpostForm extends React.Component {
             // })
     }
 
-    // renderErrors() {
-
-    //     return this.props.errors.map(error => {
-    //       return (
-    //       <li className="error" key={error}>
-    //         {error}
-    //       </li>
-    //       );
-    //     });
-    //     }
-      
 
     render() {
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} height="200px" width="200px" /> : null;
