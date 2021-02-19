@@ -10,6 +10,8 @@ class SubpostShow extends React.Component {
                     <ul>
                         <li> {subpost.author}</li>
                         <li>{subpost.title}</li>
+                        <li><img src={subpost.photo}/></li>
+
                     </ul>
                     {this.props.currentUserId === subpost.author_id ?
                         (<div>

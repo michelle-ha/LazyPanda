@@ -49,7 +49,7 @@ class PostShow extends React.Component {
         </div>
 
         <SubpostFormContainer
-          postId={this.props.post.id}
+          // postId={this.props.post.id}
         />
         <SubpostShowContainer/>
 

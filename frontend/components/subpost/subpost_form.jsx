@@ -83,12 +83,12 @@ class SubpostForm extends React.Component {
                     className="subpost-title-input"
                 />
 
-            {/* <div className="button-holder">
+            <div className="button-holder">
               {preview}
               <h3 className="button-holder">Upload photo</h3>
               <input type="file" className="new-post-button"
                 onChange={this.handleFile.bind(this)}/>
-            </div> */}
+            </div> 
                 {this.props.currentUser ?
                         (<div>
                             <input type="submit" value="Write a response" />
