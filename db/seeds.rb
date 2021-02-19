@@ -71,6 +71,36 @@ file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Cat+Meme+Netflix
 
 p4.photo.attach(io: file, filename: 'Cat+Meme+Netflix+Funny+1000x666.png')
 
+p5 = Post.create!(
+  author_id: u3.id,
+  title: "Advertising Fails",
+  body: "We all know that sometimes companies just fail to deliver."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/advertising+fails.jpg')
+
+p5.photo.attach(io: file, filename: 'advertising+fails.jpg')
+
+p6 = Post.create!(
+  author_id: u2.id,
+  title: "Creepy pop-culture character remakes",
+  body: "I can never look at them the same"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/creepy-pop-culture-character-remakes-wil-hughes-coverimage.jpg')
+
+p6.photo.attach(io: file, filename: 'creepy-pop-culture-character-remakes-wil-hughes-coverimage.jpg')
+
+p7 = Post.create!(
+  author_id: u2.id,
+  title: "Makeup can do anything",
+  body: "You will soon wonder what someone will look like without makeup on"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/makeup+wonders.jpg')
+
+p7.photo.attach(io: file, filename: 'makeup+wonders.jpg')
+
 s1 = Subpost.create!(
   author_id: u1.id, 
   post_id: p1.id, 
