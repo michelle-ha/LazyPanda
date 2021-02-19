@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link,  Redirect} from 'react-router-dom';
 import NavBar from "../greeting/navbar"
+import SubpostFormContainer from "../subpost/subpost_form_container"
+import SubpostShowContainer from "../subpost/subpost_show_container"
 
 class PostShow extends React.Component {
   constructor(props) {
   super(props); }
 
   componentDidMount() {
-    this.props.fetchPost(this.props.match.params.postId); 
+    this.props.fetchPost(this.props.match.params.postId)
   }
 
   render() {
@@ -45,6 +47,10 @@ class PostShow extends React.Component {
             {canEditPost}
           </ul>
         </div>
+        <SubpostFormContainer
+          postId={this.props.post.id}
+        />
+        <SubpostShowContainer/>
       </div>
     );
   };

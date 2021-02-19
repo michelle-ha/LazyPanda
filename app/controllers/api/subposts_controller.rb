@@ -4,7 +4,7 @@ class Api::SubpostsController < ApplicationController
 
     def create
       @subpost = Subpost.new(subpost_params)
-      @post.author_id = current_user.id
+      @subpost.author_id = current_user.id
       if @subpost.save
         render :show
       else

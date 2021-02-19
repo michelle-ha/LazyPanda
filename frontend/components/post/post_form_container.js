@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import PostForm from './post_form';
 import { createPost, fetchPost } from '../../actions/post_actions';
 import {clearErrors} from "../../actions/error_actions"
+import {openModal} from '../../actions/modal_actions'
+
 
 const mapStateToProps = state => {
   return {
@@ -15,8 +17,9 @@ const mapStateToProps = state => {
   const mapDispatchToProps = (dispatch) => {
     return({
       createPost: post => dispatch(createPost(post)),
-      fetchPost: postId => dispatch(fetchTrack(postId)),
-      clearErrors: () => dispatch(clearErrors())
+      fetchPost: postId => dispatch(fetchPost(postId)),
+      clearErrors: () => dispatch(clearErrors()),
+
     });
   };
 
