@@ -47,10 +47,12 @@ class PostShow extends React.Component {
             {canEditPost}
           </ul>
         </div>
+
         <SubpostFormContainer
           postId={this.props.post.id}
         />
         <SubpostShowContainer/>
+
       </div>
     );
   };

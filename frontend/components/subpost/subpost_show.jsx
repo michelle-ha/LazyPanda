@@ -3,7 +3,7 @@ import React from 'react';
 class SubpostShow extends React.Component {
 
     render() {
-        let AllSubposts = this.props.postSubposts.map((subpost, idx) => {
+        let AllSubposts = this.props.postSubposts.map((subpost) => {
 
             return (
                 <div key={subpost.id}>

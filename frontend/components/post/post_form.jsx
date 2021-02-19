@@ -14,7 +14,7 @@ class PostForm extends React.Component {
       body: "",
       photoFile: null,
       photoUrl: null,
-      creator_id: this.props.currentUserId,
+      author_id: this.props.currentUserId,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);

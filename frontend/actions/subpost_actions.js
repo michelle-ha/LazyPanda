@@ -20,9 +20,11 @@ const removeSubpost = subpostId => {
 
 export const createSubpost = subpost => dispatch => (
     SubpostAPIUtil.createSubpost(subpost)
-      .then(subpost => { dispatch(receiveSubpost(subpost)); dispatch(clearErrors())},
-        err => dispatch(receiveErrors(err.responseJSON)))
-  );
+      .then(subpost => { dispatch(receiveSubpost(subpost))}
+        // ; dispatch(clearErrors())},
+        // err => dispatch(receiveErrors(err.responseJSON))
+        // )
+  ));
 
   export const deleteSubpost = subpostId => dispatch => (
     SubpostAPIUtil.deleteSubpost(subpostId)
