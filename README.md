@@ -27,6 +27,6 @@ In order for the "Add Post" button to only permit registered users to access the
 ![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/code.png "Code Screenshot")
 
 ## Future Plans
-⋅⋅* Be able to properly render sub-posts to a post's show page
-⋅⋅* Allow users to comment on posts
-⋅⋅* Allow users to vote on posts in order to move them higher up the page
+* Be able to properly render sub-posts to a post's show page
+* Allow users to comment on posts
+* Allow users to vote on posts in order to move them higher up the page
