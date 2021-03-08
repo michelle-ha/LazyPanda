@@ -10,9 +10,9 @@ import {
 
     switch(action.type){
       case RECEIVE_POSTS:
-        return action.payload.posts;
+        return action.posts;
       case RECEIVE_POST:
-          nextState[action.post.post.id] = action.post.post;
+          nextState[action.post.id] = action.post;
         return nextState
       case REMOVE_POST:
         delete nextState[action.postId];
