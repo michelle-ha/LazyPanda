@@ -4,21 +4,21 @@ import {
     REMOVE_POST,
   } from '../actions/post_actions';
   
-  const postsReducer = (state = {}, action) => {
-    Object.freeze(state);
-    let nextState = Object.assign({}, state);
+  const postsReducer = (oldState  = {}, action) => {
+    Object.freeze(oldState );
+    let nextState = Object.assign({}, oldState );
 
     switch(action.type){
       case RECEIVE_POSTS:
-        return action.payload.posts;
+        return action.posts;
       case RECEIVE_POST:
-          nextState[action.post.post.id] = action.post.post;
+          nextState[action.post.id] = action.post;
         return nextState
       case REMOVE_POST:
         delete nextState[action.postId];
         return nextState;
       default:
-        return state;
+        return oldState ;
     }
   };
 

@@ -9,7 +9,7 @@ def index
 end
 
 def show
-  @post = Post.find(params[:id])
+  @post = Post.find_by(id: params[:id])
   render :show
 end
 

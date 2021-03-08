@@ -7,5 +7,5 @@ json.photo url_for(@subpost.photo) if @subpost.photo.attached?
 
 
 json.user do
-  json.partial! '/api/users/user', user: @review.user
+  json.partial! '/api/users/user', user: @subpost.user
 end

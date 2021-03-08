@@ -1,10 +1,10 @@
-json.post do
-  json.partial! '/api/posts/post', post: @post
-end
+# json.post do
+#   json.partial! '/api/posts/post', post: @post
+# end
 
-json.user do
-  json.partial! '/api/users/user', user: @post.user
-end
+# json.user do
+#   json.partial! '/api/users/user', user: @post.user
+# end
 
 json.partial! '/api/posts/post', post: @post
 
@@ -17,6 +17,7 @@ json.partial! '/api/posts/post', post: @post
 
   json.users do
     json.set! subpost.author_id do
-      json.extract! subpost.user, :id, :first_name, :last_name
+      json.extract! subpost.user, :id, :email, :name
     end
   end
+end

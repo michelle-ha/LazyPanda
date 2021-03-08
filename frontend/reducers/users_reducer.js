@@ -1,17 +1,21 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
-import {RECEIVE_POSTS} from "../actions/post_actions"
+// import {RECEIVE_POSTS} from "../actions/post_actions"
+import { RECEIVE_USERS } from '../actions/user_actions'
 
 
-const usersReducer = (state = {}, action) => {
-  Object.freeze(state);
-  switch(action.type) {
+const usersReducer = (oldState = {}, action) => {
+  Object.freeze(oldState)
+  const nextState = Object.assign({}, oldState)
+  switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
-    case RECEIVE_POSTS:
-      return Object.assign({}, action.payload.users, state)
+      return Object.assign({}, oldState, {
+        [action.currentUser.id]: action.currentUser,
+      })
+    case RECEIVE_USERS:
+      return action.users
     default:
-      return state;
+      return oldState
   }
-};
+}
 
 export default usersReducer;
