@@ -24,8 +24,8 @@ def create
 end
 
 def update
-  @post = Post.find(params[:post][:id])
-  if @post.update(post_params)
+  @post = Post.find_by(id: params[:id])
+  if  @post.author_id == current_user.id && @post.update(post_params)
     render :show
   else
     render json: @post.errors.full_messages, status: 422
@@ -33,9 +33,12 @@ def update
 end
 
 def destroy
-  @post = Post.find(params[:id])
-  @post.destroy
-  render json: {}
+  @post = current_user.posts.find_by(id: params[:id])
+  if @post && @post.destroy
+      render :show
+  else
+      render json: ["Post cannot be deleted"], status: 422
+  end
 end
 
 private
