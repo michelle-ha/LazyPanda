@@ -20,7 +20,7 @@ class PostShow extends React.Component {
     if (this.props.currentUser && this.props.currentUser.id === post.author_id) {
       canEditPost = (
         <div className="post-edit-links">
-            <button ><Link to={`/${post.id}/edit`} className="edit-link">Edit</Link> </button>
+            {/* <button ><Link to={`/${post.id}/edit`} className="edit-link">Edit</Link> </button> */}
             <button ><Link to="/" className="delete-link" onClick={() => deletePost(post.id)}>Delete</Link></button>
         </div>
       )
@@ -50,6 +50,8 @@ class PostShow extends React.Component {
           postId={this.props.post.id}
         />
         <SubpostShowContainer/>
+        {/* {this.props.post.subposts.map} */}
+        {/* {this.props.post.users[this.props.post.author_id].name} */}
 
       </div>
     );
