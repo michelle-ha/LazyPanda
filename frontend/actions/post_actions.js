@@ -26,14 +26,14 @@ export const removePost = postId => ({
 
 export const receiveErrors = (errors) => {
   return {
-    type: RECEIVE_REVIEW_ERRORS,
+    type: RECEIVE_POST_ERRORS,
     errors,
   }
 }
 
 export const clearErrors = () => {
   return {
-    type: CLEAR_REVIEW_ERRORS,
+    type: CLEAR_POST_ERRORS,
   }
 }
 
@@ -52,12 +52,12 @@ export const createPost = (post) => (dispatch) => {
   )
 }
 
-export const updatePost = (post) => (dispatch) => {
-  return PostApiUtil.updatePost(post).then(
-    (updatePost) => dispatch(receivePost(updatePost)),
-    (error) => dispatch(receiveErrors(error.responseJSON))
-  )
-}
+// export const updatePost = (post) => (dispatch) => {
+//   return PostApiUtil.updatePost(post).then(
+//     (updatePost) => dispatch(receivePost(updatePost)),
+//     (error) => dispatch(receiveErrors(error.responseJSON))
+//   )
+// }
 
 export const deletePost = (postId) => (dispatch) => {
   return PostApiUtil.deletePost(postId).then(() =>

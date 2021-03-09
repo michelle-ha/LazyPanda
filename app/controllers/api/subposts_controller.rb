@@ -6,6 +6,19 @@ class Api::SubpostsController < ApplicationController
     @subposts = Subpost.all
   end
 
+  def edit
+    @subpost = Subpost.find(params[:id])
+  end
+
+  def update
+      @subpost = Subpost.find_by(id: params[:id])
+      if @subpost.author_id == current_user.id && @subpost.update(subpost_params)
+          render :show
+      else
+          render json: ["Cannot update subpost"]
+      end 
+  end
+
   def create
     @subpost = Subpost.new(subpost_params)
     @subpost.author_id = current_user.id

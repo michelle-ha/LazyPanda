@@ -22,16 +22,16 @@ export const fetchPosts = () => (
     })
   };
   
-  export const updatePost = post => {
-    return $.ajax({
-      method: 'PATCH',
-      // url: `/api/posts/${post.get['post[id]']}`,
-      url: `/api/posts/${post.id}`,
-      data: post,
-      contentType: false,
-      processData: false
-    })
-  };
+  // export const updatePost = post => {
+  //   return $.ajax({
+  //     method: 'PATCH',
+  //     // url: `/api/posts/${post.get['post[id]']}`,
+  //     url: `/api/posts/${post.id}`,
+  //     data: post,
+  //     contentType: false,
+  //     processData: false
+  //   })
+  // };
   
   export const deletePost = postId => (
     $.ajax({
