@@ -5,15 +5,17 @@ import SubpostFormContainer from "../subpost/subpost_form_container"
 import SubpostShowContainer from "../subpost/subpost_show_container"
 
 class PostShow extends React.Component {
-  constructor(props) {
-  super(props); }
+  // constructor(props) {
+  // super(props); }
 
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
+    this.props.fetchSubposts(this.props.match.params.postId)
+    this.props.fetchUsers()
   }
 
   render() {
-    const {post, deletePost} = this.props
+    const {post, deletePost, subposts, users, deleteSubpost} = this.props
 
     if (!post) return (<Redirect to="/" />)
     let canEditPost;
@@ -46,13 +48,22 @@ class PostShow extends React.Component {
           </ul>
         </div>
 
-        <SubpostFormContainer
-          postId={this.props.post.id}
-        />
-        <SubpostShowContainer/>
-        {/* {this.props.post.subposts.map} */}
-        {/* {this.props.post.users[this.props.post.author_id].name} */}
-
+        <div className="subposts-container">
+          <div className="subposts-show-container">Responses</div>
+          {subposts.map((subpost, idx) => {
+            return (
+              <SubpostShowContainer
+                key={idx}
+                subpost={subpost}
+                author={users[subpost.authorId]}
+                deleteSubpost={deleteSubpost}
+              />
+            )
+          })}
+          <SubpostFormContainer
+            postId={this.props.post.id}
+          />
+        </div>
       </div>
     );
   };
