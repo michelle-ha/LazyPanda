@@ -101,11 +101,9 @@ file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/makeup+wonders.j
 
 p7.photo.attach(io: file, filename: 'makeup+wonders.jpg')
 
-s1 = Subpost.create!(
-  author_id: u1.id, 
-  post_id: p1.id, 
-  title: "Take a look!"
-)
+
+s1 = Subpost.create!(:title => "Take a look!", :author_id => u1.id, :post_id => p1.id)
+
 
 s2 = Subpost.create!(
   author_id: u1.id, 

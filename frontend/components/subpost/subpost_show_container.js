@@ -7,7 +7,7 @@ const mSTP = (state) => {
     return {
         // postSubposts: Object.values(state.entities.subposts),
         // currentUserId: state.session.id
-        subposters: state.entities.businesses,
+        subposters: state.entities.posts,
         currentUser: state.entities.users[state.session.id],
     }
 }
