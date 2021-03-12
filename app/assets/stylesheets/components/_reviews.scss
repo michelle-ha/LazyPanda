@@ -4,6 +4,8 @@
     font-size: 1.875em;
     color: #000;
     border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    padding-top: 10px;
     margin-bottom: 20px;
     padding-bottom: 14px;
     line-height: 1.1em;
@@ -11,7 +13,10 @@
 }
 
 .post-comments {
-    padding: 1.6em 1.562em 1em 1.562em;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .native-comments {
