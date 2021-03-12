@@ -43,13 +43,14 @@
     background-color: #f12121
 }
 
+
 .subpost-header {
-    text-align: center;
     line-height: 1.5;
     padding: 0 0 12px 0;
     color: rgba(0, 0, 0, 0.8);
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
 }
 
 button.delete-link {
@@ -67,6 +68,7 @@ button.delete-link {
     margin-bottom: 10px;
     margin-left: 10px;
     height: 25px;
+    margin-top: 10px;
 }
 
 button.delete-link:hover {
@@ -77,4 +79,10 @@ button.delete-link:hover {
 
 .subpost-author {
     padding: 10px;
+    margin-top: 5px;
+}
+
+.subpost-display {
+    display: flex;
+    justify-content: space-between;
 }
