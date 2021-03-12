@@ -51,3 +51,30 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+button.delete-link {
+    display: block;
+    border: 2px solid #c73a3a;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: none;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+    width: 80px;
+    background-color: #da3535;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: 25px;
+}
+
+button.delete-link:hover {
+    font-weight: bold;
+    background-color: #f12121
+
+}
+
+.subpost-author {
+    padding: 10px;
+}
