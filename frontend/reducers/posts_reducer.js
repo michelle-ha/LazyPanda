@@ -1,25 +1,25 @@
 import {
-    RECEIVE_POSTS,
-    RECEIVE_POST,
-    REMOVE_POST,
-  } from '../actions/post_actions';
-  
-  const postsReducer = (oldState  = {}, action) => {
-    Object.freeze(oldState );
-    let nextState = Object.assign({}, oldState );
+  RECEIVE_POSTS,
+  RECEIVE_POST,
+  REMOVE_POST,
+} from '../actions/post_actions';
 
-    switch(action.type){
-      case RECEIVE_POSTS:
-        return action.posts;
-      case RECEIVE_POST:
-          nextState[action.post.id] = action.post;
-        return nextState
-      case REMOVE_POST:
-        delete nextState[action.postId];
-        return nextState;
-      default:
-        return oldState ;
-    }
-  };
+const postsReducer = (state = {}, action) => {
+  Object.freeze(state);
+  let nextState = Object.assign({}, state);
 
-  export default postsReducer;
+  switch(action.type){
+    case RECEIVE_POSTS:
+      return action.payload.posts;
+    case RECEIVE_POST:
+        nextState[action.post.post.id] = action.post.post;
+      return nextState
+    case REMOVE_POST:
+      delete nextState[action.postId];
+      return nextState;
+    default:
+      return state;
+  }
+};
+
+export default postsReducer;

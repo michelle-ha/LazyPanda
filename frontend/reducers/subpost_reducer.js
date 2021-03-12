@@ -1,22 +1,23 @@
-import { RECEIVE_SUBPOST, RECEIVE_SUBPOSTS, REMOVE_SUBPOST } from '../actions/subpost_actions'
+import { RECEIVE_SUBPOST, REMOVE_SUBPOST } from '../actions/subpost_actions'
 
 import { RECEIVE_POST } from '../actions/post_actions'
 
 const SubpostsReducer = (oldState = {}, action) => {
-    Object.freeze(oldState)
+    
+    Object.freeze(oldState);
+    let nextState = Object.assign({}, oldState);
+
     switch (action.type) {
         case RECEIVE_SUBPOST:
-            return Object.assign({}, oldState, { [action.subpost.id]: action.subpost })
-        case RECEIVE_SUBPOSTS:
-            return action.subposts
+            nextState[action.subpost.subpost.id] = action.subpost.subpost;
+            return nextState;
         case REMOVE_SUBPOST:
-            const newState = Object.assign({}, oldState)
-            delete newState[action.subpostId]
-            return newState
+            delete nextState[action.subpostId];
+            return nextState;
         case RECEIVE_POST:
-            return Object.assign({}, oldState, action.subposts)
+            return Object.assign({}, action.post.subposts);
         default:
-            return oldState
+            return oldState;
     }
 }
 

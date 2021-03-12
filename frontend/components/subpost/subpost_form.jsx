@@ -5,7 +5,7 @@ class SubpostForm extends React.Component {
         super(props)
 
         this.state = {
-            title: this.props.subpost.title,
+            title: '',
             author_id: this.props.currentUserId,
             post_id: this.props.postId,
             photoFile: null,
@@ -14,80 +14,48 @@ class SubpostForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
-        this.renderErrors = this.renderErrors.bind(this)
-        this.errorsOccured = this.errorsOccured.bind(this)
 
     }
 
-    // update(field) {
-    //     return e => {
-    //         this.setState({ [field]: e.target.value })
-    //     };
-    // }
+    update(field) {
+        return e => {
+            this.setState({ [field]: e.target.value })
+        };
+    }
 
     
-    handleFile(e) {
-        const file = e.currentTarget.files[0];
-        const fileReader = new FileReader();
-        fileReader.onloadend = () => {
-        this.setState({ photoFile: file, photoUrl: fileReader.result });
-        };
-        if (file) {
-            fileReader.readAsDataURL(file);
-        }
-        return (e) =>
-            this.setState({
-                [field]: e.currentTarget.value,
-        })
+  handleFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
     }
+  }
 
     handleSubmit(e) {
         e.preventDefault();
-
         const formData = new FormData();
         formData.append('subpost[title]', this.state.title);
         formData.append('subpost[author_id]', this.state.author_id);
         formData.append('subpost[post_id]', this.state.post_id)
 
-
-
         if (this.state.photoFile) {
         formData.append('subpost[photo]', this.state.photoFile);
         }
 
-        // this.props.processPost(this.state)
-            // .then(() => this.props.fetchPost(this.props.postId))
+        this.props.createSubpost(formData)
+            .then(() => this.props.fetchPost(this.props.postId))
             // .then(() => {
             //     this.setState({
             //         title: '',
             //         post_id: this.props.postId
             //     })
             // })
-        this.props
-            .processForm(this.state)
-            .then(() =>
-                this.props.history.push(`/${this.props.postId}`)
-      )
     }
 
-    errorsOccured() {
-        this.props.errors.length !== 0
-      }
-    
-    renderErrors() {
-        if (this.errorsOccured) {
-            return (
-            <ul>
-                {this.props.errors.slice(0, 1).map((error, idx) => (
-                <li className="review-error" key={`error-${idx}`}>
-                    {' '}
-                    {error}
-                </li>
-                ))}
-            </ul>
-            )
-        }
-    }
 
 
     render() {
@@ -98,7 +66,7 @@ class SubpostForm extends React.Component {
                     <input type="string"
                     value={this.state.title}
                     placeholder="Picture title..."
-                    onChange={this.handlefile('title')}
+                    onChange={this.update('title')}
                     className="subpost-title-input"
                 />
 
@@ -116,7 +84,6 @@ class SubpostForm extends React.Component {
                         <button className= "sub-post-signin" onClick={() => this.props.openModal()}>Sign in to write a Response </button>
                     </div>)}
                 </form>
-                <div>{this.renderErrors()}</div>
             </div>
         )
     }

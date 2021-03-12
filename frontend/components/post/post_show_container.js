@@ -1,36 +1,22 @@
 import { connect } from 'react-redux';
 
-import { fetchPost, deletePost } from '../../actions/post_actions';
-import { fetchSubposts, deleteSubpost } from '../../actions/subpost_actions';
-import { fetchUsers } from '../../actions/user_actions'
-import { selectPost } from '../../reducers/selectors'
-import { getSubpostsForPost } from '../../reducers/selectors'
-
-
+import { fetchPost, deletePost, fetchPosts } from '../../actions/post_actions';
+import {  selectPost } from '../../reducers/selectors';
 import PostShow from './post_show';
 
-const mapStateToProps = (state, {match}) => {
-  const users = state.entities.users
-  const postId = parseInt(match.params.postId)
-  const post = selectPost(state.entities, postId)
-  const subposts = getSubpostsForPost(state, { postId })
+const mapStateToProps = (state, ownProps) => {
+
   return {
+    post: state.entities.posts[ownProps.match.params.postId],
     currentUser: state.entities.users[state.session.id],
-    // user: state.entities.users[state.entities.post.author_id],
-    postId,
-    post,
-    subposts,
-    users,
+    // user: state.entities.users[state.entities.post.author_id]
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchPost: postId => dispatch(fetchPost(postId)),
   deletePost: postId => dispatch(deletePost(postId)),
-  fetchSubposts: (postId) => dispatch(fetchSubposts(postId)),
-  deleteSubpost: (subpostId) => dispatch(deleteSubpost(subpostId)),
-  fetchUsers: () => dispatch(fetchUsers()),
-
+  // fetchPosts: () => dispatch(fetchPosts())
 });
 
 export default connect(

@@ -5,24 +5,22 @@ import SubpostFormContainer from "../subpost/subpost_form_container"
 import SubpostShowContainer from "../subpost/subpost_show_container"
 
 class PostShow extends React.Component {
-  // constructor(props) {
-  // super(props); }
+  constructor(props) {
+  super(props); }
 
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
-    this.props.fetchSubposts(this.props.match.params.postId)
-    this.props.fetchUsers()
   }
 
   render() {
-    const {post, deletePost, subposts, users, deleteSubpost} = this.props
+    const {post, deletePost} = this.props
 
     if (!post) return (<Redirect to="/" />)
     let canEditPost;
     if (this.props.currentUser && this.props.currentUser.id === post.author_id) {
       canEditPost = (
         <div className="post-edit-links">
-            {/* <button ><Link to={`/${post.id}/edit`} className="edit-link">Edit</Link> </button> */}
+            <button ><Link to={`/${post.id}/edit`} className="edit-link">Edit</Link> </button>
             <button ><Link to="/" className="delete-link" onClick={() => deletePost(post.id)}>Delete</Link></button>
         </div>
       )
@@ -33,6 +31,8 @@ class PostShow extends React.Component {
         <li><img src={this.props.post.photo}/></li>
         )
     }
+
+    
 
     return(
       <div className="single-post-show">
@@ -48,22 +48,11 @@ class PostShow extends React.Component {
           </ul>
         </div>
 
-        <div className="subposts-container">
-          <div className="subposts-show-container">Responses</div>
-          {subposts.map((subpost, idx) => {
-            return (
-              <SubpostShowContainer
-                key={idx}
-                subpost={subpost}
-                author={users[subpost.authorId]}
-                deleteSubpost={deleteSubpost}
-              />
-            )
-          })}
-          <SubpostFormContainer
-            // postId={this.props.post.id}
-          />
-        </div>
+        <SubpostFormContainer
+          postId={this.props.post.id}
+        />
+        <SubpostShowContainer/>
+
       </div>
     );
   };

@@ -18,13 +18,15 @@ class PostIndexItem extends React.Component {
 
   render() {
     const { title, body, photo } = this.props.post;
+    // console.log(photo)
     let insertPhoto;
     if (photo) {
       insertPhoto = (
         <div className="index-item-photo"><img src={photo}/></div>
       )
     }
-
+    // debugger
+    // if (this.props.user === undefined) debugger
     return (
       <div
         className="post-index-item"
@@ -33,7 +35,7 @@ class PostIndexItem extends React.Component {
           {insertPhoto}
           <div className="index-item-title">{title}</div>
           <div className="index-item-body">{body}</div>
-          {/* <div className="index-item-author">By: {this.props.user.name}</div> */}
+          <div className="index-item-author">By: {this.props.user.name}</div>
         </div>
       </div>
     );

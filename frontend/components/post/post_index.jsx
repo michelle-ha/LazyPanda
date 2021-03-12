@@ -13,6 +13,7 @@ class PostIndex extends React.Component {
       <PostIndexItem
         key={post.id}
         post={post}
+        // updatePost={updatePost} 
         user={users[post.author_id]}
         />
       )
