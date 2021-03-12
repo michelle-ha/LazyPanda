@@ -10,7 +10,7 @@ class SubpostShow extends React.Component {
             return (
                 <div className="post-details" key={subpost.id}>
                     <ul>
-                        < li className="post-title">{subpost.title}</li>
+                        < li className="post-title">{idx + 1}. {subpost.title}</li>
                         <li className="picture-shown"><img src={subpost.photo}/></li>
                         By: {subpost.author}
 
