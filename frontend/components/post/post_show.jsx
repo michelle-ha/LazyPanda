@@ -32,8 +32,6 @@ class PostShow extends React.Component {
         )
     }
 
-    
-
     return(
       <div className="single-post-show">
         <NavBar/>
@@ -47,11 +45,12 @@ class PostShow extends React.Component {
             {canEditPost}
           </ul>
         </div>
+        <div className="subpost-header">Responses:</div>
+        <SubpostShowContainer/>
 
         <SubpostFormContainer
           postId={this.props.post.id}
         />
-        <SubpostShowContainer/>
 
       </div>
     );
