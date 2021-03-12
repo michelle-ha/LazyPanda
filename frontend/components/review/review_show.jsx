@@ -10,9 +10,9 @@ class ReviewShow extends React.Component {
             return (
                 <div className="review-details" key={review.id}>
                     <ul>
-                        < li className="review-title">{idx + 1}. {review.content}</li>
+                         <li className="review-author"> {review.author} </li>
+                        < li className="review-title">{review.content}</li>
                         <div className="review-display">
-                        <li className="review-author"> By: {review.author} </li>
                         {this.props.currentUserId === review.author_id ?
                         (<div>
                             <button className="delete-link" onClick={() => this.props.deleteReview(review.id)}>Delete </button>

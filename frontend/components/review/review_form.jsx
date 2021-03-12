@@ -56,12 +56,14 @@ class SubpostForm extends React.Component {
             <div className="review-form">
                 <div className="errors">{this.renderErrors()}</div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="string"
+                    {/* <input type="string"
                         value={this.state.content}
                         placeholder="Comment here..."
                         onChange={this.update('content')}
                         className="review-content-input"
-                />
+                /> */}
+
+                <textarea class="review-content-input" maxlength="1000" type="text" value={this.state.content} placeholder="Add a comment..." onChange={this.update('content')}></textarea>
                 {this.props.currentUser ?
                         (<div>
                             <input type="submit" value="Write a comment" />
