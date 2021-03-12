@@ -8,4 +8,7 @@ class Post < ApplicationRecord
     has_one_attached :photo
 
     has_many :subposts
+
+    has_many :reviews
+
 end
