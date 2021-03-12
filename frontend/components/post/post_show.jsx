@@ -3,6 +3,8 @@ import { Link,  Redirect} from 'react-router-dom';
 import NavBar from "../greeting/navbar"
 import SubpostFormContainer from "../subpost/subpost_form_container"
 import SubpostShowContainer from "../subpost/subpost_show_container"
+import ReviewFormContainer from "../review/review_form_container"
+import ReviewShowContainer from "../review/review_show_container"
 
 class PostShow extends React.Component {
   constructor(props) {
@@ -51,6 +53,12 @@ class PostShow extends React.Component {
         <SubpostFormContainer
           postId={this.props.post.id}
         />
+        <div className="subpost-header">Reviews:</div>
+        <ReviewShowContainer/>
+        <ReviewFormContainer
+          postId={this.props.post.id}
+
+        /> 
 
       </div>
     );
