@@ -56,12 +56,25 @@ class SubpostForm extends React.Component {
             // })
     }
 
-
+    renderErrors() {
+        return this.props.errors.map(error => {
+          return (
+          <li className="error" key={error}>
+            {error}
+          </li>
+          );
+        });
+      }
+    
+      componentWillUnmount() {
+        this.props.clearErrors()
+      }    
 
     render() {
         const preview = this.state.photoUrl ? <img src={this.state.photoUrl} height="200px" width="200px" /> : null;
         return (
             <div className="subpost-form">
+                <div className="errors">{this.renderErrors()}</div>
                 <form onSubmit={this.handleSubmit}>
                     <input type="string"
                     value={this.state.title}
