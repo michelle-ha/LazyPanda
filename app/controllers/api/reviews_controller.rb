@@ -22,4 +22,3 @@ class Api::ReviewsController < ApplicationController
       params.require(:review).permit(:content, :post_id)
     end
   end
-end
