@@ -15,9 +15,8 @@ const mapStateToProps = (state, {match}) => {
   const post = selectPost(state.entities, postId)
   const subposts = getSubpostsForPost(state, { postId })
   return {
-    // post: state.entities.posts[ownProps.match.params.postId],
-    // currentUser: state.entities.users[state.session.id],
-    // user: state.entities.users[state.entities.post.author_id]
+    currentUser: state.entities.users[state.session.id],
+    // user: state.entities.users[state.entities.post.author_id],
     postId,
     post,
     subposts,

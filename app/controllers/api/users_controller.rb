@@ -10,10 +10,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def index
-    @users = User.all
-    render :index
-  end
 
 
   private
@@ -22,4 +18,3 @@ class Api::UsersController < ApplicationController
     params.require(:user).permit(:email, :password, :name)
   end
 end
-  

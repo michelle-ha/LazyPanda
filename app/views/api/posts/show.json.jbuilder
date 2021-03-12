@@ -1,23 +1,14 @@
-# json.post do
-#   json.partial! '/api/posts/post', post: @post
-# end
+json.post do
+  json.partial! '/api/posts/post', post: @post
+end
 
-# json.user do
-#   json.partial! '/api/users/user', user: @post.user
-# end
+json.subposts do
+  @post.subposts.each do |subpost|
 
-json.partial! '/api/posts/post', post: @post
-
-@post.subposts.includes(:user).each do |subpost|
-  json.subposts do
-    json.set! subpost.id do
-      json.partial! 'api/subposts/subpost', subpost: subpost
-    end
-  end
-
-  json.users do
-    json.set! subpost.author_id do
-      json.extract! subpost.user, :id, :email, :name
-    end
+      json.set! subpost.id do
+          json.extract! subpost, :id, :title, :author_id, :post_id
+          json.author subpost.author.name
+          json.photo url_for(subpost.photo) if subpost.photo.attached?
+      end
   end
 end

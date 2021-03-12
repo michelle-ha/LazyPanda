@@ -1,11 +1,11 @@
 
-json.subpost do
-  json.partial! '/api/subposts/subpost', subpost: @subpost
+json.subpost do 
+  json.extract! @subpost, :id, :title, :author_id, :post_id
 end
 
 json.photo url_for(@subpost.photo) if @subpost.photo.attached?
 
-
-json.user do
-  json.partial! '/api/users/user', user: @subpost.user
+json.author do 
+    json.extract! @subpost.author, :id, :name, :email
 end
+

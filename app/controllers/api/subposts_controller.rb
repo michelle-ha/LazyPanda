@@ -1,24 +1,6 @@
 class Api::SubpostsController < ApplicationController
 
-  before_action :require_logged_in, except: [:index]
-
-  def index
-    @subposts = Subpost.all
-  end
-
-  def edit
-    @subpost = Subpost.find(params[:id])
-  end
-
-  def update
-      @subpost = Subpost.find_by(id: params[:id])
-      if @subpost.author_id == current_user.id && @subpost.update(subpost_params)
-          render :show
-      else
-          render json: ["Cannot update subpost"]
-      end 
-  end
-
+  before_action :require_logged_in
   def create
     @subpost = Subpost.new(subpost_params)
     @subpost.author_id = current_user.id
@@ -30,13 +12,10 @@ class Api::SubpostsController < ApplicationController
   end
 
   def destroy
-    @subpost = current_user.subposts.find_by(id: params[:id])
-    if @subpost && @subpost.destroy
-      render :show
-    else
-      render json: ["Subpost cannot be deleted"], status: 422
+      @subpost = Subpost.find(params[:id])
+      @subpost.destroy
+      render json: {}
     end
-  end 
 
   private
 
