@@ -20,7 +20,7 @@
 }
 
 .native-comments {
-    margin: 0 0 50px;
+    // margin: 0 0 50px;
     font-family: Roboto,sans-serif;
     font-weight: 500;
     line-height: 1;
@@ -50,4 +50,21 @@ textarea.review-content-input {
     margin: 0px;
     width: 547px;
     height: 91px;
+}
+.review-author{
+    color: #353535;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.review-title {
+    padding-bottom: 2px;
+    color: #989898;
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.review-details {
+    padding-bottom: 10px;
 }
