@@ -56,15 +56,25 @@ textarea.review-content-input {
     font-size: 14px;
     font-weight: 500;
 }
-
 .review-title {
     padding-bottom: 2px;
     color: #989898;
     font-weight: 400;
     line-height: 18px;
     font-size: 14px;
+    margin-left: 20px;
 }
 
 .review-details {
     padding-bottom: 10px;
+}
+
+button.close-x {
+    position: relative;
+    top: -20px;
+}
+
+button.close-x:hover {
+    font-weight: bold;
+    cursor: pointer;
 }
