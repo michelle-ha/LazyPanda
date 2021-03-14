@@ -40,6 +40,18 @@ u4 = User.create!(
   email: 'tester@gmail.com'
 )
 
+u5 = User.create!(
+  name: 'Lucca Puppers',
+  password: 'password',
+  email: 'lucca@gmail.com'
+)
+
+u6 = User.create!(
+  name: 'Disney Maniac',
+  password: 'password',
+  email: 'disney@gmail.com'
+)
+
 p1 = Post.create!(
   author_id: u1.id,
   title: "Cutest animal drawings",
@@ -162,6 +174,34 @@ r14 = Review.create!(
   author_id: u4.id,
   post_id: p4.id,
   content: "Shocked no one posted up that one with the cute baby making a fist"
+)
+
+p5 = Post.create!(
+  author_id: u4.id,
+  title: "Disney animals re-created into humans!",
+  body: "People are so creative!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/bambi.jpg')
+
+p5.photo.attach(io: file, filename: 'bambi.jpg')
+
+r15 = Review.create!(
+  author_id: u5.id,
+  post_id: p5.id,
+  content: "Gonna binge disney movies tonight for sure~!"
+)
+
+r16 = Review.create!(
+  author_id: u1.id,
+  post_id: p5.id,
+  content: "Disney will never get old"
+)
+
+r17 = Review.create!(
+  author_id: u2.id,
+  post_id: p5.id,
+  content: "Classics ftw!"
 )
 
 s1 = Subpost.create!(
@@ -363,3 +403,54 @@ s20 = Subpost.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/workmemes.jpg')
 
 s20.photo.attach(io: file, filename: 'workmemes.jpg')
+
+s21 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p5.id, 
+  title: "Just want to pinch their cheeks!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/chip%2Bdale.jpg')
+
+s21.photo.attach(io: file, filename: 'chip%2Bdale.jpg')
+
+
+s22 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p5.id, 
+  title: "He was always my favorite <3"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/flounder.jpg')
+
+s22.photo.attach(io: file, filename: 'flounder.jpg')
+
+s23 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p5.id, 
+  title: "Jungle Book ftw"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/jungle+book.jpg')
+
+s23.photo.attach(io: file, filename: 'jungle+book.jpg')
+
+s24 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p5.id, 
+  title: "I just want to snuggle Eeyore"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/tigger+%2B+eeyore.jpg')
+
+s24.photo.attach(io: file, filename: 'tigger+%2B+eeyore.jpg')
+
+s25 = Subpost.create!(
+  author_id: u6.id, 
+  post_id: p5.id, 
+  title: "Give him some honey!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/winnie+the+pooh.jpg')
+
+s25.photo.attach(io: file, filename: 'winnie+the+pooh.jpg')
