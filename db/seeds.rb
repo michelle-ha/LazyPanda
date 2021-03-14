@@ -12,6 +12,8 @@ require 'open-uri'
 User.delete_all
 Post.delete_all
 Subpost.delete_all
+Review.delete_all
+
 
 u1 = User.create!(
   name: 'Demo User',
@@ -31,6 +33,13 @@ u3 = User.create!(
   email: 'panda@gmail.com'
 )
 
+
+u4 = User.create!(
+  name: 'Beta Tester',
+  password: 'password',
+  email: 'tester@gmail.com'
+)
+
 p1 = Post.create!(
   author_id: u1.id,
   title: "Cutest animal drawings",
@@ -40,6 +49,24 @@ p1 = Post.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
 
 p1.photo.attach(io: file, filename: 'cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
+
+r1 = Review.create!(
+  author_id: u1.id,
+  post_id: p1.id,
+  content: "Thanks for the responses!"
+)
+
+r2 = Review.create!(
+  author_id: u2.id,
+  post_id: p1.id,
+  content: "The pictures made me smile :)"
+)
+
+r3 = Review.create!(
+  author_id: u2.id,
+  post_id: p1.id,
+  content: "Please share more!"
+)
 
 p2 = Post.create!(
   author_id: u2.id,
@@ -51,6 +78,36 @@ file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute-marshmallow
 
 p2.photo.attach(io: file, filename: 'cute-marshmallows.png')
 
+r4 = Review.create!(
+  author_id: u1.id,
+  post_id: p2.id,
+  content: "I would never be able to eat any of these"
+)
+
+r5 = Review.create!(
+  author_id: u3.id,
+  post_id: p2.id,
+  content: "I want to learn how to make these!"
+)
+
+r6 = Review.create!(
+  author_id: u3.id,
+  post_id: p2.id,
+  content: "Going to spend forever watching youtube tutorials!"
+)
+
+r7 = Review.create!(
+  author_id: u4.id,
+  post_id: p2.id,
+  content: "Now these are the foods that deserve instagram features"
+)
+
+r8 = Review.create!(
+  author_id: u4.id,
+  post_id: p2.id,
+  content: "I would totally try out the foods setting on my phone camera if I ever saw these in real life"
+)
+
 p3 = Post.create!(
   author_id: u3.id,
   title: "Worst pickup lines",
@@ -60,6 +117,24 @@ p3 = Post.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup-thumb.jpg')
 
 p3.photo.attach(io: file, filename: 'pickup-thumb.jpg')
+
+r10 = Review.create!(
+  author_id: u3.id,
+  post_id: p3.id,
+  content: "Thanks for participating! Made my day"
+)
+
+r9 = Review.create!(
+  author_id: u4.id,
+  post_id: p3.id,
+  content: "Omg. Please tell me guys don't actually say these horrid pickup lines"
+)
+
+r11 = Review.create!(
+  author_id: u1.id,
+  post_id: p3.id,
+  content: "Great icebreakers for sure"
+)
 
 p4 = Post.create!(
   author_id: u3.id,
@@ -71,54 +146,220 @@ file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Cat+Meme+Netflix
 
 p4.photo.attach(io: file, filename: 'Cat+Meme+Netflix+Funny+1000x666.png')
 
-p5 = Post.create!(
-  author_id: u3.id,
-  title: "Advertising Fails",
-  body: "We all know that sometimes companies just fail to deliver."
+r12 = Review.create!(
+  author_id: u1.id,
+  post_id: p4.id,
+  content: "I feel like memes will never go away"
 )
 
-file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/advertising+fails.jpg')
-
-p5.photo.attach(io: file, filename: 'advertising+fails.jpg')
-
-p6 = Post.create!(
+r13 = Review.create!(
   author_id: u2.id,
-  title: "Creepy pop-culture character remakes",
-  body: "I can never look at them the same"
+  post_id: p4.id,
+  content: "Brings back so many memories"
 )
 
-file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/creepy-pop-culture-character-remakes-wil-hughes-coverimage.jpg')
-
-p6.photo.attach(io: file, filename: 'creepy-pop-culture-character-remakes-wil-hughes-coverimage.jpg')
-
-p7 = Post.create!(
-  author_id: u2.id,
-  title: "Makeup can do anything",
-  body: "You will soon wonder what someone will look like without makeup on"
+r14 = Review.create!(
+  author_id: u4.id,
+  post_id: p4.id,
+  content: "Shocked no one posted up that one with the cute baby making a fist"
 )
 
-file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/makeup+wonders.jpg')
+s1 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p1.id, 
+  title: "Dino go rawr rawr!"
+)
 
-p7.photo.attach(io: file, filename: 'makeup+wonders.jpg')
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/animal+drawings/40-408946_drawing-bedrooms-kawaii-kawaii-cute-animal-drawings.png')
 
+s1.photo.attach(io: file, filename: '40-408946_drawing-bedrooms-kawaii-kawaii-cute-animal-drawings.png')
 
-s1 = Subpost.create!(:title => "Take a look!", :author_id => u1.id, :post_id => p1.id)
+s5 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p1.id, 
+  title: "Pandas ftw :)"
+)
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/animal+drawings/412658.jpg')
+
+s5.photo.attach(io: file, filename: '412658.jpg')
+
+s6 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p1.id, 
+  title: "Someone needs to make this!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/animal+drawings/49-497964_cute-animal-drawings-kawaii.png')
+
+s6.photo.attach(io: file, filename: '49-497964_cute-animal-drawings-kawaii.png')
+
+s7 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p1.id, 
+  title: "Someone was bored during class. Haha"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/animal+drawings/cute-animal-pencil-drawings-iantha-naicker-fb2.jpg')
+
+s7.photo.attach(io: file, filename: 'cute-animal-pencil-drawings-iantha-naicker-fb2.jpg')
+
+s8 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p1.id, 
+  title: "He looks so real!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/animal+drawings/cute-pug-olga-shvartsur.jpg')
+
+s8.photo.attach(io: file, filename: 'cute-pug-olga-shvartsur.jpg')
 
 s2 = Subpost.create!(
   author_id: u1.id, 
   post_id: p2.id, 
-  title: "Nom nom nom!"
+  title: "This would make me actually eat veggies"
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute+foods/07c747201a2dc4f6569d0c91e981db2a.jpg')
+
+s2.photo.attach(io: file, filename: '07c747201a2dc4f6569d0c91e981db2a.jpg')
+
+s9 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p2.id, 
+  title: "Peenngguuuuuuin!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute+foods/Animal-Shaped-Snacks.jpg')
+
+s9.photo.attach(io: file, filename: 'Animal-Shaped-Snacks.jpg')
+
+s10 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p2.id, 
+  title: "Oink oink"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute+foods/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
+
+s10.photo.attach(io: file, filename: 'cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
+
+s11 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p2.id, 
+  title: "Let's eat them aaaaaall!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute+foods/foodart02.jpg')
+
+s11.photo.attach(io: file, filename: 'foodart02.jpg')
+
+s12 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p2.id, 
+  title: "Doooooggies!"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/cute+foods/puppybuns.jpg')
+
+s12.photo.attach(io: file, filename: 'puppybuns.jpg')
 
 s3 = Subpost.create!(
   author_id: u2.id, 
   post_id: p3.id, 
-  title: "Can't help but laugh"
+  title: "I would be so offended..."
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup+lnes/11_1379429185_540x540.jpg')
+
+s3.photo.attach(io: file, filename: '11_1379429185_540x540.jpg')
+
+s13 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p3.id, 
+  title: "I can't look at priests the same way"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup+lnes/84064611.jpg')
+
+s13.photo.attach(io: file, filename: '84064611.jpg')
+
+s14 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p3.id, 
+  title: "How geeks flirst"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup+lnes/a5bWEMy_460s.jpg')
+
+s14.photo.attach(io: file, filename: 'a5bWEMy_460s.jpg')
+
+s15 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p3.id, 
+  title: "Ew. Just ew."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup+lnes/cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
+
+s15.photo.attach(io: file, filename: 'cute-little-hedgehog-floral-summer-bouquet-cute-little-hedgehog-girl-floral-bouquet-152001765.jpg')
+
+s16 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p3.id, 
+  title: "Ok. This would've made me laugh"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/pickup+lnes/maxresdefault.jpg')
+
+s16.photo.attach(io: file, filename: 'maxresdefault.jpg')
 
 s4 = Subpost.create!(
   author_id: u3.id, 
   post_id: p4.id, 
-  title: "Brings back the old days :)"
+  title: "I was that younger sibling..."
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/BrotherQuotesMemes.jpg')
+
+s4.photo.attach(io: file, filename: 'rotherQuotesMemes.jpg')
+
+s17 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p4.id, 
+  title: "...and then you end up with none"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/animalmemes-14.jpg')
+
+s17.photo.attach(io: file, filename: 'animalmemes-14.jpg')
+
+s18 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p4.id, 
+  title: "Been there. Done that."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/funny-teacher-meme-1531500140.jpg')
+
+s18.photo.attach(io: file, filename: 'funny-teacher-meme-1531500140.jpg')
+
+s19 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p4.id, 
+  title: "That's how I defend myelf each time I stuff my face."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/more-the-merrier-31380-2.webp')
+
+s19.photo.attach(io: file, filename: 'more-the-merrier-31380-2.webp')
+
+s20 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p4.id, 
+  title: "Just keep smiling..."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/meme/workmemes.jpg')
+
+s20.photo.attach(io: file, filename: 'workmemes.jpg')
