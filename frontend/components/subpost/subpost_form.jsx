@@ -78,7 +78,7 @@ class SubpostForm extends React.Component {
         // const requireImage = !this.state.photoUrl ? "Photo required" : null 
         return (
             <div className="subpost-form">
-                <div className="errors">{this.renderErrors()}</div>
+                {/* <div className="errors">{this.renderErrors()}</div> */}
                 <form onSubmit={this.handleSubmit}>
                     <input type="string"
                         value={this.state.title}
