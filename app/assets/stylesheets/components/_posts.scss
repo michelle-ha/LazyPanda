@@ -279,18 +279,19 @@ i.fas.fa-comment-alt {
     justify-content: space-between;
 }
 
-a.delete-icon {
+a.delete-icon, a.edit-icon {
     font-size: 20px;
 }
 
-a.delete-icon:hover {
-    font-weight: bold;
+a.delete-icon:hover, a.edit-icon:hover {
+    color: red;
 }
 
-a.edit-icon {
+i.fas.fa-trash {
     font-size: 20px;
+    padding: 15px;
 }
 
-a.edit-icon:hover {
-    font-weight: bold;
+i.fas.fa-trash:hover {
+    cursor: pointer;
 }
