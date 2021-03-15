@@ -272,8 +272,12 @@ footer#footer {
 }
 
 i.fas.fa-comment-alt {
-    margin-top: 15px;
     font-size: 20px;
+}
+
+i.fas.fa-comment-alt:hover {
+    cursor: pointer;
+    color: gray;
 }
 
 .post-edit-container{
