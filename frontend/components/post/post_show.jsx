@@ -22,8 +22,8 @@ class PostShow extends React.Component {
     if (this.props.currentUser && this.props.currentUser.id === post.author_id) {
       canEditPost = (
         <div className="post-edit-links">
-            <button ><Link to={`/${post.id}/edit`} className="edit-link">Edit</Link> </button>
-            <button ><Link to="/" className="delete-link" onClick={() => deletePost(post.id)}>Delete</Link></button>
+            <button ><Link to={`/${post.id}/edit`} className="edit-icon"><i class="fas fa-edit"></i></Link> </button>
+            <button ><Link to="/" className="delete-icon" onClick={() => deletePost(post.id)}><i class="fas fa-trash"></i></Link></button>
         </div>
       )
     }
@@ -47,11 +47,12 @@ class PostShow extends React.Component {
             <div className="post-edit-container">
               <div className="post-container">
                 <li className="subpost-author">By: {this.props.post.author}</li>
-                {/* <i class="fas fa-comment-alt"></i> */}
+                {/* <a href="#show-comments"><i class="fas fa-comment-alt"></i></a> */}
+                
               </div>
+              {canEditPost}
             </div>
             
-            {canEditPost}
           </ul>
         </div>
         <div className="subpost-header">Responses:</div>
@@ -61,8 +62,8 @@ class PostShow extends React.Component {
           postId={this.props.post.id}
         />
         <div className="post-comments">
-        <div className="review-header">Leave a comment:</div>
-        <div className="native-comments"></div>
+        <div className="review-header" id="show-comments">Leave a comment:</div>
+        {/* <div className="native-comments" id="show-comments"></div> */}
         <ReviewShowContainer/>
         <ReviewFormContainer
           postId={this.props.post.id}

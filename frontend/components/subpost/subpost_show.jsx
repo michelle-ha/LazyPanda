@@ -16,7 +16,7 @@ class SubpostShow extends React.Component {
                         <li className="subpost-author"> By: {subpost.author} </li>
                         {this.props.currentUserId === subpost.author_id ?
                         (<div>
-                            <button className="delete-link" onClick={() => this.props.deleteSubpost(subpost.id)}>Delete </button>
+                            <button className="delete-icon" onClick={() => this.props.deleteSubpost(subpost.id)}><i class="fas fa-trash"></i> </button>
                         </div>)
                     : null}
                     </div>
