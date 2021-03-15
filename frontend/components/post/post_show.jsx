@@ -47,7 +47,7 @@ class PostShow extends React.Component {
             <div className="post-edit-container">
               <div className="post-container">
                 <li className="subpost-author">By: {this.props.post.author}</li>
-                <i class="fas fa-comment-alt"></i>
+                {/* <i class="fas fa-comment-alt"></i> */}
               </div>
             </div>
             
