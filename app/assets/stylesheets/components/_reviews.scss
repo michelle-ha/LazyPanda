@@ -48,14 +48,16 @@
 
 textarea.review-content-input {
     margin: 0px;
-    width: 547px;
+    width: 621px;
     height: 91px;
 }
+
 .review-author{
     color: #353535;
     font-size: 14px;
     font-weight: 500;
 }
+
 .review-title {
     padding-bottom: 2px;
     color: #989898;
@@ -72,9 +74,28 @@ textarea.review-content-input {
 button.close-x {
     position: relative;
     top: -20px;
+    color: gray
 }
 
 button.close-x:hover {
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
+    color: darkred;
+}
+
+i.fas.fa-paper-plane {
+    height: 56px;
+    font-size: 50px;
+    padding: 20px;
+    background-color: lightgrey;
+    margin: 0px;
+}
+
+i.fas.fa-paper-plane:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.send-button {
+    display: flex;
 }

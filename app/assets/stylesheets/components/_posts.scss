@@ -42,8 +42,10 @@ img {
     margin-bottom: 20px;
 }
 
-.index-item-photo:hover {
+
+.index-item-info:hover{
     cursor: pointer;
+
 }
 
 .post-title {
@@ -125,11 +127,11 @@ button {
     width: fit-content;
 }
 
-.post-edit-links {
-    padding-bottom: 15px;
-    padding-top: 15px;
+// .post-edit-links {
+//     padding-bottom: 15px;
+//     padding-top: 15px;
 
-}
+// }
 
 .post-creator {
     background-color: #fafafa;
