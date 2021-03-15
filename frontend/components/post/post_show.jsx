@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import { Link,  Redirect} from 'react-router-dom';
 import NavBar from "../greeting/navbar"
 import SubpostFormContainer from "../subpost/subpost_form_container"
@@ -8,7 +8,15 @@ import ReviewShowContainer from "../review/review_show_container"
 
 class PostShow extends React.Component {
   constructor(props) {
-  super(props); }
+    super(props); 
+    
+  }
+
+  scrollDiv = createRef();
+
+  scrollSmoothHandler = () => {
+    this.scrollDiv.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
@@ -52,6 +60,8 @@ class PostShow extends React.Component {
               </div>
               {canEditPost}
             </div>
+            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt">Comments</i></button>
+
             
           </ul>
         </div>
@@ -62,7 +72,7 @@ class PostShow extends React.Component {
           postId={this.props.post.id}
         />
         <div className="post-comments">
-        <div className="review-header" id="show-comments">Leave a comment:</div>
+        <div className="review-header" ref={this.scrollDiv}>Leave a comment:</div>
         {/* <div className="native-comments" id="show-comments"></div> */}
         <ReviewShowContainer/>
         <ReviewFormContainer
