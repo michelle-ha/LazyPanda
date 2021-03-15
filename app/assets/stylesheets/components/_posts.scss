@@ -279,7 +279,18 @@ i.fas.fa-comment-alt {
     justify-content: space-between;
 }
 
-.index-item-info:hover{
-    cursor: pointer;
+a.delete-icon {
+    font-size: 20px;
+}
 
+a.delete-icon:hover {
+    font-weight: bold;
+}
+
+a.edit-icon {
+    font-size: 20px;
+}
+
+a.edit-icon:hover {
+    font-weight: bold;
 }
