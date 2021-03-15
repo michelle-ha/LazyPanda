@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
         subposts: state.entities.subposts,
         // postId: ownProps.match.params.post.id,
         postId: ownProps.postId,
-        // errors: state.errors.subpost
+        errors: state.errors.subpost
     }
 }
 

@@ -57,17 +57,17 @@ class SubpostForm extends React.Component {
     }
 
     
-    // renderErrors() {
+    renderErrors() {
 
-    //     return this.props.errors.map(error => {
-    //         return (
-    //             <li className="error" key={error}>
-    //                 {error}
-    //             </li>
-    //         );
+        return this.props.errors.map(error => {
+            return (
+                <li className="error" key={error}>
+                    {error}
+                </li>
+            );
 
-    //     });
-    // }
+        });
+    }
   
     componentWillUnmount() {
       this.props.clearErrors()
@@ -78,7 +78,7 @@ class SubpostForm extends React.Component {
         // const requireImage = !this.state.photoUrl ? "Photo required" : null 
         return (
             <div className="subpost-form">
-                {/* <div className="errors">{this.renderErrors()}</div> */}
+                <div className="errors">{this.renderErrors()}</div>
                 <form onSubmit={this.handleSubmit}>
                     <input type="string"
                         value={this.state.title}
