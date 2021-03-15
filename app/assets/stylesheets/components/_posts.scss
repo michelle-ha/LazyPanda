@@ -69,6 +69,7 @@ li.post-author {
 
 li.post-body {
     margin-left: 30px;
+    // position: relative;
     line-height: 1.5;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -221,6 +222,7 @@ form.post-form {
 
 .picture-shown {
     border: 1px solid lightgrey;
+    // margin-bottom: 20px;
 }
 
 .go-back {
@@ -237,6 +239,7 @@ li.error {
     font-weight: bold;
     font-family: arial;
     font-size: large;
+    // margin-top: 10px;
 }
 
 a.go-back {
@@ -256,4 +259,22 @@ a.go-back {
 
 .index-item-info{
     border: 1px solid lightgrey
+}
+
+footer#footer {
+    font-size: 20px;
+}
+
+.post-container {
+    display: flex;
+}
+
+i.fas.fa-comment-alt {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.post-edit-container{
+    display: flex;
+    justify-content: space-between;
 }
