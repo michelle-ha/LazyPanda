@@ -44,6 +44,13 @@ class PostShow extends React.Component {
             {/* <li className="post-author">By: {this.props.user.name}, {this.props.user.email}</li> */}
             <li className="post-body">{this.props.post.body}</li>
             <div className="picture-shown">{insertPhoto}</div>
+            <div className="post-edit-container">
+              <div className="post-container">
+                <li className="subpost-author">By: {this.props.post.author}</li>
+                <i class="fas fa-comment-alt"></i>
+              </div>
+            </div>
+            
             {canEditPost}
           </ul>
         </div>
