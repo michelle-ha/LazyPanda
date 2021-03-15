@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SubpostForm extends React.Component {
+class ReviewForm extends React.Component {
     constructor(props) {
         super(props)
 
@@ -35,17 +35,17 @@ class SubpostForm extends React.Component {
     }
 
     
-    renderErrors() {
+    // renderErrors() {
 
-        return this.props.errors.map(error => {
-            return (
-                <li className="error" key={error}>
-                    {error}
-                </li>
-            );
+    //     return this.props.errors.map(error => {
+    //         return (
+    //             <li className="error" key={error}>
+    //                 {error}
+    //             </li>
+    //         );
 
-        });
-    }
+    //     });
+    // }
   
     componentWillUnmount() {
       this.props.clearErrors()
@@ -54,27 +54,22 @@ class SubpostForm extends React.Component {
     render() { 
         return (
             <div className="review-form">
-                <div className="errors">{this.renderErrors()}</div>
+                {/* <div className="errors">{this.renderErrors()}</div> */}
                 <form onSubmit={this.handleSubmit}>
-                    {/* <input type="string"
-                        value={this.state.content}
-                        placeholder="Comment here..."
-                        onChange={this.update('content')}
-                        className="review-content-input"
-                /> */}
-
-                <textarea class="review-content-input" maxlength="1000" type="text" value={this.state.content} placeholder="Add a comment..." onChange={this.update('content')}></textarea>
+                <div className="send-button">
+                <textarea className="review-content-input"  type="text" value={this.state.content} placeholder="Add a comment..." onChange={this.update('content')}></textarea>
                 {this.props.currentUser ?
                         (<div>
-                            <input type="submit" value="Write a comment" />
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
                         </div>)
                     : (<div>
-                        <button className= "sub-post-signin" onClick={() => this.props.openModal()}>Sign in to write a Response </button>
+                        <button onClick={() => this.props.openModal()}><i class="fas fa-paper-plane"></i></button>
                     </div>)}
+                </div>
                 </form>
             </div>
         )
     }
 }
 
-export default SubpostForm;
+export default ReviewForm;

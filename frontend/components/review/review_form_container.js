@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: state.entities.users[state.session.id],
         reviews: state.entities.reviews,
         postId: ownProps.postId,
-        errors: state.errors.post
+        // errors: state.errors.review
     }
 }
 

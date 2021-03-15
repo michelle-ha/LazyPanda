@@ -53,12 +53,14 @@ class PostShow extends React.Component {
         <SubpostFormContainer
           postId={this.props.post.id}
         />
-        <div className="subpost-header">Reviews:</div>
+        <div className="post-comments">
+        <div className="review-header">Leave a comment:</div>
+        <div className="native-comments"></div>
         <ReviewShowContainer/>
         <ReviewFormContainer
           postId={this.props.post.id}
-
         /> 
+        </div>
 
       </div>
     );

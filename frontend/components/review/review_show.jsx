@@ -15,7 +15,7 @@ class ReviewShow extends React.Component {
                         <div className="review-display">
                         {this.props.currentUserId === review.author_id ?
                         (<div>
-                            <button className="delete-link" onClick={() => this.props.deleteReview(review.id)}>Delete </button>
+                            <button className="close-x" onClick={() => this.props.deleteReview(review.id)}>&#10006;</button>
                         </div>)
                     : null}
                     </div>
