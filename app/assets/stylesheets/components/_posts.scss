@@ -289,8 +289,12 @@ a.delete-icon, a.edit-icon {
     font-size: 20px;
 }
 
-a.delete-icon:hover, a.edit-icon:hover {
+a.delete-icon:hover {
     color: red;
+}
+
+a.edit-icon:hover {
+    color: blue;
 }
 
 i.fas.fa-trash {
