@@ -52,6 +52,30 @@ u6 = User.create!(
   email: 'disney@gmail.com'
 )
 
+u7 = User.create!(
+  name: 'Post King',
+  password: 'password',
+  email: 'poster@gmail.com'
+)
+
+u8 = User.create!(
+  name: 'Couch Potato',
+  password: 'password',
+  email: 'couch@gmail.com'
+)
+
+u9 = User.create!(
+  name: 'Bobby Lee',
+  password: 'password',
+  email: 'bobby@gmail.com'
+)
+
+u10 = User.create!(
+  name: 'Mathew Burns',
+  password: 'password',
+  email: 'matt@gmail.com'
+)
+
 p1 = Post.create!(
   author_id: u1.id,
   title: "Cutest animal drawings",
@@ -203,6 +227,115 @@ r17 = Review.create!(
   post_id: p5.id,
   content: "Classics ftw!"
 )
+
+p6 = Post.create!(
+  author_id: u5.id,
+  title: "Hilariously bad movie plot explanations. Go!",
+  body: "A Creepy Old Man Finally Achieves His Goal Of Being Able To Touch A 14 Year Old Boy"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/A+Creepy+Old+Man+Finally+Achieves+His+Goal+Of+Being+Able+To+Touch+A+14+Year+Old+Boy.jpg')
+
+p6.photo.attach(io: file, filename: 'A+Creepy+Old+Man+Finally+Achieves+His+Goal+Of+Being+Able+To+Touch+A+14+Year+Old+Boy.jpg')
+
+r18 = Review.create!(
+  author_id: u1.id,
+  post_id: p6.id,
+  content: "I'm never going to look at these movies the same way."
+)
+
+r19 = Review.create!(
+  author_id: u2.id,
+  post_id: p6.id,
+  content: "Omg. Hilarious"
+)
+
+r20 = Review.create!(
+  author_id: u3.id,
+  post_id: p6.id,
+  content: "lol. Way too true"
+)
+
+r20 = Review.create!(
+  author_id: u4.id,
+  post_id: p6.id,
+  content: "My mind has been wrecked"
+)
+
+p7 = Post.create!(
+  author_id: u6.id,
+  title: "Brutally honest motivational quotes",
+  body: "A little progress everyday..."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/A+little+progrss+every+day.jpg')
+
+p7.photo.attach(io: file, filename: 'A+little+progrss+every+day.jpg')
+
+r21 = Review.create!(
+  author_id: u4.id,
+  post_id: p7.id,
+  content: "Made me both laugh and cry inside"
+)
+
+r22 = Review.create!(
+  author_id: u5.id,
+  post_id: p7.id,
+  content: "Struck a little too close to home..."
+)
+
+r23 = Review.create!(
+  author_id: u1.id,
+  post_id: p7.id,
+  content: "Way too truthful for me"
+)
+
+r24 = Review.create!(
+  author_id: u2.id,
+  post_id: p7.id,
+  content: "At least I'm not the only one that thinks this way"
+)
+
+p8 = Post.create!(
+  author_id: u7.id,
+  title: "It's been a year...",
+  body: "So much has changed."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Bad+habits.jpg')
+
+p8.photo.attach(io: file, filename: 'Bad+habits.jpg')
+
+r25 = Review.create!(
+  author_id: u6.id,
+  post_id: p8.id,
+  content: "This is way too depressing"
+)
+
+r26 = Review.create!(
+  author_id: u8.id,
+  post_id: p8.id,
+  content: "Omg. It's already been a year"
+)
+
+r27 = Review.create!(
+  author_id: u9.id,
+  post_id: p8.id,
+  content: "God. When will things gets better?"
+)
+
+r28 = Review.create!(
+  author_id: u10.id,
+  post_id: p8.id,
+  content: "At least vaccinations are more available now"
+)
+
+r29 = Review.create!(
+  author_id: u1.id,
+  post_id: p8.id,
+  content: "Malls are finally open!"
+)
+
 
 s1 = Subpost.create!(
   author_id: u1.id, 
@@ -454,3 +587,213 @@ s25 = Subpost.create!(
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/disney+animals+to+people/winnie+the+pooh.jpg')
 
 s25.photo.attach(io: file, filename: 'winnie+the+pooh.jpg')
+
+s26 = Subpost.create!(
+  author_id: u6.id, 
+  post_id: p6.id, 
+  title: "A group Of midgets go on a hike to get rid of jewelry"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/A+Group+Of+Midgets+Go+On+A+Hike+To+Get+Rid+Of+Jewelry.jpg')
+
+s26.photo.attach(io: file, filename: 'A+Group+Of+Midgets+Go+On+A+Hike+To+Get+Rid+Of+Jewelry.jpg')
+
+s27 = Subpost.create!(
+  author_id: u6.id, 
+  post_id: p6.id, 
+  title: "A teenage girl marries a foot fetishist to escape her abusive family"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/A+Teenage+Girl+Marries+A+Foot+Fetishist+To+Escape+Her+Abusive+Family.jpg')
+
+s27.photo.attach(io: file, filename: 'A+Teenage+Girl+Marries+A+Foot+Fetishist+To+Escape+Her+Abusive+Family.jpg')
+
+s28 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p6.id, 
+  title: "Everyone tries the ice bucket challenge"
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/Everyone+Tries+The+Ice+Bucket+Challenge.jpg')
+
+s28.photo.attach(io: file, filename: 'A+Teenage+Girl+Marries+A+Foot+Fetishist+To+Escape+Her+Abusive+Family.jpg')
+
+s29 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p6.id, 
+  title: "Guy's wife dies so he gets high"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/Guy's+Wife+Dies+So+He+Gets+High.jpg")
+
+s29.photo.attach(io: file, filename: "Guy's+Wife+Dies+So+He+Gets+High.jpg")
+
+s30 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p6.id, 
+  title: "Older sister ruins younger sister's chances of appearing on television"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/Older+Sister+Ruins+Younger+Sister's+Chances+Of+Appearing+On+Television.jpg")
+
+s30.photo.attach(io: file, filename: "Older+Sister+Ruins+Younger+Sister's+Chances+Of+Appearing+On+Television.jpg")
+
+s31 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p6.id, 
+  title: "Rock brings rock to a rock"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/Rock+Brings+Rock+To+A+Rock.jpg")
+
+s31.photo.attach(io: file, filename: "Rock+Brings+Rock+To+A+Rock.jpg")
+
+s32 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p6.id, 
+  title: "Skinny kid makes a black friend, father doesn’t approve"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Hilariously+bad+movie+plot+explanations/Skinny+Kid+Makes+A+Black+Friend%2C+Father+Doesn%E2%80%99t+Approve.jpg")
+
+s32.photo.attach(io: file, filename: "Skinny+Kid+Makes+A+Black+Friend%2C+Father+Doesn%E2%80%99t+Approve.jpg")
+
+s33 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p7.id, 
+  title: "I can and I will"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/I+can+and+I+will.jpg")
+
+s33.photo.attach(io: file, filename: "I+can+and+I+will.jpg")
+
+s34 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p7.id, 
+  title: "Prove them wrong"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/Prove+them+wrong.jpg")
+
+s34.photo.attach(io: file, filename: "Prove+them+wrong.jpg")
+
+s35 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p7.id, 
+  title: "Stop hating yourself"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/Stop+hating+yourself.jpg")
+
+s35.photo.attach(io: file, filename: "Stop+hating+yourself.jpg")
+
+s36 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p7.id, 
+  title: "Stop wishing, start doing"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/Stop+wishing%2C+start+doing.jpg")
+
+s36.photo.attach(io: file, filename: "Stop+wishing%2C+start+doing.jpg")
+
+s37 = Subpost.create!(
+  author_id: u6.id, 
+  post_id: p7.id, 
+  title: "Your only limit is you"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Brutally+honest+motivational+quotes/Your+only+limit+is+you.jpg")
+
+s37.photo.attach(io: file, filename: "Your+only+limit+is+you.jpg")
+
+s38 = Subpost.create!(
+  author_id: u9.id, 
+  post_id: p8.id, 
+  title: "Habits are so hard to stop"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Habits+are+hard+to+stop.jpg")
+
+s38.photo.attach(io: file, filename: "Habits+are+hard+to+stop.jpg")
+
+p39 = Subpost.create!(
+  author_id: u10.id, 
+  post_id: p8.id, 
+  title: "Too true..."
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Too+true....jpg")
+
+p39.photo.attach(io: file, filename: "Too+true....jpg")
+
+p40 = Subpost.create!(
+  author_id: u10.id, 
+  post_id: p8.id, 
+  title: "I can relate. Haha."
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I+can+relate.jpg")
+
+p40.photo.attach(io: file, filename: "I+can+relate.jpg")
+
+p41 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p8.id, 
+  title: "I can't believe there was a shortage."
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I+can't+believe+there+was+a+shortage.jpg")
+
+p41.photo.attach(io: file, filename: "I+can't+believe+there+was+a+shortage.jpg")
+
+p42 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p8.id, 
+  title: "I'm not complaining."
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I'm+not+complaining.jpg")
+
+p42.photo.attach(io: file, filename: "I'm+not+complaining.jpg")
+
+p43 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p8.id, 
+  title: "Just another day..."
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Just+another+day.jpg")
+
+p43.photo.attach(io: file, filename: "Just+another+day.jpg")
+
+p44 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p8.id, 
+  title: "One benefit from Covid. At least to me. Haha"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/One+benefit+from+Covid.jpg")
+
+p44.photo.attach(io: file, filename: "One+benefit+from+Covid.jpg")
+
+p45 = Subpost.create!(
+  author_id: u4.id, 
+  post_id: p8.id, 
+  title: "One year later"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/One+year+later.jpg")
+
+p45.photo.attach(io: file, filename: "One+year+later.jpg")
+
+p46 = Subpost.create!(
+  author_id: u5.id, 
+  post_id: p8.id, 
+  title: "Too feral for society"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Too+feral+for+society.jpg")
+
+p46.photo.attach(io: file, filename: "Too+feral+for+society.jpg")
