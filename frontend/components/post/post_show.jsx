@@ -60,19 +60,19 @@ class PostShow extends React.Component {
               </div>
               {canEditPost}
             </div>
-            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt">Comments</i></button>
+            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> Comments</i></button>
 
             
           </ul>
         </div>
-        <div className="subpost-header">Responses:</div>
-        <SubpostShowContainer/>
-
-        <SubpostFormContainer
+        <div><SubpostFormContainer
           postId={this.props.post.id}
-        />
+        /></div>
+        
+        <div className="subpost-header">Responses:</div>
+        <div><SubpostShowContainer/></div>
         <div className="post-comments">
-        <div className="review-header" ref={this.scrollDiv}>Leave a comment:</div>
+        <div className="review-header" ref={this.scrollDiv}>Comments:</div>
         {/* <div className="native-comments" id="show-comments"></div> */}
         <ReviewShowContainer/>
         <ReviewFormContainer
