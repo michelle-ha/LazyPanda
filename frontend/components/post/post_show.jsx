@@ -60,7 +60,7 @@ class PostShow extends React.Component {
               </div>
               {canEditPost}
             </div>
-            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {Object.keys(reviews.Data).length} Comments</i></button>
+            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {Object.keys(reviews).length} Comments</i></button>
 
             
           </ul>
