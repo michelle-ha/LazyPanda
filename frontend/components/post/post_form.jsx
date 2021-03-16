@@ -100,8 +100,8 @@ class PostForm extends React.Component {
             </div>
           <button className="post-button">Create Post</button>
           </div>
-          </div>
           <div className="go-back-link"><Link to="/" className="go-back">Go Back</Link></div>
+          </div>
         </form>
       </div>
     );

@@ -39,7 +39,8 @@ img {
     max-width: 700px;
     border: 1px solid lightgray;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    background: white;
 }
 
 
@@ -229,6 +230,7 @@ form.post-form {
 
 .go-back {
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 .go-back:hover {
     color: red;
@@ -265,6 +267,7 @@ a.go-back {
 
 footer#footer {
     font-size: 20px;
+    padding: 10px
 }
 
 .post-container {
