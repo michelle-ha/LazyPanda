@@ -79,7 +79,7 @@ class PostShow extends React.Component {
           postId={this.props.post.id}
         /> 
         </div>
-
+        <div className="go-back-link"><Link to="/" className="go-back">Go Back</Link></div>
       </div>
     );
   };
