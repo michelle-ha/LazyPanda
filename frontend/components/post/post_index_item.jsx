@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import PostShowContainer from "../post/post_show_container"
-import SubpostShowContainer from "../subpost/subpost_show_container"
+// import PostShowContainer from "../post/post_show_container"
+// import SubpostShowContainer from "../subpost/subpost_show_container"
 
 
 
