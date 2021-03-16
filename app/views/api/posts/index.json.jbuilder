@@ -13,3 +13,16 @@ json.users do
         end
     end
 end
+
+
+json.reviews do
+  @posts.each do |post|
+    post.reviews.each do |review|
+      json.set! review.id do
+        json.extract! review, :id, :content, :author_id, :post_id
+        json.author review.author.name
+
+      end
+    end
+  end
+end
