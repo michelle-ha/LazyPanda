@@ -47,11 +47,14 @@
 
 .subpost-header {
     line-height: 1.5;
-    padding: 0 0 12px 0;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: bold;
-    font-size: 20px;
+    padding: 0 0 20px 0;
+    // color: rgba(0, 0, 0, 0.8);
+    // font-weight: bold;
+    // font-size: 20px;
     text-align: center;
+    font-weight: 700;
+    font-size: 1.875em;
+    color: #000;
 }
 
 button.delete-link {
