@@ -48,12 +48,15 @@ class SubpostForm extends React.Component {
 
         this.props.createSubpost(formData)
             .then(() => this.props.fetchPost(this.props.postId))
-            // .then(() => {
-            //     this.setState({
-            //         title: '',
-            //         post_id: this.props.postId
-            //     })
-            // })
+            .then(() => {
+                this.setState({
+                    title: '',
+                    post_id: this.props.postId,
+                    author_id: this.props.currentUserId,
+                    photoFile: null,
+                    photoUrl: null,
+                })
+            })
     }
 
     

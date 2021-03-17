@@ -29,7 +29,6 @@ class ReviewForm extends React.Component {
                     content: '',
                     post_id: this.props.postId,
                     author_id: this.props.currentUserId,
-                    post_id: this.props.postId
                 })
             })
         // this.setState({title: ''});
