@@ -47,5 +47,6 @@ json.subposts do
           json.author subpost.author.name
           json.photo url_for(subpost.photo) if subpost.photo.attached?
       end
+    end
   end
 end
