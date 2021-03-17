@@ -1,7 +1,7 @@
 
 json.subpost do 
   json.extract! @subpost, :id, :title, :author_id, :post_id
-  json.likeIds subpost.like_ids
+  json.likeIds @subpost.like_ids
 
 end
 
