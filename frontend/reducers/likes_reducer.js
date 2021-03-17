@@ -2,7 +2,7 @@ import { RECEIVE_LIKE, REMOVE_LIKE } from "../actions/like_actions";
 import { RECEIVE_POST } from "../actions/post_actions";
 
 
-const LikesReducer = (OldState = {}, action) => {
+const LikesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
 
@@ -16,7 +16,7 @@ const LikesReducer = (OldState = {}, action) => {
         case RECEIVE_POST:
             return Object.assign(nextState, action.post.likes)
         default:
-            return OldState;
+            return oldState;
     }
 }
 
