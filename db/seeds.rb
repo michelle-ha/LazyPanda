@@ -13,6 +13,8 @@ User.delete_all
 Post.delete_all
 Subpost.delete_all
 Review.delete_all
+Like.delete_all
+
 
 
 u1 = User.create!(
@@ -797,3 +799,93 @@ p46 = Subpost.create!(
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Too+feral+for+society.jpg")
 
 p46.photo.attach(io: file, filename: "Too+feral+for+society.jpg")
+
+like1 = Like.create!(
+    author_id: u1.id,
+    likeable_type: 'Post',
+    likeable_id: p1.id,
+)
+
+like2 = Like.create!(
+    author_id: u2.id,
+    likeable_type: 'Post',
+    likeable_id: p1.id,
+)
+
+like3 = Like.create!(
+    author_id: u3.id,
+    likeable_type: 'Post',
+    likeable_id: p1.id,
+)
+
+like4 = Like.create!(
+    author_id: u1.id,
+    likeable_type: 'Post',
+    likeable_id: p2.id,
+)
+
+like5 = Like.create!(
+    author_id: u4.id,
+    likeable_type: 'Post',
+    likeable_id: p3.id,
+)
+
+like6 = Like.create!(
+    author_id: u6.id,
+    likeable_type: 'Post',
+    likeable_id: p4.id,
+)
+
+like7 = Like.create!(
+    author_id: u6.id,
+    likeable_type: 'Post',
+    likeable_id: p6.id,
+)
+
+like8 = Like.create!(
+    author_id: u1.id,
+    likeable_type: 'Subpost',
+    likeable_id: s12.id,
+)
+
+like9 = Like.create!(
+    author_id: u4.id,
+    likeable_type: 'Subpost',
+    likeable_id: s30.id,
+)
+
+like10 = Like.create!(
+    author_id: u2.id,
+    likeable_type: 'Subpost',
+    likeable_id: s18.id,
+)
+
+like11 = Like.create!(
+    author_id: u3.id,
+    likeable_type: 'Subpost',
+    likeable_id: s8.id,
+)
+
+like12 = Like.create!(
+    author_id: u3.id,
+    likeable_type: 'Subpost',
+    likeable_id: s1.id,
+)
+
+like13 = Like.create!(
+    author_id: u4.id,
+    likeable_type: 'Subpost',
+    likeable_id: s2.id,
+)
+
+like14 = Like.create!(
+    author_id: u1.id,
+    likeable_type: 'Subpost',
+    likeable_id: s17.id,
+)
+
+like15 = Like.create!(
+    author_id: u1.id,
+    likeable_type: 'Subpost',
+    likeable_id: s14.id,
+)

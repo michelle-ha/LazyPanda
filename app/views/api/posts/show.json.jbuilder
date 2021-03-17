@@ -1,5 +1,8 @@
 json.post do
   json.partial! '/api/posts/post', post: @post
+  json.likeIds @post.like_ids
+  json.subpostIds @post.subpost_ids
+
 end
 
 json.subposts do
@@ -19,6 +22,22 @@ json.reviews do
       json.set! review.id do
           json.extract! review, :id, :content, :author_id, :post_id
           json.author review.author.name
+      end
+  end
+end
+
+json.likes do
+  @post.subposts.each do |subpost|
+      subpost.likes.each do |like|
+          json.set! like.id do
+              json.partial! 'api/likes/like', like: like
+          end
+      end
+  end
+
+  @post.likes.each do |like|
+      json.set! like.id do
+          json.partial! 'api/likes/like', like: like
       end
   end
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :subposts, only: [:create, :destroy]
     resources :reviews, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   
   end
   
