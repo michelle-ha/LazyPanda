@@ -9,4 +9,7 @@ class Subpost < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :likes, as: :likeable,
+        dependent: :destroy
+
 end
