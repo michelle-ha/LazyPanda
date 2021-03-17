@@ -54,6 +54,7 @@ class SubpostForm extends React.Component {
             //         post_id: this.props.postId
             //     })
             // })
+        this.setState({title: ''});
     }
 
     
@@ -78,14 +79,17 @@ class SubpostForm extends React.Component {
         // const requireImage = !this.state.photoUrl ? "Photo required" : null 
         return (
             <div className="subpost-form">
-                {/* <div className="errors">{this.renderErrors()}</div> */}
                 <form onSubmit={this.handleSubmit}>
+                    {/* {this.props.currentUser ?
+                        <div className="errors">{this.renderErrors()}</div>
+                        : null } */}
                     <input type="string"
                         value={this.state.title}
                         placeholder="Picture title..."
                         onChange={this.update('title')}
                         className="subpost-title-input"
                 />
+                
 
             <div className="subpost-form">
               {preview}
@@ -95,7 +99,7 @@ class SubpostForm extends React.Component {
             </div> 
                 {this.props.currentUser ?
                         (<div>
-                            <input type="submit" value="Write a response" />
+                            <input type="submit" className= "sub-post-signin" value="Write a response" />
                         </div>)
                     : (<div>
                         <button className= "sub-post-signin" onClick={() => this.props.openModal()}>Sign in to write a Response </button>

@@ -32,6 +32,8 @@ class ReviewForm extends React.Component {
                     post_id: this.props.postId
                 })
             })
+        this.setState({title: ''});
+
     }
 
     
@@ -54,8 +56,10 @@ class ReviewForm extends React.Component {
     render() { 
         return (
             <div className="review-form">
-                {/* <div className="errors">{this.renderErrors()}</div> */}
                 <form onSubmit={this.handleSubmit}>
+                    {/* {this.props.currentUser ?
+                        <div className="errors">{this.renderErrors()}</div>
+                        : null } */}
                 <div className="send-button">
                 <textarea className="review-content-input"  type="text" value={this.state.content} placeholder="Add a comment..." onChange={this.update('content')}></textarea>
                 {this.props.currentUser ?
