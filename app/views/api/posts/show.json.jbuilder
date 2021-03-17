@@ -2,6 +2,7 @@ json.post do
   json.partial! '/api/posts/post', post: @post
   json.likeIds @post.like_ids
   json.subpostIds @post.subpost_ids
+  json.reviewIds @post.review_ids
 
 end
 

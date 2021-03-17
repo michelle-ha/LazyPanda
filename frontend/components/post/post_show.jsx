@@ -25,6 +25,9 @@ class PostShow extends React.Component {
   render() {
     const {post, deletePost} = this.props
 
+    let reviewLength;
+    reviewLength = this.props.post.reviewIds.length
+
     if (!post) return (<Redirect to="/" />)
     let canEditPost;
     if (this.props.currentUser && this.props.currentUser.id === post.author_id) {
@@ -49,7 +52,6 @@ class PostShow extends React.Component {
         <div className="post-details">
           <ul>
             <li className="post-title">{this.props.post.title}</li>
-            {/* <li className="post-author">By: {this.props.user.name}, {this.props.user.email}</li> */}
             <li className="post-body">{this.props.post.body}</li>
             <div className="picture-shown">{insertPhoto}</div>
             <div className="post-edit-container">
@@ -60,7 +62,7 @@ class PostShow extends React.Component {
               </div>
               {canEditPost}
             </div>
-            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> Comments</i></button>
+            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {reviewLength} Comments</i></button>
 
             
           </ul>
@@ -73,7 +75,6 @@ class PostShow extends React.Component {
         <div><SubpostShowContainer/></div>
         <div className="post-comments">
         <div className="review-header" ref={this.scrollDiv}>Comments:</div>
-        {/* <div className="native-comments" id="show-comments"></div> */}
         <ReviewShowContainer/>
         <ReviewFormContainer
           postId={this.props.post.id}
