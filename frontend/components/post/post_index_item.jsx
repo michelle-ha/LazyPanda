@@ -12,7 +12,6 @@ class PostIndexItem extends React.Component {
 
   }
 
-
   handleClick() {
     const postId = this.props.post.id;
     this.props.history.push(`/${postId}`);
@@ -49,7 +48,7 @@ class PostIndexItem extends React.Component {
           </div>
           <div className="index-item-author">By: {this.props.user.name}
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
-            <div className="index-item-icons" onClick={this.handleClick}>
+            <div className="index-item-icons">
             <i class="fas fa-comments"> {subpostLength} Subposts</i>
               <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
             </div>
