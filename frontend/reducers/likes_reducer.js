@@ -3,8 +3,8 @@ import { RECEIVE_POST } from "../actions/post_actions";
 
 
 const LikesReducer = (OldState = {}, action) => {
-    Object.freeze(state);
-    let nextState = Object.assign({}, state);
+    Object.freeze(oldState);
+    let nextState = Object.assign({}, oldState);
 
     switch (action.type) {
         case RECEIVE_LIKE:
