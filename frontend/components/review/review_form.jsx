@@ -26,13 +26,13 @@ class ReviewForm extends React.Component {
             .then(() => this.props.fetchPost(this.props.postId))
             .then(() => {
                 this.setState({
-                    title: '',
+                    content: '',
                     post_id: this.props.postId,
                     author_id: this.props.currentUserId,
                     post_id: this.props.postId
                 })
             })
-        this.setState({title: ''});
+        // this.setState({title: ''});
 
     }
 
