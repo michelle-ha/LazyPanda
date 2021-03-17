@@ -300,8 +300,8 @@ r24 = Review.create!(
 
 p8 = Post.create!(
   author_id: u7.id,
-  title: "It's been a year...",
-  body: "So much has changed."
+  title: "Covid tweets that are just a little too real",
+  body: "Made me cringe a little inside."
 )
 
 file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Bad+habits.jpg')
@@ -336,6 +336,52 @@ r29 = Review.create!(
   author_id: u1.id,
   post_id: p8.id,
   content: "Malls are finally open!"
+)
+
+p9 = Post.create!(
+  author_id: u8.id,
+  title: "Advertising fails",
+  body: "Makes me wonder if they did this on purpose."
+)
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/Choose+abortion.+Life+kills.jpg')
+
+p9.photo.attach(io: file, filename: 'Choose+abortion.+Life+kills.jpg')
+
+r30 = Review.create!(
+  author_id: u1.id,
+  post_id: p9.id,
+  content: "My brain hurts now!"
+)
+
+r31 = Review.create!(
+  author_id: u2.id,
+  post_id: p9.id,
+  content: "I just destroyed my throat wheezing and laughing at all of these. I need water."
+)
+
+r32 = Review.create!(
+  author_id: u3.id,
+  post_id: p9.id,
+  content: "It's like Dr Seuss got together with Yoda to write some of these."
+)
+
+r33 = Review.create!(
+  author_id: u4.id,
+  post_id: p9.id,
+  content: "So many of these are due to people not understanding that westerners read left to right, not top to bottom."
+)
+
+r34 = Review.create!(
+  author_id: u5.id,
+  post_id: p9.id,
+  content: "I actually thought my head would explode reading these."
+)
+
+r35 = Review.create!(
+  author_id: u6.id,
+  post_id: p9.id,
+  content: "Why is it that when we make signs we completely forget that we read left to right?"
 )
 
 
@@ -720,7 +766,7 @@ file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Habits+are
 
 s38.photo.attach(io: file, filename: "Habits+are+hard+to+stop.jpg")
 
-p39 = Subpost.create!(
+s39 = Subpost.create!(
   author_id: u10.id, 
   post_id: p8.id, 
   title: "Too true..."
@@ -728,9 +774,9 @@ p39 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Too+true....jpg")
 
-p39.photo.attach(io: file, filename: "Too+true....jpg")
+s39.photo.attach(io: file, filename: "Too+true....jpg")
 
-p40 = Subpost.create!(
+s40 = Subpost.create!(
   author_id: u10.id, 
   post_id: p8.id, 
   title: "I can relate. Haha."
@@ -738,9 +784,9 @@ p40 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I+can+relate.jpg")
 
-p40.photo.attach(io: file, filename: "I+can+relate.jpg")
+s40.photo.attach(io: file, filename: "I+can+relate.jpg")
 
-p41 = Subpost.create!(
+s41 = Subpost.create!(
   author_id: u1.id, 
   post_id: p8.id, 
   title: "I can't believe there was a shortage."
@@ -748,9 +794,9 @@ p41 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I+can't+believe+there+was+a+shortage.jpg")
 
-p41.photo.attach(io: file, filename: "I+can't+believe+there+was+a+shortage.jpg")
+s41.photo.attach(io: file, filename: "I+can't+believe+there+was+a+shortage.jpg")
 
-p42 = Subpost.create!(
+s42 = Subpost.create!(
   author_id: u2.id, 
   post_id: p8.id, 
   title: "I'm not complaining."
@@ -758,9 +804,9 @@ p42 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/I'm+not+complaining.jpg")
 
-p42.photo.attach(io: file, filename: "I'm+not+complaining.jpg")
+s42.photo.attach(io: file, filename: "I'm+not+complaining.jpg")
 
-p43 = Subpost.create!(
+s43 = Subpost.create!(
   author_id: u2.id, 
   post_id: p8.id, 
   title: "Just another day..."
@@ -768,9 +814,9 @@ p43 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Just+another+day.jpg")
 
-p43.photo.attach(io: file, filename: "Just+another+day.jpg")
+s43.photo.attach(io: file, filename: "Just+another+day.jpg")
 
-p44 = Subpost.create!(
+s44 = Subpost.create!(
   author_id: u3.id, 
   post_id: p8.id, 
   title: "One benefit from Covid. At least to me. Haha"
@@ -778,9 +824,9 @@ p44 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/One+benefit+from+Covid.jpg")
 
-p44.photo.attach(io: file, filename: "One+benefit+from+Covid.jpg")
+s44.photo.attach(io: file, filename: "One+benefit+from+Covid.jpg")
 
-p45 = Subpost.create!(
+s45 = Subpost.create!(
   author_id: u4.id, 
   post_id: p8.id, 
   title: "One year later"
@@ -790,7 +836,7 @@ file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/One+year+l
 
 p45.photo.attach(io: file, filename: "One+year+later.jpg")
 
-p46 = Subpost.create!(
+s46 = Subpost.create!(
   author_id: u5.id, 
   post_id: p8.id, 
   title: "Too feral for society"
@@ -798,7 +844,67 @@ p46 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/Too+feral+for+society.jpg")
 
-p46.photo.attach(io: file, filename: "Too+feral+for+society.jpg")
+s46.photo.attach(io: file, filename: "Too+feral+for+society.jpg")
+
+s47 = Subpost.create!(
+  author_id: u1.id, 
+  post_id: p9.id, 
+  title: "Don't do it"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/Don't+do+it.jpg")
+
+s47.photo.attach(io: file, filename: "Don't+do+it.jpg")
+
+s48 = Subpost.create!(
+  author_id: u2.id, 
+  post_id: p9.id, 
+  title: "Well... that got my attention"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/Well...+that+got+my+attention.jpg")
+
+s48.photo.attach(io: file, filename: "Well...+that+got+my+attention.jpg")
+
+s49 = Subpost.create!(
+  author_id: u3.id, 
+  post_id: p9.id, 
+  title: "He scares me, too"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/He+scares+me%2C+too.jpg")
+
+s49.photo.attach(io: file, filename: "Advertising+fails/He+scares+me%2C+too.jpg")
+
+s50 = Subpost.create!(
+  author_id: u7.id, 
+  post_id: p9.id, 
+  title: "I would be insulted if they were talking about my children"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/I+would+be+insulted+if+they+were+talking+about+my+children.jpg")
+
+s50.photo.attach(io: file, filename: "I+would+be+insulted+if+they+were+talking+about+my+children.jpg")
+
+s51 = Subpost.create!(
+  author_id: u8.id, 
+  post_id: p9.id, 
+  title: "I'm actually kind of curious"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/I'm+actually+kind+of+curious.jpg")
+
+s51.photo.attach(io: file, filename: "I'm+actually+kind+of+curious.jpg")
+
+s52 = Subpost.create!(
+  author_id: u9.id, 
+  post_id: p9.id, 
+  title: "No action. Stop the excitement"
+)
+
+file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/No+action.+Stop+the+excitement.jpg")
+
+s52.photo.attach(io: file, filename: "No+action.+Stop+the+excitement.jpg")
 
 like1 = Like.create!(
     author_id: u1.id,
@@ -888,4 +994,10 @@ like15 = Like.create!(
     author_id: u1.id,
     likeable_type: 'Subpost',
     likeable_id: s14.id,
+)
+
+like16 = Like.create!(
+    author_id: u9.id,
+    likeable_type: 'Post',
+    likeable_id: p9.id,
 )
