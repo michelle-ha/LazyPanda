@@ -46,13 +46,13 @@ class PostIndexItem extends React.Component {
             <div className="index-item-title" >{title}</div>
             <div className="index-item-body">{body}</div>
           </div>
-          <div className="index-item-author">By: {this.props.user.name}</div>
+          <div className="index-item-author">By: {this.props.user.name}
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
-          <div className="index-item-icons">
+            <div className="index-item-icons">
             <i class="fas fa-comments"> {subpostLength} Subposts</i>
-            <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
+              <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
+            </div>
           </div>
-          
       </div>
       {/* <i class="fas fa-comment-alt"  onclick={this.myFunction}></i> */}
       {/* <ReviewShowContainer/> */}
