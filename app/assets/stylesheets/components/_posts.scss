@@ -331,6 +331,10 @@ i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
     cursor: auto;
     color: black;
 }
+i#reviewLength {
+    padding-right: 30px;
+
+}
 
 .show-item-title, .post-title {
     font-size: 35px;
@@ -357,4 +361,9 @@ i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
 
 .post-title {
     padding-bottom: 10px;
+}
+
+.index-info{
+    display: flex;
+    justify-content: space-between;
 }
