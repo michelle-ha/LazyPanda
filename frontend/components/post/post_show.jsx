@@ -51,12 +51,12 @@ class PostShow extends React.Component {
 
         <div className="post-details">
           <ul>
-            <li className="index-item-title">{this.props.post.title}</li>
-            <li className="index-item-body">{this.props.post.body}</li>
-            <div className="picture-shown">{insertPhoto}</div>
+            <li className="show-item-title">{this.props.post.title}</li>
+            <li className="show-item-body">{this.props.post.body}</li>
+            <li className="show-item-author">By: {this.props.post.author}</li>
+            <div className="picture-shown">{insertPhoto} </div>
             <div className="post-edit-container">
               <div className="post-container">
-                <li className="index-item-author">By: {this.props.post.author}</li>
                 {/* <a href="#show-comments"><i class="fas fa-comment-alt"></i></a> */}
                 
               </div>
