@@ -56,13 +56,14 @@ class PostShow extends React.Component {
             <li className="show-item-author">By: {this.props.post.author}</li>
             <div className="picture-shown">{insertPhoto} </div>
             <div className="post-edit-container">
+              <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {reviewLength} Comments</i></button>
               <div className="post-container">
                 {/* <a href="#show-comments"><i class="fas fa-comment-alt"></i></a> */}
                 
               </div>
               {canEditPost}
             </div>
-            <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {reviewLength} Comments</i></button>
+            
 
             
           </ul>
