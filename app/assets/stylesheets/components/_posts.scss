@@ -330,14 +330,14 @@ i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
     color: black;
 }
 
-show-item-title {
+.show-item-title {
     font-size: 35px;
     font-family: arial;
     padding-left: 30px;
     padding-top: 10px;
 }
 
-show-item-body {
+.show-item-body {
     color: gray;
     font-family: arial;
     padding-left: 30px;
@@ -345,7 +345,7 @@ show-item-body {
     padding-bottom: 15px;
 }
 
-show-item-author {
+.show-item-author {
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 30px;
