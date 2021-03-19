@@ -49,19 +49,19 @@ img {
 
 }
 
-.post-title {
-    background: 0 0;
-    font-family: Merriweather,serif;
-    font-weight: 700;
-    font-size: 2.3em;
-    line-height: 1.2;
-    padding: 12px .781em .125em .781em;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: auto;
-    text-align: left;
-    font-weight: bold;
-}
+// .post-title {
+//     background: 0 0;
+//     font-family: Merriweather,serif;
+//     font-weight: 700;
+//     font-size: 2.3em;
+//     line-height: 1.2;
+//     padding: 12px .781em .125em .781em;
+//     word-wrap: break-word;
+//     overflow-wrap: break-word;
+//     margin: auto;
+//     text-align: left;
+//     font-weight: bold;
+// }
 
 li.post-author {
     padding-left: 30px;
@@ -332,7 +332,7 @@ i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
     color: black;
 }
 
-.show-item-title {
+.show-item-title, .post-title {
     font-size: 35px;
     font-family: arial;
     padding-left: 30px;
