@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 // import PostShowContainer from "../post/post_show_container"
 // import SubpostShowContainer from "../subpost/subpost_show_container"
 // import ReviewShowContainer from "../review/review_show_container"
+// import Like from '../likes/like';
 
 class PostIndexItem extends React.Component {
   constructor(props) {
@@ -37,6 +38,9 @@ class PostIndexItem extends React.Component {
     let subpostLength;
     subpostLength = this.props.post.subpostIds.length
 
+    let likeLength;
+    likeLength = this.props.post.likeIds.length
+
     return (
       <div>
         <div
@@ -50,7 +54,9 @@ class PostIndexItem extends React.Component {
             <div className="index-item-author">By: {this.props.user.name}</div>
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">
-            <i class="fas fa-comments"> {subpostLength} Subposts</i>
+            {/* <Like likeable_id={this.props.post.id} likeable_type={'Post'} user_id={this.props.currentUser.id} /> */}
+              <i class="fas fa-heart">{likeLength} Likes</i>
+              <i class="fas fa-comments"> {subpostLength} Subposts</i>
               <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
             </div>
           </div>
