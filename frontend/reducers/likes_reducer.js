@@ -14,7 +14,12 @@ const LikesReducer = (oldState = {}, action) => {
             delete nextState[action.likeId]
             return nextState;
         case RECEIVE_POST:
-            return Object.assign(nextState, action.post.likes)
+            if(action.data.likes){
+                Object.values(action.data.likes).forEach(like => {
+                    nextState[like.id] = like
+                })
+            }
+            return nextState
         default:
             return oldState;
     }
