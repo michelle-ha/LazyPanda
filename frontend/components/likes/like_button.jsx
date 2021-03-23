@@ -21,12 +21,20 @@ const mDTP = (dispatch) => {
 class LikeButton extends React.Component{
     constructor(props){
         super(props)
+
+        // this.state = {
+        //     likeable_id: this.props.likeable_id, 
+        //     likeable_type: this.props.likeable_type,
+        //     author_id: this.props.author_id
+        // }
+
         this.toggleLike = this.toggleLike.bind(this)
     }
 
-    toggleLike(){
+    toggleLike(e){
+        e.preventDefault();
         if(this.props.like){
-            this.props.deleteLike(this.props.like.id);
+            this.props.deleteLike(this.props.like.id)
         }
         else {
             this.props.createLike({
@@ -46,7 +54,7 @@ class LikeButton extends React.Component{
         //     )
         // }
         return (
-            <button className='option-btn' onClick={this.toggleLike}>
+            <button className='option-btn'  onClick={this.toggleLike}>
                 <i class="fas fa-heart" id={this.props.like ? 'does-like' : 'subpost'} > </i>
             </button>
             
