@@ -55,7 +55,7 @@ class PostIndexItem extends React.Component {
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">
             {/* <Like likeable_id={this.props.post.id} likeable_type={'Post'} user_id={this.props.currentUser.id} /> */}
-              <i class="fas fa-heart">{likeLength} Likes</i>
+              <i class="fas fa-heart"> {likeLength} Likes</i>
               <i class="fas fa-comments"> {subpostLength} Subposts</i>
               <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
             </div>
