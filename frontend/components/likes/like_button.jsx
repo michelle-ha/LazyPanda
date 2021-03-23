@@ -46,8 +46,8 @@ class LikeButton extends React.Component{
         //     )
         // }
         return (
-            <button id={this.props.like ? 'does-like' : ''} className='option-btn' onClick={this.toggleLike}>
-                <i class="fas fa-heart" id="subpost"> </i>
+            <button className='option-btn' onClick={this.toggleLike}>
+                <i class="fas fa-heart" id={this.props.like ? 'does-like' : 'subpost'} > </i>
             </button>
             
         )

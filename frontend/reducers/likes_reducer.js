@@ -1,5 +1,6 @@
 import { RECEIVE_LIKE, REMOVE_LIKE } from "../actions/like_actions";
 import { RECEIVE_POST } from "../actions/post_actions";
+import {RECEIVE_SUBPOST} from "../actions/subpost_actions"
 
 
 const LikesReducer = (oldState = {}, action) => {
@@ -13,13 +14,10 @@ const LikesReducer = (oldState = {}, action) => {
         case REMOVE_LIKE:
             delete nextState[action.likeId]
             return nextState;
+        case RECEIVE_SUBPOST:
+            return Object.assign({}, action.subpost.likes);
         case RECEIVE_POST:
-            if(action.data.likes){
-                Object.values(action.data.likes).forEach(like => {
-                    nextState[like.id] = like
-                })
-            }
-            return nextState
+            return Object.assign({}, action.post.likes);
         default:
             return oldState;
     }
