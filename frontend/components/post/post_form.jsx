@@ -3,9 +3,6 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import EditNavBar from "../greeting/edit_navbar"
 
-
-
-
 class PostForm extends React.Component {
   constructor(props) {
     super(props);

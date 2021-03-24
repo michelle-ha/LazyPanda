@@ -11,3 +11,10 @@ json.author do
     json.extract! @subpost.author, :id, :name, :email
 end
 
+# json.likes do
+#   @subpost.likes.each do |like|
+#       json.set! like.id do
+#           json.partial! 'api/likes/like', like: like
+#       end
+#   end
+# end

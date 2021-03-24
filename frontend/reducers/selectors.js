@@ -28,22 +28,13 @@ export const findLike = (likes, likeable_id, likeable_type, author_id) => {
   return false;
 }
 
-export const getLikes = (likes, likeable_id, likeable_type) => {
-  let result = [];
-  for (let id in likes) {
-      if (likes[id].likeable_id === parseInt(likeable_id) && likes[id].likeable_type === likeable_type){
-          result.push(likes[id]);
-      }
-  }
-  return result;
-}
-
-// export const getLikesFromSubposts = (likes, subpostArray) => {
+// export const getLikes = (likes, likeable_id, likeable_type) => {
 //   let result = [];
 //   for (let id in likes) {
-//       if(subpostArray.includes(likes[id].likeable_id) && likes[id].likeable_type === 'Subpost' ){
-//           result.push(likes[id])
+//       if (likes[id].likeable_id === parseInt(likeable_id) && likes[id].likeable_type === likeable_type){
+//           result.push(likes[id]);
 //       }
 //   }
 //   return result;
 // }
+

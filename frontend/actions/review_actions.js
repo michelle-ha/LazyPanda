@@ -1,5 +1,4 @@
 import * as ReviewAPIUtil from '../util/review_api_util';
-// import { receiveErrors, clearErrors } from './error_actions';
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';

@@ -5,11 +5,12 @@ import SubpostFormContainer from "../subpost/subpost_form_container"
 import SubpostShowContainer from "../subpost/subpost_show_container"
 import ReviewFormContainer from "../review/review_form_container"
 import ReviewShowContainer from "../review/review_show_container"
+// import Like from "../likes/like"
 
 class PostShow extends React.Component {
   constructor(props) {
     super(props); 
-    
+
   }
 
   scrollDiv = createRef();
@@ -56,15 +57,11 @@ class PostShow extends React.Component {
             <li className="show-item-author">By: {this.props.post.author}</li>
             <div className="picture-shown">{insertPhoto} </div>
             <div className="post-edit-container">
+              {/* <i class="fas fa-heart">{likeLength} Likes</i> */}
               <button onClick={this.scrollSmoothHandler}><i class="fas fa-comment-alt"> {reviewLength} Comments</i></button>
-              <div className="post-container">
-                {/* <a href="#show-comments"><i class="fas fa-comment-alt"></i></a> */}
-                
-              </div>
+
               {canEditPost}
             </div>
-            
-
             
           </ul>
         </div>

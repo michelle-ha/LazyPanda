@@ -4,7 +4,6 @@ import { receiveErrors, clearErrors } from './error_actions';
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
-// export const POST_ERROR = "POST_ERROR";
 
 export const receivePosts = payload => ({
   type: RECEIVE_POSTS,
@@ -20,11 +19,6 @@ export const removePost = postId => ({
   type: REMOVE_POST,
   postId
 });
-
-// export const postError = error => ({
-//   type: POST_ERROR,
-//   error
-// });
 
 export const fetchPosts = () => dispatch => (
   PostAPIUtil.fetchPosts().then(payload => dispatch(receivePosts(payload)))

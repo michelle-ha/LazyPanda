@@ -1,22 +1,23 @@
 
 import { connect } from 'react-redux';
 import PostIndex from './post_index';
-import { fetchPosts, updatePost, destroyPost } from '../../actions/post_actions';
-// import { allPosts } from '../../reducers/selectors';
+import { fetchPosts } from '../../actions/post_actions';
+// import { getLikes } from '../../reducers/selectors';
+
 
 const mapStateToProps =  ({ session, entities }) => {
   return({
-    // posts: allPosts(state.entities),
     currentUser: entities.users[session.id],
     posts: Object.values(entities.posts),
-    users: entities.users
+    users: entities.users,
+    // likes: getLikes(entities.likes, ownProps.post.id, "Post")
+
   });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return ({
     requestPosts: () => dispatch(fetchPosts()),
-  // updatePost: post => dispatch(updatePost(post))
   });
 };
 
