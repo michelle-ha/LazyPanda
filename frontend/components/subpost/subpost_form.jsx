@@ -24,17 +24,8 @@ class SubpostForm extends React.Component {
         let didUpdate = likes.length !== prevProps.likes.length
         if (didUpdate && prevProps.likes.length && likes.length) {
             this.props.fetchPost(this.props.postId)
-            // console.log("prev likes count", prevProps.likes)
-            // console.log("likes count", likes)
-
         }
 
-        // let likeArr = prevProps.likes
-        // if (likeArr !== this.props.likes) {
-        //     this.props.fetchPost(this.props.postId)
-        //     likeArr = this.props.likes
-            
-        // }
       }
 
     update(field) {
@@ -102,9 +93,7 @@ class SubpostForm extends React.Component {
         return (
             <div className="subpost-form">
                 <form onSubmit={this.handleSubmit}>
-                    {/* {this.props.currentUser ?
-                        <div className="errors">{this.renderErrors()}</div>
-                        : null } */}
+
                     <input type="string"
                         value={this.state.title}
                         placeholder="Picture title..."
