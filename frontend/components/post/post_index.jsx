@@ -4,20 +4,9 @@ import PostIndexItem from './post_index_item';
 
 
 class PostIndex extends React.Component {
-
-  constructor(props) {
-    super(props)
-  }
   componentDidMount() {
     this.props.requestPosts();
   }
-
-  // componentDidUpdate(prevProps) {
-
-  //   if (this.props.likes !== prevProps.likes) {
-  //       this.props.requestPosts()
-  //   }
-  // }
 
   render() {
     const users = this.props.users;
