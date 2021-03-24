@@ -15,6 +15,10 @@ Subpost.delete_all
 Review.delete_all
 Like.delete_all
 
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+
 
 
 u1 = User.create!(
