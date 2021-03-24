@@ -50,7 +50,10 @@ class PostEditForm extends React.Component {
     }
 
     this.props.updatePost(formData)
-    .then( () => this.props.history.push("/"));
+    // .then( () => this.props.history.push("/"));
+    // .then(() => this.props.fetchPost(this.props.post.id))
+    .then(() => this.props.history.goBack())
+
   }
 
 
