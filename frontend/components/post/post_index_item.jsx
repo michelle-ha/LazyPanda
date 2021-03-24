@@ -1,30 +1,61 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-// import PostShowContainer from "../post/post_show_container"
-// import SubpostShowContainer from "../subpost/subpost_show_container"
-// import ReviewShowContainer from "../review/review_show_container"
-// import Like from '../likes/like';
+import LikeButton from "../likes/like_button"
+import { connect } from 'react-redux';
+import { getLikes } from '../../reducers/selectors';
+import { fetchPosts } from '../../actions/post_actions';
+
+
+
+
+// const mSTP = (state, ownProps) => {
+  
+//   return ({
+//       users: state.entities.users,
+//       currentUser: state.entities.users[state.session.id],
+//       post: ownProps.post,
+//       likes: getLikes(state, ownProps.post)
+//   })
+// }
+
+// const mDTP = (dispatch) => {
+//   return ({
+//       createLike: (like) => dispatch(createLike(like)),
+//       deleteLike: (like) => dispatch(deleteLike(like)),
+//       requestPosts: () => dispatch(fetchPosts()),
+
+//   })
+// }
+
+
 
 class PostIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    // this.myFunction = this.myFunction.bind(this);
 
   }
+
+  //   componentDidUpdate(prevProps) {
+
+  //   if (this.props.likes !== prevProps.likes) {
+  //       this.props.requestPosts()
+  //   }
+  // }
 
   handleClick() {
     const postId = this.props.post.id;
     this.props.history.push(`/${postId}`);
   }
 
-  // myFunction() {
-  //   return <ReviewShowContainer/>
-  // }
+
 
   render() {
     const { title, body, photo } = this.props.post;
-    // console.log(photo)
+    // if (!this.props.post) return null
+
+
+
     let insertPhoto;
     if (photo) {
       insertPhoto = (
@@ -52,20 +83,20 @@ class PostIndexItem extends React.Component {
           </div>
           <div className="index-info">
             <div className="index-item-author">By: {this.props.user.name}</div>
-          {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">
-            {/* <Like likeable_id={this.props.post.id} likeable_type={'Post'} user_id={this.props.currentUser.id} /> */}
-              <i class="fas fa-heart"> {likeLength} Likes</i>
+              <LikeButton likeable_id={this.props.post.id} likeable_type={'Post'} author_id={this.props.currentUser.id} /> 
+              <span>{this.props.post.likeIds.length} Likes</span>
+              {/* <i class="fas fa-heart"> {likeLength} Likes</i> */}
               <i class="fas fa-comments"> {subpostLength} Subposts</i>
               <i class="fas fa-comment-alt" id="reviewLength"> {reviewLength} Comments</i>
             </div>
           </div>
       </div>
-      {/* <i class="fas fa-comment-alt"  onclick={this.myFunction}></i> */}
-      {/* <ReviewShowContainer/> */}
+
       </div>
     );
   }
 }
 
-export default withRouter(PostIndexItem);
+export default connect(mSTP, mDTP)(PostIndexItem);
+
