@@ -18,10 +18,19 @@ class SubpostForm extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-
-        if (this.props.likes !== prevProps.likes) {
+        const {likes} = this.props
+        let didUpdate = likes !== prevProps.likes
+        if (didUpdate && likes && prevProps) {
             this.props.fetchPost(this.props.postId)
+
         }
+
+        // let likeArr = prevProps.likes
+        // if (likeArr !== this.props.likes) {
+        //     this.props.fetchPost(this.props.postId)
+        //     likeArr = this.props.likes
+            
+        // }
       }
 
     update(field) {
