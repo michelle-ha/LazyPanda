@@ -6,42 +6,12 @@ import { getLikes } from '../../reducers/selectors';
 import { fetchPosts } from '../../actions/post_actions';
 
 
-
-
-// const mSTP = (state, ownProps) => {
-  
-//   return ({
-//       users: state.entities.users,
-//       currentUser: state.entities.users[state.session.id],
-//       post: ownProps.post,
-//       likes: getLikes(state, ownProps.post)
-//   })
-// }
-
-// const mDTP = (dispatch) => {
-//   return ({
-//       createLike: (like) => dispatch(createLike(like)),
-//       deleteLike: (like) => dispatch(deleteLike(like)),
-//       requestPosts: () => dispatch(fetchPosts()),
-
-//   })
-// }
-
-
-
 class PostIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
 
   }
-
-  //   componentDidUpdate(prevProps) {
-
-  //   if (this.props.likes !== prevProps.likes) {
-  //       this.props.requestPosts()
-  //   }
-  // }
 
   handleClick() {
     const postId = this.props.post.id;
@@ -52,9 +22,6 @@ class PostIndexItem extends React.Component {
 
   render() {
     const { title, body, photo } = this.props.post;
-    // if (!this.props.post) return null
-
-
 
     let insertPhoto;
     if (photo) {
@@ -98,5 +65,5 @@ class PostIndexItem extends React.Component {
   }
 }
 
-export default connect(mSTP, mDTP)(PostIndexItem);
+export default PostIndexItem
 
