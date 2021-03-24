@@ -43,6 +43,8 @@ class PostForm extends React.Component {
     }
     this.props.createPost(formData)
     .then( () => this.props.history.push("/"));
+    // const postId = this.state.id
+    // this.props.history.push(`/${postId}`);
   }
 
 
@@ -92,7 +94,7 @@ class PostForm extends React.Component {
             <div className="button-holder">
               {preview}
               <h3 className="button-holder">Upload photo</h3>
-              <input type="file" className="new-post-button"
+              <input type="file" required className="new-post-button"
                 onChange={this.handleFile.bind(this)}/>
             </div>
           <button className="post-button">Create Post</button>

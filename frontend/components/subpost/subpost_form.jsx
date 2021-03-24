@@ -105,7 +105,7 @@ class SubpostForm extends React.Component {
             <div className="subpost-form">
               {preview}
               <h3 className="sub-button-holder">Upload photo</h3>
-              <input type="file" className="sub-post-button"
+              <input type="file" required className="sub-post-button"
                 onChange={this.handleFile.bind(this)}/>
             </div> 
                 {this.props.currentUser ?

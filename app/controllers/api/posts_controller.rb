@@ -2,6 +2,8 @@ class Api::PostsController < ApplicationController
   #CRUD: create, read, update, delete
   
   before_action :require_logged_in, only: [:create, :destroy, :update]
+  # after_commit :add_default_cover, on: [:create, :update]
+
   
   def index
     @posts = Post.all
@@ -43,5 +45,11 @@ class Api::PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :photo) 
   end
+
+  # def add_default_cover
+  #   unless cover.attached?
+  #     self.cover.attach(io: File.open(Rails.root.join("app", "assets", "images", "default.jpeg")), filename: 'default.jpg' , content_type: "image/jpg")
+  #   end
+  # end
   
   end
