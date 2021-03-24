@@ -10,6 +10,7 @@ class SubpostForm extends React.Component {
             post_id: this.props.postId,
             photoFile: null,
             photoUrl: null,
+            // likesCount: this.props.likes
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,9 +21,11 @@ class SubpostForm extends React.Component {
     componentDidUpdate(prevProps) {
         const {likes} = this.props
         // debugger
-        let didUpdate = likes !== prevProps.likes
-        if (didUpdate && prevProps.likes && likes) {
+        let didUpdate = likes.length !== prevProps.likes.length
+        if (didUpdate && prevProps.likes.length && likes.length) {
             this.props.fetchPost(this.props.postId)
+            // console.log("prev likes count", prevProps.likes)
+            // console.log("likes count", likes)
 
         }
 

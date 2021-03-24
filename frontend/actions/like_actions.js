@@ -12,10 +12,10 @@ const receiveLike = like => {
     })
 }
 
-const removeLike = reviewId => {
+const removeLike = likeId => {
     return({
         type: REMOVE_LIKE,
-        reviewId
+        likeId
     })
 }
 
