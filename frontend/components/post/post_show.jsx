@@ -25,11 +25,12 @@ class PostShow extends React.Component {
 
   render() {
     const {post, deletePost} = this.props
+    if (!post) return null
 
     let reviewLength;
     reviewLength = this.props.post.reviewIds.length
 
-    if (!post) return (<Redirect to="/" />)
+    // if (!post) return (<Redirect to="/" />)
     let canEditPost;
     if (this.props.currentUser && this.props.currentUser.id === post.author_id) {
       canEditPost = (

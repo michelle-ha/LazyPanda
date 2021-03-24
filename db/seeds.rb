@@ -834,7 +834,7 @@ s45 = Subpost.create!(
 
 file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/covid/One+year+later.jpg")
 
-p45.photo.attach(io: file, filename: "One+year+later.jpg")
+s45.photo.attach(io: file, filename: "One+year+later.jpg")
 
 s46 = Subpost.create!(
   author_id: u5.id, 

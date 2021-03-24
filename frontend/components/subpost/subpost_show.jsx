@@ -2,10 +2,21 @@ import React from 'react';
 import LikeButton from "../likes/like_button"
 
 class SubpostShow extends React.Component {
+    // constructor(props) {
+    //     super(props)
+    // }
+
+    // componentDidUpdate(prevProps) {
+
+    //     if (this.props.likes !== prevProps.likes) {
+    //         this.props.fetchPost(this.props.postId)
+    //     }
+    //   }
 
     render() {
 
         let AllSubposts = this.props.postSubposts.map((subpost, idx) => {
+       
             
 
             return (

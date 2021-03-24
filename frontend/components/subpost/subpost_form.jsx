@@ -17,6 +17,13 @@ class SubpostForm extends React.Component {
 
     }
 
+    componentDidUpdate(prevProps) {
+
+        if (this.props.likes !== prevProps.likes) {
+            this.props.fetchPost(this.props.postId)
+        }
+      }
+
     update(field) {
         return e => {
             this.setState({ [field]: e.target.value })

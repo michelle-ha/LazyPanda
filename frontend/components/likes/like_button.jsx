@@ -9,7 +9,7 @@ import { fetchPost } from '../../actions/post_actions';
 const mSTP = (state, ownProps) => {
     return {
         like: findLike(state.entities.likes, ownProps.likeable_id, ownProps.likeable_type, ownProps.author_id),
-        // postId: ownProps.likeable_id,
+        // postId: ownProps.postId,
         // likes: state.entities.likes,
 
 
@@ -20,7 +20,6 @@ const mDTP = (dispatch) => {
     return {
         createLike: (like) => dispatch(createLike(like)),
         deleteLike: (likeId) => dispatch(deleteLike(likeId)),
-        // fetchPost: postId => dispatch(fetchPost(postId)),
 
     }
 }
@@ -43,7 +42,8 @@ class LikeButton extends React.Component{
         e.preventDefault();
         if(this.props.like){
             this.props.deleteLike(this.props.like.id)
-            // .then(() => this.props.fetchPost(this.props.postId))
+
+            // .then(() => window.location.reload()) 
 
         }
         else {
@@ -52,8 +52,10 @@ class LikeButton extends React.Component{
                 likeable_type: this.props.likeable_type,
                 author_id: this.props.author_id
             })
+
+            // .then(() => window.location.reload()) 
+
             // this.props.createLike(this.state)
-            // .then(() => this.props.fetchPost(this.props.postId))
             // .then(() => {
             //     this.setState({
             //         likeable_id: this.props.likeable_id, 
@@ -71,6 +73,9 @@ class LikeButton extends React.Component{
         //     return (
         //         <div id={this.props.like ? 'does-like' : ''} className='comment-like' onClick={this.toggleLike}>Like</div>
         //     )
+        // }
+        // if (!this.props.likes) {
+        //     return <div></div>
         // }
         return (
             <button className='option-btn'  onClick={this.toggleLike}>

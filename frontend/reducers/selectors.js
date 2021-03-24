@@ -4,15 +4,15 @@ export const selectPost = ({ posts }, postId) => {
     return posts[postId]
   };
   
-// export const getLikes = (likes, likeable_id, likeable_type) => {
-//   let result = [];
-//   for (let id in likes) {
-//       if (likes[id].likeable_id === parseInt(likeable_id) && likes[id].likeable_type === likeable_type){
-//           result.push(likes[id]);
-//       }
-//   }
-//   return result;
-// }
+export const getLikes = (likes, likeable_id, likeable_type) => {
+  let result = [];
+  for (let id in likes) {
+      if (likes[id].likeable_id === parseInt(likeable_id) && likes[id].likeable_type === likeable_type){
+          result.push(likes[id]);
+      }
+  }
+  return result;
+}
 
 export const findLike = (likes, likeable_id, likeable_type, author_id) => {
   for (let id in likes) {
@@ -28,13 +28,4 @@ export const findLike = (likes, likeable_id, likeable_type, author_id) => {
   return false;
 }
 
-// export const getLikes = (likes, likeable_id, likeable_type) => {
-//   let result = [];
-//   for (let id in likes) {
-//       if (likes[id].likeable_id === parseInt(likeable_id) && likes[id].likeable_type === likeable_type){
-//           result.push(likes[id]);
-//       }
-//   }
-//   return result;
-// }
 
