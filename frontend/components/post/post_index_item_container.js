@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-// import { fetchPost } from '../../actions/post_actions';
+import { fetchPosts } from '../../actions/post_actions';
 import PostIndexItem from './post_index_item';
 
 
@@ -13,14 +13,12 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         createSubpost: subpost => dispatch(createSubpost(subpost)),
-//         fetchPost: postId => dispatch(fetchPost(postId)),
-//         clearErrors: () => dispatch(clearErrors()),
-//         openModal: () => dispatch(openModal('login'))
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchPosts: () => dispatch(fetchPosts()),
 
-//     }
-// }
+
+    }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndexItem);

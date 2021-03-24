@@ -15,6 +15,21 @@ class PostIndexItem extends React.Component {
 
   }
 
+  // componentDidMount(){
+  //   // debugger
+  //   this.props.fetchPosts()
+  // }
+
+  componentDidUpdate(prevProps) {
+    const {likes} = this.props
+    // debugger
+    let didUpdate = likes.length !== prevProps.likes.length
+    if (didUpdate && prevProps.likes.length && likes.length) {
+        this.props.fetchPosts()
+    }
+
+  }
+
   handleClick() {
     const postId = this.props.post.id;
     this.props.history.push(`/${postId}`);
@@ -56,7 +71,7 @@ class PostIndexItem extends React.Component {
             <div className="index-item-author">By: {this.props.user.name}</div>
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">
-            <LikeButton likeable_id={this.props.post.id} likeable_type={'Post'} author_id={this.props.user.id} /> 
+            <LikeButton likeable_id={this.props.post.id} likeable_type={'Post'} author_id={this.props.currentUserId} /> 
             <span>{this.props.post.likeIds.length} Likes</span>
 
               {/* <i class="fas fa-heart"> {likeLength} Likes</i> */}

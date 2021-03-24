@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexItem from './post_index_item';
+import PostIndexItem from './post_index_item_container';
 // import ReviewShowContainer from "../review/review_show_container"
 
 
