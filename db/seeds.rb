@@ -27,17 +27,29 @@ u1 = User.create!(
   email: 'guest@gmail.com'
 )
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/1.jfif')
+
+u1.profile_pic.attach(io: file, filename: '1.jfif')
+
 u2 = User.create!(
   name: 'Cindy Lee',
   password: 'password',
   email: 'kitty@gmail.com'
 )
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/216c8e2f8d76c0d42cee38516034d5df.jpg')
+
+u2.profile_pic.attach(io: file, filename: '216c8e2f8d76c0d42cee38516034d5df.jpg')
+
 u3 = User.create!(
   name: 'Panda Man',
   password: 'password',
   email: 'panda@gmail.com'
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/70521e688d924112848396ec220a517b.png')
+
+u3.profile_pic.attach(io: file, filename: '70521e688d924112848396ec220a517b.png')
 
 
 u4 = User.create!(
@@ -46,11 +58,19 @@ u4 = User.create!(
   email: 'tester@gmail.com'
 )
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/download+(1).jfif')
+
+u4.profile_pic.attach(io: file, filename: 'download+(1).jfif')
+
 u5 = User.create!(
   name: 'Lucca Puppers',
   password: 'password',
   email: 'lucca@gmail.com'
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/download.jfif')
+
+u5.profile_pic.attach(io: file, filename: 'download.jfif')
 
 u6 = User.create!(
   name: 'Disney Maniac',
@@ -58,17 +78,29 @@ u6 = User.create!(
   email: 'disney@gmail.com'
 )
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/images.png')
+
+u6.profile_pic.attach(io: file, filename: 'images.png')
+
 u7 = User.create!(
   name: 'Post King',
   password: 'password',
   email: 'poster@gmail.com'
 )
 
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/profileIcon_snoo6c401ae9-a3ff-4a63-89de-31e86024ca9b-headshot.png')
+
+u7.profile_pic.attach(io: file, filename: 'profileIcon_snoo6c401ae9-a3ff-4a63-89de-31e86024ca9b-headshot.png')
+
 u8 = User.create!(
   name: 'Couch Potato',
   password: 'password',
   email: 'couch@gmail.com'
 )
+
+file = open('https://lazypanda-seeds.s3-us-west-1.amazonaws.com/profile_pics/rage-flip-avatar-2.jpg')
+
+u8.profile_pic.attach(io: file, filename: 'rage-flip-avatar-2.jpg')
 
 u9 = User.create!(
   name: 'Bobby Lee',
