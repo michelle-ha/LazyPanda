@@ -10,6 +10,16 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:user][:id])
+
+    if @user.update(user_params)
+        render :show
+    else
+        render json: {} 
+    end
+end
+
 
 
   private

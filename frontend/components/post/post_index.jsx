@@ -6,6 +6,7 @@ import PostIndexItem from './post_index_item_container';
 class PostIndex extends React.Component {
   componentDidMount() {
     this.props.requestPosts();
+    debugger
   }
 
   render() {
