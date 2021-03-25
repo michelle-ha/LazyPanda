@@ -13,6 +13,12 @@ json.users do
     @posts.each do |post|
         json.set! post.author.id do
             json.extract! post.author, :id, :name, :email
+            if post.author.profile_pic.attached?
+              json.profilePicURL url_for(post.author.profile_pic)
+           else
+              json.profilePicURL 'https://lazypanda-seeds.s3-us-west-1.amazonaws.com/blank-profile-picture-973460_1280.webp'
+              
+          end
         end
     end
 end

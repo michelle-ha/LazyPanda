@@ -14,6 +14,12 @@ json.post do
             json.author subpost.author.name
             json.likeIds subpost.like_ids
             json.photo url_for(subpost.photo) if subpost.photo.attached?
+            if subpost.author.profile_pic.attached?
+                json.profilePicURL url_for(subpost.author.profile_pic)
+            else
+                json.profilePicURL 'https://lazypanda-seeds.s3-us-west-1.amazonaws.com/blank-profile-picture-973460_1280.webp'
+                
+            end
         end
     end
   end
@@ -24,6 +30,12 @@ json.post do
         json.set! review.id do
             json.extract! review, :id, :content, :author_id, :post_id
             json.author review.author.name
+            if review.author.profile_pic.attached?
+                json.profilePicURL url_for(review.author.profile_pic)
+            else
+                json.profilePicURL 'https://lazypanda-seeds.s3-us-west-1.amazonaws.com/blank-profile-picture-973460_1280.webp'
+                
+            end
         end
     end
   end
