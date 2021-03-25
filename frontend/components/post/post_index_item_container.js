@@ -7,14 +7,14 @@ import { getLikes } from '../../reducers/selectors';
 
 
 const mapStateToProps = (state, ownProps) => {
+    
     return {
         currentUserId: state.session.id,
         currentUser: state.entities.users[state.session.id],
         postId: ownProps.post.id,
-        likes: Object.values(state.entities.likes),
-        // likes: getLikes(state.entities.likes, ownProps.post.id, "Post"),
+        // likes: Object.values(state.entities.likes),
         post: ownProps.post,
-        // likes: getLikes(state, ownProps.post.id),
+        likes: getLikes(state, ownProps.post),
 
 
     }

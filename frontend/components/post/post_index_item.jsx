@@ -17,6 +17,7 @@ class PostIndexItem extends React.Component {
 
   //  componentDidMount(){
   //   this.props.fetchPost(this.props.post.id)
+  //   this.props.fetchPosts()
   // }
 
 
@@ -29,6 +30,7 @@ class PostIndexItem extends React.Component {
 
 
   render() {
+    // debugger
     if (!this.props.post) return null
     const { title, body, photo } = this.props.post;
     // console.log(photo)

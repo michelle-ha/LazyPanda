@@ -20,6 +20,8 @@ export const getLikes = (state, item ) => {
 
   Object.values(state.entities.likes).forEach( like => {
       if ( like.likeable_id === item.id && like.likeable_type === type) {
+        // if ( like.likeable_id === item.id ) {
+
           likes.push(like)
       }
   })

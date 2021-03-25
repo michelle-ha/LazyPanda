@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { createLike, deleteLike } from '../../actions/like_actions';
 import { findLike } from '../../reducers/selectors';
-import { fetchPosts } from '../../actions/post_actions';
+import { fetchPosts, fetchPost } from '../../actions/post_actions';
 import {openModal } from '../../actions/modal_actions'
 
 
@@ -20,6 +20,8 @@ const mDTP = (dispatch) => {
         createLike: (like) => dispatch(createLike(like)),
         deleteLike: (likeId) => dispatch(deleteLike(likeId)),
         fetchPosts: () => dispatch(fetchPosts()),
+        fetchPost: postId => dispatch(fetchPost(postId)),
+
         openModal: () => dispatch(openModal('login'))
 
     }
@@ -36,10 +38,11 @@ class LikeButton extends React.Component{
     toggleLike(e){
         e.preventDefault();
         
-
+// debugger
         if(this.props.like ){
             if (this.props.likeable_type === "Post") {
-                this.props.deleteLike(this.props.like.id).then(() => this.props.fetchPosts())
+                // this.props.deleteLike(this.props.like.id).then(() => this.props.fetchPosts())
+                this.props.deleteLike(this.props.like.id).then(() => this.props.fetchPost(this.props.likeable_id))
             } else {
                 this.props.deleteLike(this.props.like.id)
             }
@@ -51,7 +54,8 @@ class LikeButton extends React.Component{
                     likeable_type: this.props.likeable_type,
                     author_id: this.props.currentUser.id
                 })
-                .then(() => this.props.fetchPosts())
+                // .then(() => this.props.fetchPosts())
+                .then(() => this.props.fetchPost(this.props.likeable_id))
             } else {
                 this.props.createLike({
                     likeable_id: this.props.likeable_id, 
