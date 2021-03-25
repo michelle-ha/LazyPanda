@@ -86,7 +86,7 @@ button.close-x {
     color: gray
 }
 
-button.close-x:hover {
+.close-x:hover, .close-x-review:hover  {
     font-weight: bolder;
     cursor: pointer;
     color: darkred;
@@ -111,4 +111,9 @@ i.fas.fa-paper-plane:hover {
 
 .review-form {
     padding-bottom: 5px;
+}
+
+.close-x-review {
+    color: gray
+
 }
