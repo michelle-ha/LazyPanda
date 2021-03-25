@@ -60,7 +60,10 @@ class PostIndexItem extends React.Component {
             <div className="index-item-body">{body}</div>
           </div>
           <div className="index-info">
-            <div className="index-item-author">By: {this.props.user.name}</div>
+            <div className="index-author">
+            <div className="index-item-author">By:  {this.props.user.name}</div> 
+            <img className="profile-pic" src={this.props.user.profilePicURL}/>
+            </div>
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">
             <LikeButton likeable_id={this.props.post.id} likeable_type={'Post'} author_id={this.props.currentUserId} /> 
