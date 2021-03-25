@@ -15,6 +15,10 @@ class PostIndexItem extends React.Component {
 
   }
 
+  //  componentDidMount(){
+  //   this.props.fetchPost(this.props.post.id)
+  // }
+
 
 
   handleClick() {

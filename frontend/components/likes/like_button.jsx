@@ -8,8 +8,8 @@ import {openModal } from '../../actions/modal_actions'
 
 const mSTP = (state, ownProps) => {
     return {
-        like: findLike(state.entities.likes, ownProps.likeable_id, ownProps.likeable_type, ownProps.author_id),
         currentUser: state.entities.users[state.session.id],
+        like: findLike(state.entities.likes, ownProps.likeable_id, ownProps.likeable_type, ownProps.author_id)
 
 
     }
@@ -35,6 +35,8 @@ class LikeButton extends React.Component{
 
     toggleLike(e){
         e.preventDefault();
+        
+
         if(this.props.like ){
             if (this.props.likeable_type === "Post") {
                 this.props.deleteLike(this.props.like.id).then(() => this.props.fetchPosts())
@@ -47,14 +49,14 @@ class LikeButton extends React.Component{
                 this.props.createLike({
                     likeable_id: this.props.likeable_id, 
                     likeable_type: this.props.likeable_type,
-                    author_id: this.props.author_id
+                    author_id: this.props.currentUser.id
                 })
                 .then(() => this.props.fetchPosts())
             } else {
                 this.props.createLike({
                     likeable_id: this.props.likeable_id, 
                     likeable_type: this.props.likeable_type,
-                    author_id: this.props.author_id
+                    author_id: this.props.currentUser.id
                 })
             }
         
