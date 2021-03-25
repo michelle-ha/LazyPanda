@@ -352,15 +352,22 @@ i#reviewLength {
     font-family: arial;
     padding-left: 30px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
-.show-item-author, .subpost-author {
+ .subpost-author {
     // margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 30px;
     position: absolute;
     z-index: 1;
+}
+
+.show-item-author {
+    margin-top: 15px;
+    margin-left: 30px;
+    // position: absolute;
+    // z-index: 1;
 }
 
 .post-title {
@@ -395,4 +402,19 @@ span {
 
 .index-author {
     display: flex;
+}
+
+.profile-pic-show {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    // position: absolute;
+    // z-index: 1;
+    // margin-top: 5px;
+}
+
+.show-container {
+    display: flex;
+    padding-bottom: 5px;
 }

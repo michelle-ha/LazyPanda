@@ -55,7 +55,11 @@ class PostShow extends React.Component {
           <ul>
             <li className="show-item-title">{this.props.post.title}</li>
             <li className="show-item-body">{this.props.post.body}</li>
-            <li className="show-item-author">By: {this.props.post.author}</li>
+            <div className="show-container">
+              <li className="show-item-author">By: {this.props.post.author}</li>
+              <img className="profile-pic-show" src={this.props.post.profilePicURL}/>
+            </div>
+
             <div className="picture-shown">{insertPhoto} </div>
             <div className="post-edit-container">
               {/* <i class="fas fa-heart">{likeLength} Likes</i> */}
