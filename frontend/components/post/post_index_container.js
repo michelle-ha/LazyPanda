@@ -10,6 +10,8 @@ const mapStateToProps =  ({ session, entities }) => {
     currentUser: entities.users[session.id],
     posts: Object.values(entities.posts),
     users: entities.users,
+    // likes: Object.values(entities.likes),
+
     // likes: getLikes(entities.likes, ownProps.post.id, "Post")
 
   });

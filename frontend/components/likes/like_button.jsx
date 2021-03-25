@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { createLike, deleteLike } from '../../actions/like_actions';
 import { findLike } from '../../reducers/selectors';
-import { fetchPost } from '../../actions/post_actions';
+import { fetchPosts } from '../../actions/post_actions';
 
 
 
@@ -20,6 +20,8 @@ const mDTP = (dispatch) => {
     return {
         createLike: (like) => dispatch(createLike(like)),
         deleteLike: (likeId) => dispatch(deleteLike(likeId)),
+        fetchPosts: () => dispatch(fetchPosts()),
+
 
     }
 }
@@ -40,18 +42,30 @@ class LikeButton extends React.Component{
 
     toggleLike(e){
         e.preventDefault();
-        if(this.props.like){
-            this.props.deleteLike(this.props.like.id)
+        if(this.props.like ){
+            if (this.props.likeable_type === "Post") {
+                this.props.deleteLike(this.props.like.id).then(() => this.props.fetchPosts())
+            } else {
+                this.props.deleteLike(this.props.like.id)
+            }
+        } else {
 
-            // .then(() => window.location.reload()) 
+            if (this.props.likeable_type === "Post") {
+                this.props.createLike({
+                    likeable_id: this.props.likeable_id, 
+                    likeable_type: this.props.likeable_type,
+                    author_id: this.props.author_id
+                })
+                .then(() => this.props.fetchPosts())
+            } else {
+                this.props.createLike({
+                    likeable_id: this.props.likeable_id, 
+                    likeable_type: this.props.likeable_type,
+                    author_id: this.props.author_id
+                })
+            }
+        
 
-        }
-        else {
-            this.props.createLike({
-                likeable_id: this.props.likeable_id, 
-                likeable_type: this.props.likeable_type,
-                author_id: this.props.author_id
-            })
 
             // .then(() => window.location.reload()) 
 

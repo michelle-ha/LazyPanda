@@ -16,7 +16,9 @@ class PostIndex extends React.Component {
         key={post.id}
         post={post}
         user={users[post.author_id]}
+
         />
+
       )
     );
 
