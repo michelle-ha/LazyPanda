@@ -31,6 +31,14 @@ end
 
 json.likes do
   @posts.each do |post|
+      post.subposts.each do |subpost|
+          subpost.likes.each do |like|
+              json.set! like.id do
+                  json.partial! 'api/likes/like', like: like
+              end
+          end 
+      end
+      
       post.likes.each do |like|
           json.set! like.id do
               json.partial! 'api/likes/like', like: like
