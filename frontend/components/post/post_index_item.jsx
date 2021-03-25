@@ -15,41 +15,14 @@ class PostIndexItem extends React.Component {
 
   }
 
-  // componentDidMount(){
-  // //   // debugger
-  //   this.props.fetchPost(this.props.post.id)
-  // }
 
-  // componentDidUpdate(prevProps) {
-  //   // const {likes} = this.props.post.likeIds
-  //   // debugger
-  //   let didUpdate = this.props.post.likeIds.length !== prevProps.post.likeIds.length
-    
-
-  //   if (didUpdate ) {
-
-  //       this.props.fetchPosts()
-  //   }
-
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   debugger
-  //   let didUpdate = this.props.likes.length !== prevProps.likes.length
-  //   if (didUpdate && prevProps.likes.length && this.props.likes.length) {
-  //       this.props.fetchPosts()
-  //   }
-
-  // }
 
   handleClick() {
     const postId = this.props.post.id;
     this.props.history.push(`/${postId}`);
   }
 
-  // myFunction() {
-  //   return <ReviewShowContainer/>
-  // }
+
 
   render() {
     if (!this.props.post) return null
@@ -93,8 +66,7 @@ class PostIndexItem extends React.Component {
             </div>
           </div>
       </div>
-      {/* <i class="fas fa-comment-alt"  onclick={this.myFunction}></i> */}
-      {/* <ReviewShowContainer/> */}
+
       </div>
     );
   }

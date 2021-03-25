@@ -258,7 +258,7 @@ a.go-back {
 
 .index-item-author {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 17px;
     margin-left: 30px;
 }
 
@@ -326,6 +326,7 @@ i.fas.fa-trash:hover {
 i.fas.fa-comments {
     // padding-right: 15px;
     padding-bottom: 5px;
+    padding-top: 17px;
 }
 
 i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
@@ -335,6 +336,7 @@ i#reviewLength, i#reviewLength:hover, i.fas.fa-comments:hover {
 }
 i#reviewLength {
     padding-right: 30px;
+    padding-top: 17px;
 
 }
 
@@ -377,4 +379,9 @@ i.fas.fa-heart {
 span {
     padding-right: 17px;
     font-weight: 900;
+    padding-top: 17px;
+}
+
+.index-item-icons {
+    display: flex;
 }

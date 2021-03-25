@@ -3,14 +3,13 @@ import { connect } from 'react-redux';
 import { createLike, deleteLike } from '../../actions/like_actions';
 import { findLike } from '../../reducers/selectors';
 import { fetchPosts } from '../../actions/post_actions';
-
+import {openModal } from '../../actions/modal_actions'
 
 
 const mSTP = (state, ownProps) => {
     return {
         like: findLike(state.entities.likes, ownProps.likeable_id, ownProps.likeable_type, ownProps.author_id),
-        // postId: ownProps.postId,
-        // likes: state.entities.likes,
+        currentUser: state.entities.users[state.session.id],
 
 
     }
@@ -21,7 +20,7 @@ const mDTP = (dispatch) => {
         createLike: (like) => dispatch(createLike(like)),
         deleteLike: (likeId) => dispatch(deleteLike(likeId)),
         fetchPosts: () => dispatch(fetchPosts()),
-
+        openModal: () => dispatch(openModal('login'))
 
     }
 }
@@ -30,12 +29,6 @@ const mDTP = (dispatch) => {
 class LikeButton extends React.Component{
     constructor(props){
         super(props)
-
-        // this.state = {
-        //     likeable_id: this.props.likeable_id, 
-        //     likeable_type: this.props.likeable_type,
-        //     author_id: this.props.author_id
-        // }
 
         this.toggleLike = this.toggleLike.bind(this)
     }
@@ -65,39 +58,27 @@ class LikeButton extends React.Component{
                 })
             }
         
-
-
-            // .then(() => window.location.reload()) 
-
-            // this.props.createLike(this.state)
-            // .then(() => {
-            //     this.setState({
-            //         likeable_id: this.props.likeable_id, 
-            //         likeable_type: this.props.likeable_type,
-            //         author_id: this.props.author_id
-            //     })
-            // })
         }
     }
 
 
 
     render(){
-        // if(this.props.likeable_type === 'Subpost'){
-        //     return (
-        //         <div id={this.props.like ? 'does-like' : ''} className='comment-like' onClick={this.toggleLike}>Like</div>
-        //     )
-        // }
-        // if (!this.props.likes) {
-        //     return <div></div>
-        // }
+
         return (
-            <button className='option-btn'  onClick={this.toggleLike}>
-                <i class="fas fa-heart" id={this.props.like ? 'does-like' : 'subpost'} > </i>
-            </button>
-            
+            <div className="like-button">
+                {this.props.currentUser ?
+                    (<button className='option-btn'  onClick={this.toggleLike}>
+                    <i class="fas fa-heart" id={this.props.like ? 'does-like' : 'subpost'} > </i>
+                    </button>)
+                : (<button className='option-btn'  onClick={() => this.props.openModal()}>
+                    <i class="fas fa-heart" id={this.props.like ? 'does-like' : 'subpost'} > </i>
+                    </button>)
+                }
+            </div>
         )
     }
 }
 
 export default connect(mSTP, mDTP)(LikeButton);
+
