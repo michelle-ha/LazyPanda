@@ -17,7 +17,8 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         <button className="add-post-button" type="button">Add post</button>
       </Link>
       <button className="header-button" onClick={logout}>Log Out</button>
-      <img className="profile-pic-header" src={currentUser.profilePicURL} />
+      <Link to={`/${currentUser.id}/editUser`}><img className="profile-pic-header" src={currentUser.profilePicURL} ></img></Link>
+      
     </>
   )
 
