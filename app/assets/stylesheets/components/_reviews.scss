@@ -6,8 +6,8 @@
     border-bottom: 1px solid #d3d3d3;
     // border-top: 1px solid #d3d3d3;
     padding-top: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     line-height: 1.1em;
     display: block;
 }
@@ -62,11 +62,12 @@ textarea.review-content-input {
     font-size: 14px;
     font-weight: 500;
     font-family: arial;
+    padding-top: 5px;
 
 }
 
 .review-title {
-    padding-bottom: 2px;
+    padding-top: 3px;    
     color: #989898;
     font-weight: 400;
     line-height: 18px;
@@ -77,7 +78,7 @@ textarea.review-content-input {
 }
 
 .review-details {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 button.close-x {
@@ -114,7 +115,8 @@ i.fas.fa-paper-plane:hover {
 }
 
 .close-x-review {
-    color: gray
+    color: gray;
+    font-size: medium;
 
 }
 
@@ -131,3 +133,18 @@ li.review-title-2 {
     margin-left: 20px;
     font-family: arial;
 }
+
+.reviews {
+    display: flex;
+}
+
+.review-container {
+    display: flex;
+}
+
+.profile-pic-review{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }

@@ -10,8 +10,10 @@ class ReviewShow extends React.Component {
             return (
                 <div className="review-details" key={review.id}>
                     <ul>
-                         <li className="review-author"> {review.author} </li>
-                        
+                        <div className="reviews">
+                            <li className="review-author"> {review.author} </li>
+                            <img className="profile-pic-review" src={review.profilePicURL}/>
+                        </div>
                         <div className="review-display">
                         
                         {this.props.currentUserId === review.author_id ?
