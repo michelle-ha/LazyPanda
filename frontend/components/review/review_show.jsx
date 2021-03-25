@@ -15,11 +15,12 @@ class ReviewShow extends React.Component {
                         <div className="review-display">
                         
                         {this.props.currentUserId === review.author_id ?
-                            (<div>
+                            (<div className="review-container">
                                 <button className="close-x-review" onClick={() => this.props.deleteReview(review.id)}>&#10006;</button>
+                                < li className="review-title">{review.content}</li>
                             </div>)
-                            : null}
-                        < li className="review-title">{review.content}</li>
+                            : < li className="review-title-2">{review.content}</li>}
+                        
                     </div>
                     </ul>
                     
