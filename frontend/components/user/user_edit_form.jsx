@@ -1,4 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import EditNavBar from "../greeting/edit_navbar"
+
+
 
 class UserEditForm extends React.Component {
     constructor(props) {
@@ -49,26 +53,37 @@ class UserEditForm extends React.Component {
 
     render() {
 
-        const preview = this.state.profilePicPreviewURL ? <img height="200px" width="200px" src={this.state.profilePicPreviewURL} /> : null;
+        const preview = this.state.profilePicPreviewURL ? <img src={this.state.profilePicPreviewURL} className="profile-pic-edit" /> : null;
 
         return (
-            <div>
+            <div>      <EditNavBar/>
+            
+            <div className="picture-edit-container">
 
-                <form onSubmit={this.handleSubmit}>
+                <form className="picture-edit-form" onSubmit={this.handleSubmit}>
+                    <h1 className="profile-pic-heading"> Profile Picture Edit</h1>
                 <h3 className="button-holder">Original Photo</h3>
-                <img src = { this.props.currentUser.profilePicURL } />
-                    <h1>Upload a New Profile Pic</h1>
+                <img className="profile-pic-edit" src = { this.props.currentUser.profilePicURL } />
+                <h3 className="button-holder">New Photo</h3>
                     {preview}
-                    <input
-                        type="file"
+                    <div>
+                        <input
+                        type="file" required
                         onChange={this.handleFile}
+                        className="update-profile-button"
                     />
+                    </div>
+                    
+<div><input type="submit" value="Update Profile Pic" className="update-profile" /></div>
+
+<div className="go-back-link-edit"><Link to="/" className="go-back">Go Back</Link></div>
 
 
-                    <input type="submit" value="Update Profile Pic" />
                 </form>
 
+
                 
+            </div>
             </div>
         );
     }
