@@ -64,7 +64,14 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 };
 
 ```
+
+### User creation
+
+Users are able to search for posts by title. A list of all the posts and their links are shown. The lists updates as the user types into the input field. 
+
+
+
 ## Future Plans
-* Be able to properly render sub-posts to a post's show page
-* Allow users to comment on posts
-* Allow users to vote on posts in order to move them higher up the page
+* Be able to properly render sub-posts to a post's show page UPDATED
+* Allow users to comment on posts UPDATED
+* Allow users to like posts UPDATED
