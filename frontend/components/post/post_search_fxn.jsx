@@ -40,7 +40,7 @@ export const Search = props => {
                 <h3 className="button-holder">Search Results</h3>
                 
                 
-                <h3 className="button-holder">{filterDisplay.map((post, i) => (
+                <h3 className="button-holder-search">{filterDisplay.map((post, i) => (
                     filterDisplay.length ? (
                     <div key={i}>
                         <li>
@@ -55,6 +55,7 @@ export const Search = props => {
 
 
                 </form>
+
 
 
                 
