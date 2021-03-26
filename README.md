@@ -23,7 +23,7 @@ LazyPanda is a BoredPanda clone, which is a social media application that allows
 
 ## Features
 
-### User creation
+### User Creation
 
 A modal is used for user login and registration. A demo user account is offered for viewers to experiment with the site's features without creating an account. 
 
@@ -59,17 +59,16 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     </>
   )
 
-
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
 ```
 
-### User creation
+### Post Search
 
 Users are able to search for posts by title. A list of all the posts and their links are shown. The lists updates as the user types into the input field. 
 
-
+![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/Screenshot%202021-03-26%2012.37.34%20PM.png "Search Post Screenshot")
 
 ## Future Plans
 * Be able to properly render sub-posts to a post's show page UPDATED
