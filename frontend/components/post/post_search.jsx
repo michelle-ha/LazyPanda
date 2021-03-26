@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
+
 
 export const Search = props => {
     const [word, setWord] = useState("")
@@ -7,7 +9,7 @@ export const Search = props => {
 
     const handleChange = e => {
         let oldList = props.posts.map(post => {
-            return {title: post.title.toLowerCase(), author: post.author}
+            return {title: post.title.toLowerCase(), author: post.author, id: post.id}
         })
 
             if (e !== "") {
@@ -25,12 +27,12 @@ export const Search = props => {
         return (
             <div>
                 <h1>Search Results</h1>
-                Search: <input onChange={e => handleChange(e.targer.value)}/>
+                Search: <input onChange={e => handleChange(e.target.value)}/>
                 {filterDisplay.map((post, i) => (
                     <div key={i}>
                         <li>
-                            {post.title} &nbsp;
-                            <span>{post.author}</span>
+                        <Link to={`/${post.id}`}>{post.title}</Link>
+                        <span>{post.author}</span>
                         </li>
                     </div>
                 ))}

@@ -1,6 +1,7 @@
 import React from 'react';
 import PostIndexItem from './post_index_item_container';
 // import ReviewShowContainer from "../review/review_show_container"
+import {Search} from "./post_search"
 
 
 class PostIndex extends React.Component {
@@ -25,6 +26,7 @@ class PostIndex extends React.Component {
 
     return(
       <div className="post-index">
+        <Search posts={this.props.posts}/>
         <ul className="post-list">
           <div>{postIndexItems}</div> 
         </ul>
