@@ -63,7 +63,10 @@ class UserEditForm extends React.Component {
                 <form className="picture-edit-form" onSubmit={this.handleSubmit}>
                     <h1 className="profile-pic-heading"> Profile Picture Edit</h1>
                 <h3 className="button-holder">Original Photo</h3>
+                <div className="pic-holder">
                 <img className="profile-pic-edit" src = { this.props.currentUser.profilePicURL } />
+                </div>
+                
                 <h3 className="button-holder">New Photo</h3>
                     {preview}
                     <div>
@@ -74,9 +77,9 @@ class UserEditForm extends React.Component {
                     />
                     </div>
                     
-<div><input type="submit" value="Update Profile Pic" className="update-profile" /></div>
+                    <div><input type="submit" value="Update Profile Pic" className="update-profile" /></div>
 
-<div className="go-back-link-edit"><Link to="/" className="go-back">Go Back</Link></div>
+                    <div className="go-back-link-edit"><Link to="/" className="go-back">Go Back</Link></div>
 
 
                 </form>
