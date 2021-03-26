@@ -6,6 +6,8 @@ import { updateUser } from '../../actions/user_actions';
 const mSTP = (state, ownProps) => {
     return {
         currentUserId: state.session.id,
+        currentUser: state.entities.users[state.session.id],
+
     }
 }
 

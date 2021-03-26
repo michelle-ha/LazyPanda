@@ -55,6 +55,8 @@ class UserEditForm extends React.Component {
             <div>
 
                 <form onSubmit={this.handleSubmit}>
+                <h3 className="button-holder">Original Photo</h3>
+                <img src = { this.props.currentUser.profilePicURL } />
                     <h1>Upload a New Profile Pic</h1>
                     {preview}
                     <input
