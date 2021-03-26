@@ -942,11 +942,6 @@ file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fail
 
 s52.photo.attach(io: file, filename: "No+action.+Stop+the+excitement.jpg")
 
-# like1 = Like.create!(
-#     author_id: u1.id,
-#     likeable_type: 'Post',
-#     likeable_id: p1.id,
-# )
 
 like2 = Like.create!(
     author_id: u2.id,
@@ -960,11 +955,6 @@ like3 = Like.create!(
     likeable_id: p1.id,
 )
 
-# like4 = Like.create!(
-#     author_id: u1.id,
-#     likeable_type: 'Post',
-#     likeable_id: p2.id,
-# )
 
 like5 = Like.create!(
     author_id: u4.id,
