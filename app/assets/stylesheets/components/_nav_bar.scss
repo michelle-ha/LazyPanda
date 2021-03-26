@@ -226,3 +226,14 @@ img.profile-pic-edit {
     margin-right: auto;
     display: block;
 }
+
+i.fas.fa-search {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+i.fas.fa-search:hover {
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}

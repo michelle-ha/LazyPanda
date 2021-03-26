@@ -15,10 +15,11 @@ const signin = () => (
       <header>
         <div className="logo">
           <NavLink to="/" activeClassName="active"><img className= "panda-logo" src={logo} /></NavLink>
-          <NavLink to="/search" activeClassName="active"><i class="fas fa-search"></i></NavLink>
           
         </div>
         <div className="form-buttons">
+        <NavLink to="/search" activeClassName="active"><i class="fas fa-search"></i></NavLink>
+
         <GreetingContainer/>
         </div>
       </header>
