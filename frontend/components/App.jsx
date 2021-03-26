@@ -6,6 +6,7 @@ import {ProtectedRoute } from '../util/route_util.jsx';
 import PostShowContainer from './post/post_show_container'
 import PostEditContainer from './post/post_edit_form_container'
 import UserEditContainer from "./user/user_edit_container"
+import SearchPostContainer from "./post/post_search_container"
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
         <Switch>
           <Route exact path="/" component={SignIn } />
+          <Route exact path="/search" component={SearchPostContainer} />
           <ProtectedRoute exact path="/add-new-post" component={PostFormContainer} />
           <Route exact path="/:postId" component={PostShowContainer} />
           <ProtectedRoute exact path="/:postId/edit" component={PostEditContainer} />

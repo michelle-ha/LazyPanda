@@ -24,15 +24,21 @@ export const Search = props => {
                 setFilterDisplay(props.posts)
             }
         }
+        let header;
+        if (filterDisplay.length > 0) {
+            header = <h1 className="results">Search Results</h1>
+        } else {header = null}
+
         return (
-            <div>
-                <h1>Search Results</h1>
-                Search: <input onChange={e => handleChange(e.target.value)}/>
+            <div className="searchResults">
+                <input placeholder="Search for post title..." onChange={e => handleChange(e.target.value)}/>
+                {header}
+
                 {filterDisplay.map((post, i) => (
                     <div key={i}>
                         <li>
                         <Link to={`/${post.id}`}>{post.title}</Link>
-                        <span>{post.author}</span>
+                        <span> {post.author}</span>
                         </li>
                     </div>
                 ))}

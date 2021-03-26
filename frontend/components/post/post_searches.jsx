@@ -1,10 +1,12 @@
 import React from 'react';
 import PostIndexItem from './post_index_item_container';
 // import ReviewShowContainer from "../review/review_show_container"
-// import {Search} from "./post_search_fxn"
+import {Search} from "./post_search_fxn"
+import { Link } from 'react-router-dom';
 
 
-class PostIndex extends React.Component {
+
+class PostSearches extends React.Component {
   componentDidMount() {
     this.props.requestPosts();
   }
@@ -26,14 +28,15 @@ class PostIndex extends React.Component {
 
     return(
       <div className="post-index">
-        {/* <Search posts={this.props.posts}/> */}
-        <ul className="post-list">
+        <Search posts={this.props.posts}/>
+        <div className="go-back-link"><Link to="/" className="go-back">Go Back</Link></div>
+        {/* <ul className="post-list">
           <div>{postIndexItems}</div> 
-        </ul>
+        </ul> */}
         {/* <ReviewShowContainer post={this.props.post}/> */}
       </div>
     );
   }
 }
 
-export default PostIndex;
+export default PostSearches;
