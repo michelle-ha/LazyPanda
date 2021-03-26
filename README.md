@@ -37,8 +37,33 @@ Registered users are able to create their own posts in order to start up a new t
 
 In order for the "Add Post" button to only permit registered users to access the form page, a conditional was made in which the button action changed in regards to if the user was logged in or not. If the user was not, the login modal will appear on the screen. If the user was, they would be re-directed to another page. 
 
-![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/code.png "Code Screenshot")
+```js
+//frontend/components/greeting/greeting.jsx 
 
+const Greeting = ({ currentUser, logout, openModal }) => {
+  const sessionLinks = () => (
+    <>
+      <button className="add-post-button" onClick={() => openModal('login')}>Add post</button>
+      <button className="login-signup" onClick={() => openModal('login')}>Login / Register</button>
+
+    </>
+  );
+  const personalGreeting = () => (
+    <>
+      <Link to="/add-new-post">
+        <button className="add-post-button" type="button">Add post</button>
+      </Link>
+      <button className="header-button" onClick={logout}>Log Out</button>
+      <Link to={`/${currentUser.id}/editUser`}><img className="profile-pic-header" src={currentUser.profilePicURL} ></img></Link>
+      
+    </>
+  )
+
+
+  return currentUser ? personalGreeting() : sessionLinks();
+};
+
+```
 ## Future Plans
 * Be able to properly render sub-posts to a post's show page
 * Allow users to comment on posts
