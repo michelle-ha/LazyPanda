@@ -42,7 +42,8 @@ class UserEditForm extends React.Component {
             formData.append('user[profile_pic]', this.state.profile_pic);
         }
 
-        this.props.updateUser(formData);
+        this.props.updateUser(formData)
+            .then( () => this.props.history.push("/"))
     }
 
 
