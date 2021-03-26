@@ -244,7 +244,13 @@ i.fas.fa-search:hover {
     margin: 10px;
     margin-bottom: 30px;
     margin-top: 31px;
-    height: 100px;
+    height: auto;    
     background: white;
 }
 
+input.input-search {
+  margin: 10px;
+  width: 476px;
+  height: 30px;
+  border: black;
+}

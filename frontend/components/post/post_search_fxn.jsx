@@ -36,7 +36,7 @@ export const Search = props => {
 
                 <form className="picture-edit-form" >
                     <h1 className="profile-pic-heading"> Search For Posts</h1>
-                    <input placeholder="Search for post title..." onChange={e => handleChange(e.target.value)}/>
+                    <input className="input-search" placeholder="Search for post title..." onChange={e => handleChange(e.target.value)}/>
                 <h3 className="button-holder">Search Results</h3>
                 
                 
