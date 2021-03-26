@@ -8,6 +8,19 @@ LazyPanda is a BoredPanda clone, which is a social media application that allows
 
 ![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/boredpanda%20screenshot.png "LazyPanda Screenshot")
 
+# Technologies Used
+* Technologies Used
+* Ruby / Rails
+* React.js
+* AJAX
+* JBuilder
+* Redux
+* JavaScript
+* Webpack
+* Node.js
+* HTML5 / CSS3
+* Amazon Web Service (S3)
+
 ## Features
 
 ### User creation
