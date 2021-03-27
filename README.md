@@ -74,3 +74,4 @@ Users are able to search for posts by title. A list of all the posts and their l
 * Be able to properly render sub-posts to a post's show page UPDATED
 * Allow users to comment on posts UPDATED
 * Allow users to like posts UPDATED
+* User show page with created/liked posts
