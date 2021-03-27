@@ -75,3 +75,4 @@ Users are able to search for posts by title. A list of all the posts and their l
 * Allow users to comment on posts UPDATED
 * Allow users to like posts UPDATED
 * User show page with created/liked posts
+* Post category navigation bar 
