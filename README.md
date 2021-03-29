@@ -1,8 +1,8 @@
 ![alt text](https://github.com/michelle-ha/LazyPanda/blob/master/app/assets/images/PngItem_2512217.png "Lazy Panda Logo")
 
-# BoredPanda
+# LazyPanda
 
-[BoredPanda Link](https://lazy-panda.herokuapp.com/#/)
+[LazyPanda Link](https://lazy-panda.herokuapp.com/#/)
 
 LazyPanda is a BoredPanda clone, which is a social media application that allows users to post and share anything ranging from somber news articles to entertaining, cute animal pictures. Rails was implemented for the backend, while React/Redux was utilized for the frontend.
 
@@ -74,3 +74,5 @@ Users are able to search for posts by title. A list of all the posts and their l
 * Be able to properly render sub-posts to a post's show page UPDATED
 * Allow users to comment on posts UPDATED
 * Allow users to like posts UPDATED
+* User show page with created/liked posts
+* Post category navigation bar 
