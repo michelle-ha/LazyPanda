@@ -1,5 +1,7 @@
 import React from 'react';
 import LikeButton from "../likes/like_button"
+import { Link } from 'react-router-dom';
+
 
 class SubpostShow extends React.Component {
 
@@ -15,7 +17,8 @@ class SubpostShow extends React.Component {
                         < li className="post-title">{idx + 1}. {subpost.title}</li>
                         <div className="subpost-show">
                             <li className="show-item-author"> By: {subpost.author} </li>
-                            <img className="profile-pic-show" src={subpost.profilePicURL}/>
+                            <Link to={`/users/${subpost.author_id}`}><img className="profile-pic-show" src={subpost.profilePicURL}/></Link>
+                            
                         </div>
                         
                         <li className="picture-shown"><img src={subpost.photo}/></li>
