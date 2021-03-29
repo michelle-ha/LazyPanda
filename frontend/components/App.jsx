@@ -7,6 +7,8 @@ import PostShowContainer from './post/post_show_container'
 import PostEditContainer from './post/post_edit_form_container'
 import UserEditContainer from "./user/user_edit_container"
 import SearchPostContainer from "./post/post_search_container"
+import ShowUserContainer from './user/show_user_container';
+
 
 class App extends React.Component {
   render() {
@@ -19,6 +21,8 @@ class App extends React.Component {
           <Route exact path="/:postId" component={PostShowContainer} />
           <ProtectedRoute exact path="/:postId/edit" component={PostEditContainer} />
           <ProtectedRoute exact path="/:userId/editUser" component={UserEditContainer} />
+          <Route exact path="/users/:userId" component={ShowUserContainer} />
+
           <Route render={() => (<Redirect to="/" />)}/>
         </Switch>
     )
