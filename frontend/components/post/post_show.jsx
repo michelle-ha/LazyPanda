@@ -21,6 +21,7 @@ class PostShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
+    .fail(() => this.props.history.push("/"))
   }
 
   render() {

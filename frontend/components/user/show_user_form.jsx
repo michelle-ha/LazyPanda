@@ -7,7 +7,9 @@ class ShowUser extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
-        this.props.fetchPosts();
+
+        this.props.fetchPosts()
+
     }
 
 
@@ -15,8 +17,11 @@ class ShowUser extends React.Component {
     render () {
         let showUser = this.props.showUser;
 
+
         if (!showUser) {
             return null;
+
+        
 
         } else {
 
@@ -27,13 +32,10 @@ class ShowUser extends React.Component {
                         <li className="postLinks"><Link to={`/${post.id}`}>{post.title}</Link>
 </li>
                     </div>
-
-                    : null 
+                    
+                    : null
                 )
-
             )
-
-
 
             
         return (
