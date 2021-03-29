@@ -922,26 +922,6 @@ file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fail
 
 s50.photo.attach(io: file, filename: "I+would+be+insulted+if+they+were+talking+about+my+children.jpg")
 
-s51 = Subpost.create!(
-  author_id: u8.id, 
-  post_id: p9.id, 
-  title: "I'm actually kind of curious"
-)
-
-file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/I'm+actually+kind+of+curious.jpg")
-
-s51.photo.attach(io: file, filename: "I'm+actually+kind+of+curious.jpg")
-
-s52 = Subpost.create!(
-  author_id: u9.id, 
-  post_id: p9.id, 
-  title: "No action. Stop the excitement"
-)
-
-file = open("https://lazypanda-seeds.s3-us-west-1.amazonaws.com/Advertising+fails/No+action.+Stop+the+excitement.jpg")
-
-s52.photo.attach(io: file, filename: "No+action.+Stop+the+excitement.jpg")
-
 
 like2 = Like.create!(
     author_id: u2.id,
@@ -986,27 +966,4 @@ like9 = Like.create!(
     likeable_id: s30.id,
 )
 
-like10 = Like.create!(
-    author_id: u2.id,
-    likeable_type: 'Subpost',
-    likeable_id: s18.id,
-)
-
-like11 = Like.create!(
-    author_id: u3.id,
-    likeable_type: 'Subpost',
-    likeable_id: s8.id,
-)
-
-like12 = Like.create!(
-    author_id: u3.id,
-    likeable_type: 'Subpost',
-    likeable_id: s1.id,
-)
-
-like13 = Like.create!(
-    author_id: u4.id,
-    likeable_type: 'Subpost',
-    likeable_id: s2.id,
-)
 
