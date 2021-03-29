@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 // import ReviewShowContainer from "../review/review_show_container"
 // import Like from '../likes/like';
 import LikeButton from "../likes/like_button"
+import { Link } from 'react-router-dom';
+
 
 
 class PostIndexItem extends React.Component {
@@ -62,7 +64,7 @@ class PostIndexItem extends React.Component {
           <div className="index-info">
             <div className="index-author">
             <div className="index-item-author">By:  {this.props.user.name}</div> 
-            <img className="profile-pic" src={this.props.user.profilePicURL}/>
+            <Link to={`/users/${this.props.user.id}`}><img className="profile-pic" src={this.props.user.profilePicURL}/></Link>
             </div>
           {/* <div onclick={this.myFunction}> <i class="fas fa-comment-alt"> </i> </div> */}
             <div className="index-item-icons">

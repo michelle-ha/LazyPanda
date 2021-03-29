@@ -5,17 +5,10 @@ class ShowUser extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
-            .fail(() => this.props.history.push("/"))
-
         this.props.fetchPosts();
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.match.params.userId !== this.props.match.params.userId) {
-            this.props.fetchUser(this.props.match.params.userId)
-                .fail(() => this.props.history.push("/"))
-        }
-    }
+
 
     render () {
         let showUser = this.props.showUser;
@@ -33,9 +26,14 @@ class ShowUser extends React.Component {
                         <Link to={`/${post.id}`}>{post.title}</Link>
                     </div>
 
-                    : "No Posts" 
+                    : null 
                 )
+
             )
+
+            if (!showPosts.length) {
+                "No posts"
+            }
 
             
             return (
