@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class ReviewShow extends React.Component {
 
@@ -12,7 +14,9 @@ class ReviewShow extends React.Component {
                     <ul>
                         <div className="reviews">
                             <li className="review-author"> {review.author} </li>
-                            <img className="profile-pic-review" src={review.profilePicURL}/>
+                            <Link to={`/users/${review.author_id}`}>  <img className="profile-pic-review" src={review.profilePicURL}/>
+</Link>
+
                         </div>
                         <div className="review-display">
                         
