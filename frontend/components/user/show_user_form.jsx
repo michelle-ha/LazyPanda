@@ -49,7 +49,8 @@ class ShowUser extends React.Component {
                         <img className="profile-pic-edit" src = { this.props.showUser.profilePicURL } />
                     </div>
                     <h3 className="button-holder">All Posts</h3>
-                    {showPosts}
+                    <div class="button-holder-search">                    {showPosts}
+</div>
                     <div className="go-back-link-edit" ><Link to="/" className="go-back">Go Back</Link></div>
                 </form>
             </div>
