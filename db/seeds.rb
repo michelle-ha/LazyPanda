@@ -1010,20 +1010,3 @@ like13 = Like.create!(
     likeable_id: s2.id,
 )
 
-# like14 = Like.create!(
-#     author_id: u1.id,
-#     likeable_type: 'Subpost',
-#     likeable_id: s17.id,
-# )
-
-# like15 = Like.create!(
-#     author_id: u1.id,
-#     likeable_type: 'Subpost',
-#     likeable_id: s14.id,
-# )
-
-# like16 = Like.create!(
-#     author_id: u9.id,
-#     likeable_type: 'Post',
-#     likeable_id: p9.id,
-# )
