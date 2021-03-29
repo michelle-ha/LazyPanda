@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from "../greeting/navbar"
+
 
 class ShowUser extends React.Component {
 
@@ -22,8 +24,8 @@ class ShowUser extends React.Component {
                 (this.props.showUser.id === post.author_id ?
 
                     <div key={post.id}>
-                        {/* <h1>User Posts:</h1> */}
-                        <Link to={`/${post.id}`}>{post.title}</Link>
+                        <li className="postLinks"><Link to={`/${post.id}`}>{post.title}</Link>
+</li>
                     </div>
 
                     : null 
@@ -31,32 +33,26 @@ class ShowUser extends React.Component {
 
             )
 
-            if (!showPosts.length) {
-                "No posts"
-            }
+
 
             
-            return (
-                <div className="showUserBody">
+        return (
+            <div>
+                        <NavBar/>
 
-                    <br />
-                    <p>{this.props.showUser.name}'s Page</p>
-                    <br />
-                    <img className="showUserProfilePic" src={this.props.showUser.profilePicURL}/>
-                    <br />
-                    <br />
-
-                    <p>All Posts</p>
-                    
-                    {showPosts}
-                    
-                    <div>
-                        <Link to="/">Back to Main Page</Link>
+            <div className="picture-edit-container">
+                <form className="picture-edit-form" >
+                    <h1 className="profile-pic-heading"> {this.props.showUser.name}'s Page</h1>
+                    <div className="pic-holder">
+                        <img className="profile-pic-edit" src = { this.props.showUser.profilePicURL } />
                     </div>
-                    <br />
-                    
-                </div>
-            )
+                    <h3 className="button-holder">All Posts</h3>
+                    {showPosts}
+                    <div className="go-back-link-edit" ><Link to="/" className="go-back">Go Back</Link></div>
+                </form>
+            </div>
+            </div>
+        )
         }
     }
 }
