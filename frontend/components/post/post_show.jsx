@@ -57,7 +57,9 @@ class PostShow extends React.Component {
             <li className="show-item-body">{this.props.post.body}</li>
             <div className="show-container">
               <li className="show-item-author">By: {this.props.post.author}</li>
-              <img className="profile-pic-show" src={this.props.post.profilePicURL}/>
+              <Link to={`/users/${this.props.post.author_id}`}>              <img className="profile-pic-show" src={this.props.post.profilePicURL}/>
+</Link>
+
             </div>
 
             <div className="picture-shown">{insertPhoto} </div>
