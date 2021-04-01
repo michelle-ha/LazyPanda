@@ -23,12 +23,37 @@
 
   <body>
     <%= yield %>
+       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+       <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
   </body>
   <footer id="footer">&#10084; Made by Michelle Ha
   <a target="_blank" href="https://github.com/michelle-ha/LazyPanda"> <i class="fab fa-github"></i></a>
   <a target="_blank" href="https://www.linkedin.com/in/michelle-ha-9b7574b9/"><i class="fa fa-linkedin" ></i></a>
   <a target="_blank" href="https://angel.co/u/michelle-ha-4" ><i class="fa fa-angellist"></i></a>
-   &#10084; <footer>
+   &#10084; 
+<footer>
 
 </html>
 
