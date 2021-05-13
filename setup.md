@@ -5,7 +5,7 @@
 # Setup https://open.appacademy.io/learn/full-stack-online/react/rails-react-redux-configuration-checklist
 
 # Backend
-- rails  _5.2.3_ new app-name -d=postgresql --skip-turbolink
+- rails  _5.2.3_ new app-name -d=postgresql --skip-turbolinks
 <!-- create new rails app w/ postgresql database -->
 <!-- why skip turbo links? -->
 - pgstart
