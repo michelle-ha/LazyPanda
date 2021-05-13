@@ -42,3 +42,4 @@ end -->
 - Test your routes using $.ajax methods in the console or with Postman
 
 # Frontend
+- npm install webpack webpack-cli react react-dom react-router-dom redux react-redux @babel/core @babel/preset-react @babel/preset-env babel-loader
