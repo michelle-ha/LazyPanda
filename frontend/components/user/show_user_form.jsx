@@ -7,7 +7,7 @@ class ShowUser extends React.Component {
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
-        .fail(() => this.props.history.push("/"))
+        // .fail(() => this.props.history.push("/"))
 
 
         this.props.fetchPosts()
